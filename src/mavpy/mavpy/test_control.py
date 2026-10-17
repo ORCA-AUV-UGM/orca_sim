@@ -366,7 +366,6 @@ class ControlBridge(Node):
         self.reset_override()
         super().destroy_node()
 
-
 def main(args=None):
     rclpy.init(args=args)
     node = ControlBridge()

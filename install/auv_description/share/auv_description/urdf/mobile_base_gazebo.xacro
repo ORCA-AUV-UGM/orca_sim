@@ -158,7 +158,7 @@
     <gazebo reference="imu_link">
         <sensor name="imu_sensor" type="imu">
             <always_on>1</always_on>
-            <update_rate>1000.0</update_rate>
+            <update_rate>200.0</update_rate>
         </sensor>
     </gazebo>
 
