@@ -10,6 +10,8 @@ setup.py
 ../../build/mavpy/mavpy.egg-info/zip-safe
 mavpy/__init__.py
 mavpy/attitude_node.py
+mavpy/camera_sim_final.py
+mavpy/camera_sim_qualification.py
 mavpy/control_bridge.py
 mavpy/keyboard.py
 mavpy/test_control.py

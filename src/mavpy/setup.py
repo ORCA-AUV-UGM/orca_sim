@@ -25,6 +25,9 @@ setup(
             'test_control = mavpy.test_control:main',
             'test_keyboard = mavpy.test_keyboard:main',
 
+            'camera_sim_qualification = mavpy.camera_sim_qualification:main',
+            'camera_sim_final = mavpy.camera_sim_final:main',
+
             'attitude_node = mavpy.attitude_node:main',
             'control_bridge = mavpy.control_bridge:main',
             'keyboard = mavpy.keyboard:main',

@@ -1,0 +1,30 @@
+[0.680s] Invoking command in '/home/riovaldo/orcav4_ws/src/mavpy': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/riovaldo/orcav4_ws/build/mavpy/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages:/home/riovaldo/orcav4_ws/install/orca_msgs/lib/python3.12/site-packages:/home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mavpy build --build-base /home/riovaldo/orcav4_ws/build/mavpy/build install --record /home/riovaldo/orcav4_ws/build/mavpy/install.log --install-scripts $base/lib/mavpy --single-version-externally-managed install_data
+[0.886s] running egg_info
+[0.900s] writing ../../build/mavpy/mavpy.egg-info/PKG-INFO
+[0.900s] writing dependency_links to ../../build/mavpy/mavpy.egg-info/dependency_links.txt
+[0.900s] writing entry points to ../../build/mavpy/mavpy.egg-info/entry_points.txt
+[0.900s] writing requirements to ../../build/mavpy/mavpy.egg-info/requires.txt
+[0.900s] writing top-level names to ../../build/mavpy/mavpy.egg-info/top_level.txt
+[0.928s] reading manifest file '../../build/mavpy/mavpy.egg-info/SOURCES.txt'
+[0.928s] writing manifest file '../../build/mavpy/mavpy.egg-info/SOURCES.txt'
+[0.929s] running build
+[0.929s] running build_py
+[0.929s] copying mavpy/camera_sim_qualification.py -> /home/riovaldo/orcav4_ws/build/mavpy/build/lib/mavpy
+[0.929s] running install
+[0.935s] running install_lib
+[0.948s] copying /home/riovaldo/orcav4_ws/build/mavpy/build/lib/mavpy/camera_sim_qualification.py -> /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy
+[0.948s] byte-compiling /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy/camera_sim_qualification.py to camera_sim_qualification.cpython-312.pyc
+[0.953s] running install_data
+[0.953s] copying package.xml -> /home/riovaldo/orcav4_ws/install/mavpy/share/mavpy
+[0.953s] running install_egg_info
+[0.968s] removing '/home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy-0.1.0-py3.12.egg-info' (and everything under it)
+[0.968s] Copying ../../build/mavpy/mavpy.egg-info to /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy-0.1.0-py3.12.egg-info
+[0.968s] running install_scripts
+[1.060s] Installing attitude_node script to /home/riovaldo/orcav4_ws/install/mavpy/lib/mavpy
+[1.061s] Installing camera_sim_qualification script to /home/riovaldo/orcav4_ws/install/mavpy/lib/mavpy
+[1.061s] Installing control_bridge script to /home/riovaldo/orcav4_ws/install/mavpy/lib/mavpy
+[1.061s] Installing keyboard script to /home/riovaldo/orcav4_ws/install/mavpy/lib/mavpy
+[1.061s] Installing test_control script to /home/riovaldo/orcav4_ws/install/mavpy/lib/mavpy
+[1.061s] Installing test_keyboard script to /home/riovaldo/orcav4_ws/install/mavpy/lib/mavpy
+[1.061s] writing list of installed files to '/home/riovaldo/orcav4_ws/build/mavpy/install.log'
+[1.090s] Invoked command in '/home/riovaldo/orcav4_ws/src/mavpy' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/riovaldo/orcav4_ws/build/mavpy/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages:/home/riovaldo/orcav4_ws/install/orca_msgs/lib/python3.12/site-packages:/home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mavpy build --build-base /home/riovaldo/orcav4_ws/build/mavpy/build install --record /home/riovaldo/orcav4_ws/build/mavpy/install.log --install-scripts $base/lib/mavpy --single-version-externally-managed install_data

@@ -1,1 +1,1 @@
-Jetson.GPIO:geometry_msgs:orca_msgs:pygame:rclpy:sensor_msgs:std_msgs:std_srvs
+Jetson.GPIO:geometry_msgs:orca_msgs:pygame:python3-numpy:python3-opencv:rclpy:sensor_msgs:std_msgs:std_srvs

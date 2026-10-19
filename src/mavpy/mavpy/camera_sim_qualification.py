@@ -1,0 +1,334 @@
+#!/usr/bin/env python3
+import rclpy
+from rclpy.node import Node
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge
+import cv2
+import numpy as np
+from orca_msgs.msg import GateDetection
+
+# Oranye (tiang)
+ORANGE_LOW  = np.array([0,  100,  100])
+ORANGE_HIGH = np.array([30, 255,  255])
+
+# Hitam/gelap (top bar) — nilai HSV: V rendah = gelap
+DARK_LOW  = np.array([0,   0,   0])
+DARK_HIGH = np.array([180, 80,  60])
+
+# Toleransi geometri
+MIN_POST_AREA      = 80     # px² – kontur tiang minimum
+MIN_BAR_AREA       = 50     # px² – kontur bar minimum
+POST_ASPECT_MIN    = 1.5    # h/w minimum untuk tiang vertikal
+BAR_ASPECT_MAX     = 0.8    # h/w maksimum untuk bar horizontal
+POST_HEIGHT_RATIO  = 0.40   # toleransi perbedaan tinggi kedua tiang
+POST_TOP_DIFF_FRAC = 0.60   # toleransi perbedaan posisi atas tiang
+GAP_MIN_PX         = 30     # jarak horizontal minimum antar tiang
+GAP_MAX_FRAC       = 0.92   # jarak maksimum relatif terhadap lebar frame
+BAR_OVERLAP_MIN    = 0.35   # bar harus overlap >=35% dari lebar gate
+BAR_Y_MAX_FRAC     = 0.40   # bar harus berada di 40% atas gate
+
+
+class CameraSimQualification(Node):
+    def __init__(self):
+        super().__init__('camera_sim_qualification')
+        self.bridge = CvBridge()
+        self.sub = self.create_subscription(
+            Image, '/camera/image_raw', self.image_callback, 10)
+        self.pub = self.create_publisher(
+            GateDetection, '/orca/perception/gate', 10)
+        self.get_logger().info("Camera Gate SIM Node Started")
+
+    # ------------------------------------------------------------------
+    # 1. SEGMENTASI WARNA
+    # ------------------------------------------------------------------
+    def segment(self, hsv):
+        k = np.ones((5, 5), np.uint8)
+
+        mask_orange = cv2.inRange(hsv, ORANGE_LOW, ORANGE_HIGH)
+        mask_orange = cv2.morphologyEx(mask_orange, cv2.MORPH_CLOSE, k)
+        mask_orange = cv2.morphologyEx(mask_orange, cv2.MORPH_OPEN,  k)
+
+        mask_dark = cv2.inRange(hsv, DARK_LOW, DARK_HIGH)
+        mask_dark = cv2.morphologyEx(mask_dark, cv2.MORPH_CLOSE, k)
+        mask_dark = cv2.morphologyEx(mask_dark, cv2.MORPH_OPEN,  k)
+
+        return mask_orange, mask_dark
+
+    # ------------------------------------------------------------------
+    # 2. EKSTRAK KANDIDAT KOMPONEN
+    # ------------------------------------------------------------------
+    def extract_posts(self, mask_orange):
+        """Kembalikan daftar tiang vertikal dari mask oranye."""
+        contours, _ = cv2.findContours(
+            mask_orange, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        posts = []
+        for c in contours:
+            area = cv2.contourArea(c)
+            if area < MIN_POST_AREA:
+                continue
+            x, y, w, h = cv2.boundingRect(c)
+            if w == 0:
+                continue
+            aspect = h / float(w)
+            if aspect >= POST_ASPECT_MIN:
+                posts.append({
+                    'x': x, 'y': y, 'w': w, 'h': h,
+                    'area': area,
+                    'cx': x + w / 2.0,
+                    'cy': y + h / 2.0,
+                })
+        return posts
+
+    def extract_bars(self, mask_dark):
+        """Kembalikan daftar bar horizontal dari mask gelap."""
+        contours, _ = cv2.findContours(
+            mask_dark, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        bars = []
+        for c in contours:
+            area = cv2.contourArea(c)
+            if area < MIN_BAR_AREA:
+                continue
+            x, y, w, h = cv2.boundingRect(c)
+            if h == 0:
+                continue
+            aspect = h / float(w)
+            if aspect <= BAR_ASPECT_MAX:
+                bars.append({
+                    'x': x, 'y': y, 'w': w, 'h': h,
+                    'area': area,
+                    'cx': x + w / 2.0,
+                    'cy': y + h / 2.0,
+                })
+        return bars
+
+    # ------------------------------------------------------------------
+    # 3. RANGKAI GATE — wajib 3 komponen
+    # ------------------------------------------------------------------
+    def match_gate(self, posts, bars, frame_w, frame_h):
+        """
+        Kembalikan dict gate jika DAN HANYA JIKA:
+          - ditemukan tiang kiri + tiang kanan yang valid (oranye)
+          - ditemukan top bar yang valid (hitam) di atas kedua tiang
+
+        Return None jika salah satu syarat tidak terpenuhi.
+        """
+        if len(posts) < 2 or len(bars) < 1:
+            return None   # wajib ada minimal 2 tiang + 1 bar
+
+        # Ambil 6 tiang terbesar sebagai kandidat
+        posts = sorted(posts, key=lambda b: b['area'], reverse=True)[:6]
+
+        best_gate  = None
+        best_score = -1
+
+        for i in range(len(posts)):
+            for j in range(i + 1, len(posts)):
+                left  = posts[i] if posts[i]['cx'] <= posts[j]['cx'] else posts[j]
+                right = posts[i] if posts[i]['cx'] >  posts[j]['cx'] else posts[j]
+
+                # --- Validasi pasangan tiang ---
+                gap = right['cx'] - left['cx']
+                if gap < GAP_MIN_PX:
+                    continue
+                if gap > frame_w * GAP_MAX_FRAC:
+                    continue
+
+                h_ratio = (min(left['h'], right['h'])
+                           / max(left['h'], right['h']))
+                if h_ratio < POST_HEIGHT_RATIO:
+                    continue
+
+                top_diff = abs(left['y'] - right['y'])
+                if top_diff > max(left['h'], right['h']) * POST_TOP_DIFF_FRAC:
+                    continue
+
+                # Batas gate
+                gate_top    = min(left['y'], right['y'])
+                gate_bottom = max(left['y'] + left['h'], right['y'] + right['h'])
+                gate_left   = left['x']
+                gate_right  = right['x'] + right['w']
+                gate_width  = gate_right - gate_left
+                gate_height = gate_bottom - gate_top
+
+                # --- Cari top bar yang valid (WAJIB ADA) ---
+                matched_bar = None
+                for bar in bars:
+                    # Bar harus berada di zona atas gate
+                    bar_y_ok = bar['cy'] < (gate_top + gate_height * BAR_Y_MAX_FRAC)
+
+                    # Bar harus overlap secara horizontal dengan gate
+                    overlap_left  = max(bar['x'], gate_left)
+                    overlap_right = min(bar['x'] + bar['w'], gate_right)
+                    overlap_w     = overlap_right - overlap_left
+                    bar_x_ok = overlap_w >= gate_width * BAR_OVERLAP_MIN
+
+                    if bar_y_ok and bar_x_ok:
+                        matched_bar = bar
+                        break   # ambil bar pertama yang valid
+
+                # Gate HANYA valid jika bar ditemukan
+                if matched_bar is None:
+                    continue
+
+                # Skor kualitas pasangan
+                area_ratio = (gate_width * gate_height) / (frame_w * frame_h)
+                score = h_ratio * 0.5 + area_ratio * 0.5
+
+                if score > best_score:
+                    best_score = score
+                    best_gate  = {
+                        'x_min': gate_left,
+                        'y_min': gate_top,
+                        'x_max': gate_right,
+                        'y_max': gate_bottom,
+                        'left_post':  left,
+                        'right_post': right,
+                        'top_bar':    matched_bar,
+                        'score':      score,
+                        'confidence': 1.0,   # semua 3 komponen terdeteksi
+                    }
+
+        return best_gate   # None jika tidak ada pasangan valid + bar
+
+    # ------------------------------------------------------------------
+    # 4. CALLBACK UTAMA
+    # ------------------------------------------------------------------
+    def image_callback(self, msg):
+        frame = self.bridge.imgmsg_to_cv2(msg, 'bgr8')
+        h, w, _ = frame.shape
+        frame_cx = w / 2.0
+        frame_cy = h / 2.0
+
+        hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+
+        mask_orange, mask_dark = self.segment(hsv)
+        posts = self.extract_posts(mask_orange)
+        bars  = self.extract_bars(mask_dark)
+        gate  = self.match_gate(posts, bars, w, h)
+
+        msg_out            = GateDetection()
+        msg_out.detected   = False
+        msg_out.class_name = "gate"
+        msg_out.distance   = 0.0
+
+        if gate is not None:
+            # --- Kalkulasi metrik ---
+            x_min, y_min = gate['x_min'], gate['y_min']
+            x_max, y_max = gate['x_max'], gate['y_max']
+            bbox_w  = x_max - x_min
+            bbox_h  = y_max - y_min
+            gate_cx = x_min + bbox_w / 2.0
+            gate_cy = y_min + bbox_h / 2.0
+
+            dx = gate_cx - frame_cx
+            dy = gate_cy - frame_cy
+            pixel_distance = float(np.sqrt(dx**2 + dy**2))
+            frame_diagonal = float(np.sqrt(w**2 + h**2))
+            distance_norm  = pixel_distance / frame_diagonal
+            center_x_norm  = dx / (w / 2.0)
+            area_ratio     = (bbox_w * bbox_h) / (w * h)
+
+            # --- Publish ---
+            msg_out.detected        = True
+            msg_out.confidence      = float(gate['confidence'])
+            msg_out.center_x        = float(gate_cx)
+            msg_out.center_y        = float(gate_cy)
+            msg_out.center_x_norm   = float(center_x_norm)
+            msg_out.bbox_width      = float(bbox_w)
+            msg_out.bbox_height     = float(bbox_h)
+            msg_out.bbox_area_ratio = float(area_ratio)
+            msg_out.distance        = float(distance_norm)
+
+            # --- Visualisasi ---
+            # Tiang kiri (oranye)
+            lp = gate['left_post']
+            cv2.rectangle(frame,
+                          (lp['x'], lp['y']),
+                          (lp['x'] + lp['w'], lp['y'] + lp['h']),
+                          (0, 140, 255), 2)
+            cv2.putText(frame, "L",
+                        (lp['x'], lp['y'] - 5),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 140, 255), 2)
+
+            # Tiang kanan (oranye)
+            rp = gate['right_post']
+            cv2.rectangle(frame,
+                          (rp['x'], rp['y']),
+                          (rp['x'] + rp['w'], rp['y'] + rp['h']),
+                          (0, 140, 255), 2)
+            cv2.putText(frame, "R",
+                        (rp['x'], rp['y'] - 5),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 140, 255), 2)
+
+            # Top bar (kuning)
+            bar = gate['top_bar']
+            cv2.rectangle(frame,
+                          (bar['x'], bar['y']),
+                          (bar['x'] + bar['w'], bar['y'] + bar['h']),
+                          (0, 255, 255), 2)
+            cv2.putText(frame, "BAR",
+                        (bar['x'], bar['y'] - 5),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 255), 2)
+
+            # Bounding box satu kesatuan gate (hijau tebal)
+            cv2.rectangle(frame,
+                          (int(x_min), int(y_min)),
+                          (int(x_max), int(y_max)),
+                          (0, 255, 0), 3)
+
+            # Titik tengah gate & frame + garis error
+            cv2.circle(frame, (int(gate_cx), int(gate_cy)), 7, (0, 0, 255), -1)
+            cv2.circle(frame, (int(frame_cx), int(frame_cy)), 7, (0, 255, 255), -1)
+            cv2.line(frame,
+                     (int(frame_cx), int(frame_cy)),
+                     (int(gate_cx),  int(gate_cy)),
+                     (255, 255, 255), 2)
+
+            # HUD
+            cv2.putText(frame, "GATE DETECTED [L + R + BAR]",
+                        (10, 28), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+            cv2.putText(frame, f"dx={dx:+.1f}  dy={dy:+.1f}",
+                        (10, 55), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 0), 2)
+            cv2.putText(frame, f"dist={distance_norm:.3f}  conf={gate['confidence']:.2f}",
+                        (10, 80), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 0), 2)
+
+            self.get_logger().info(
+                f"[GATE] dx={dx:+.1f} dy={dy:+.1f} "
+                f"dist={distance_norm:.3f} conf={gate['confidence']:.2f}"
+            )
+
+        else:
+            # --- Debug: tunjukkan komponen yang ditemukan ---
+            n_posts = len(posts)
+            n_bars  = len(bars)
+
+            for p in posts:
+                cv2.rectangle(frame,
+                              (p['x'], p['y']),
+                              (p['x'] + p['w'], p['y'] + p['h']),
+                              (0, 80, 200), 1)
+            for b in bars:
+                cv2.rectangle(frame,
+                              (b['x'], b['y']),
+                              (b['x'] + b['w'], b['y'] + b['h']),
+                              (80, 80, 0), 1)
+
+            cv2.putText(frame, "NO GATE DETECTED", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
+            self.get_logger().warn(f"Gate NOT detected")
+
+        self.pub.publish(msg_out)
+        cv2.imshow("SIM Gate Detection", frame)
+        # Uncomment untuk debug mask:
+        # cv2.imshow("mask_orange", mask_orange)
+        # cv2.imshow("mask_dark",   mask_dark)
+        cv2.waitKey(1)
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = CameraSimQualification()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()

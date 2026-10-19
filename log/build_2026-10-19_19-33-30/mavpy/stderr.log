@@ -1,0 +1,5 @@
+  File "/home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy/camera_sim_final.py", line 9
+    class CameraSimFinal()
+                          ^
+SyntaxError: expected ':'
+
