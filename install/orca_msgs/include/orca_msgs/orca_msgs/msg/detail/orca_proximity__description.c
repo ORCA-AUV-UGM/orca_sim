@@ -66,11 +66,6 @@ orca_msgs__msg__OrcaProximity__get_type_description(
 }
 
 static char toplevel_type_raw_source[] =
-  "#data proximity isinya boolean doang njir\n"
-  "#true = arm\n"
-  "#false = disarm\n"
-  "\n"
-  "\n"
   "bool arm_mode";
 
 static char msg_encoding[] = "msg";
@@ -85,7 +80,7 @@ orca_msgs__msg__OrcaProximity__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {orca_msgs__msg__OrcaProximity__TYPE_NAME, 27, 27},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 85, 85},
+    {toplevel_type_raw_source, 13, 13},
   };
   return &source;
 }

@@ -17,7 +17,7 @@ orca_msgs__msg__FailsafeTrigger__init(orca_msgs__msg__FailsafeTrigger * msg)
   if (!msg) {
     return false;
   }
-  // structure_needs_at_least_one_member
+  // active
   return true;
 }
 
@@ -27,7 +27,7 @@ orca_msgs__msg__FailsafeTrigger__fini(orca_msgs__msg__FailsafeTrigger * msg)
   if (!msg) {
     return;
   }
-  // structure_needs_at_least_one_member
+  // active
 }
 
 bool
@@ -36,8 +36,8 @@ orca_msgs__msg__FailsafeTrigger__are_equal(const orca_msgs__msg__FailsafeTrigger
   if (!lhs || !rhs) {
     return false;
   }
-  // structure_needs_at_least_one_member
-  if (lhs->structure_needs_at_least_one_member != rhs->structure_needs_at_least_one_member) {
+  // active
+  if (lhs->active != rhs->active) {
     return false;
   }
   return true;
@@ -51,8 +51,8 @@ orca_msgs__msg__FailsafeTrigger__copy(
   if (!input || !output) {
     return false;
   }
-  // structure_needs_at_least_one_member
-  output->structure_needs_at_least_one_member = input->structure_needs_at_least_one_member;
+  // active
+  output->active = input->active;
   return true;
 }
 

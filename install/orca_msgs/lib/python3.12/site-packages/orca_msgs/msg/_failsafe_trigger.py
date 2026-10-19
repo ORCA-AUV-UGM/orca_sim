@@ -12,6 +12,8 @@ ros_python_check_fields = getenv('ROS_PYTHON_CHECK_FIELDS', default='')
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -60,15 +62,18 @@ class FailsafeTrigger(metaclass=Metaclass_FailsafeTrigger):
     """Message class 'FailsafeTrigger'."""
 
     __slots__ = [
+        '_active',
         '_check_fields',
     ]
 
     _fields_and_field_types = {
+        'active': 'boolean',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -80,6 +85,7 @@ class FailsafeTrigger(metaclass=Metaclass_FailsafeTrigger):
             assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        self.active = kwargs.get('active', bool())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -111,9 +117,24 @@ class FailsafeTrigger(metaclass=Metaclass_FailsafeTrigger):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
+        if self.active != other.active:
+            return False
         return True
 
     @classmethod
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
+
+    @builtins.property
+    def active(self):
+        """Message field 'active'."""
+        return self._active
+
+    @active.setter
+    def active(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, bool), \
+                "The 'active' field must be of type 'bool'"
+        self._active = value

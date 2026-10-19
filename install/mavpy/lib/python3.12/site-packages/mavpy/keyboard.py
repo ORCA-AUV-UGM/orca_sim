@@ -4,11 +4,10 @@ import rclpy
 from rclpy.node import Node
 from orca_msgs.msg import OrcaControl
 
-
 class ROVTeleop(Node):
     def __init__(self):
         super().__init__('orca_keyboard_node')
-        self.declare_parameter('manual_control_topic', '/orca/manual/control')
+        self.declare_parameter('manual_control_topic', '/manual/control')
         self.declare_parameter('keyboard_publish_hz', 20.0)
         self.declare_parameter('keyboard_step_pwm', 10)
         self.declare_parameter('keyboard_pwm_min', 1160)
@@ -28,12 +27,34 @@ class ROVTeleop(Node):
 
         self.publisher_ = self.create_publisher(OrcaControl, self.topic_name, 10)
         self.get_logger().info(
-            'Keyboard aktif. W/S forward, A/D lateral, panah yaw/throttle, '
-            'J arm, K mode, R open_right, C close, L open_left gripper'
+            'Keyboard aktif.\n'
+            '- W/S: Forward/Backward\n'
+            '- A/D: Lateral Left/Right\n'
+            '- Panah Kiri/Kanan: Yaw Left/Right\n'
+            '- Panah Atas/Bawah: Throttle Up/Down\n'
+            '- T/G: Pitch Up/Down\n'
+            '- F/H: Roll Left/Right\n'
+            '- 1: Open Left, 2: Close, 3: Open Right (Gripper)\n'
+            '- J: Toggle Arm/Disarm\n'
+            '- K: Toggle Mode'
         )
 
-        self.axis_pwm = {'forward': 1500, 'lateral': 1500, 'yaw': 1500, 'throttle': 1500}
-        self.axis_dir = {'forward': 0, 'lateral': 0, 'yaw': 0, 'throttle': 0}
+        self.axis_pwm = {
+            'pitch': 1500,
+            'roll': 1500,
+            'forward': 1500,
+            'lateral': 1500,
+            'yaw': 1500,
+            'throttle': 1500
+        }
+        self.axis_dir = {
+            'pitch': 0,
+            'roll': 0,
+            'forward': 0,
+            'lateral': 0,
+            'yaw': 0,
+            'throttle': 0
+        }
         self.arm_toggle = 'disarm'
         self.control_modes = ['MANUAL', 'ALT_HOLD']
         self.control_mode_idx = 0
@@ -47,32 +68,56 @@ class ROVTeleop(Node):
             if event.type == pygame.QUIT:
                 raise KeyboardInterrupt
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_j:
+                # Gripper control
+                if event.key == pygame.K_1 or event.key == pygame.K_KP1:
+                    self.gripper_idx = 2  # open_left
+                elif event.key == pygame.K_2 or event.key == pygame.K_KP2:
+                    self.gripper_idx = 1  # close
+                elif event.key == pygame.K_3 or event.key == pygame.K_KP3:
+                    self.gripper_idx = 0  # open_right
+
+                # System toggles
+                elif event.key == pygame.K_j:
                     self.arm_toggle = 'arm' if self.arm_toggle == 'disarm' else 'disarm'
                 elif event.key == pygame.K_k:
                     self.control_mode_idx = (self.control_mode_idx + 1) % len(self.control_modes)
-                elif event.key == pygame.K_r:
-                    self.gripper_idx = 0  # open_right
-                elif event.key == pygame.K_c:
-                    self.gripper_idx = 1  # close
-                elif event.key == pygame.K_l:
-                    self.gripper_idx = 2  # open_left
+
+                # Movement - Forward/Backward
                 elif event.key == pygame.K_w:
                     self.axis_dir['forward'] = 1
                 elif event.key == pygame.K_s:
                     self.axis_dir['forward'] = -1
+
+                # Movement - Lateral
                 elif event.key == pygame.K_d:
                     self.axis_dir['lateral'] = 1
                 elif event.key == pygame.K_a:
                     self.axis_dir['lateral'] = -1
+
+                # Movement - Yaw
                 elif event.key == pygame.K_RIGHT:
                     self.axis_dir['yaw'] = 1
                 elif event.key == pygame.K_LEFT:
                     self.axis_dir['yaw'] = -1
+
+                # Movement - Throttle
                 elif event.key == pygame.K_UP:
                     self.axis_dir['throttle'] = 1
                 elif event.key == pygame.K_DOWN:
                     self.axis_dir['throttle'] = -1
+
+                # Movement - Pitch
+                elif event.key == pygame.K_t:
+                    self.axis_dir['pitch'] = 1
+                elif event.key == pygame.K_g:
+                    self.axis_dir['pitch'] = -1
+
+                # Movement - Roll
+                elif event.key == pygame.K_h:
+                    self.axis_dir['roll'] = 1
+                elif event.key == pygame.K_f:
+                    self.axis_dir['roll'] = -1
+
             elif event.type == pygame.KEYUP:
                 if event.key in [pygame.K_w, pygame.K_s]:
                     self.axis_dir['forward'] = 0
@@ -82,10 +127,16 @@ class ROVTeleop(Node):
                     self.axis_dir['yaw'] = 0
                 elif event.key in [pygame.K_UP, pygame.K_DOWN]:
                     self.axis_dir['throttle'] = 0
+                elif event.key in [pygame.K_t, pygame.K_g]:
+                    self.axis_dir['pitch'] = 0
+                elif event.key in [pygame.K_f, pygame.K_h]:
+                    self.axis_dir['roll'] = 0
 
         self.update_axis_pwm()
 
         msg = OrcaControl()
+        msg.pitch = self.axis_pwm['pitch']
+        msg.roll = self.axis_pwm['roll']
         msg.forward = self.axis_pwm['forward']
         msg.lateral = self.axis_pwm['lateral']
         msg.yaw = self.axis_pwm['yaw']
@@ -124,7 +175,6 @@ def main(args=None):
     finally:
         node.destroy_node()
         rclpy.shutdown()
-
 
 if __name__ == '__main__':
     main()

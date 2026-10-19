@@ -1,4 +1,5 @@
 [console_scripts]
+attitude_node = mavpy.attitude_node:main
 control_bridge = mavpy.control_bridge:main
 keyboard = mavpy.keyboard:main
 test_control = mavpy.test_control:main

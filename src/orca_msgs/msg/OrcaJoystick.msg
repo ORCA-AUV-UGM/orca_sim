@@ -2,7 +2,10 @@
 int16 throttle
 int16 lateral
 int16 forward
+
 int16 yaw
+int16 roll
+int16 pitch
 
 #tombol
 # bool x_button

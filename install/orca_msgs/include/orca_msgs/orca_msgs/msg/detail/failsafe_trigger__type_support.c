@@ -33,15 +33,15 @@ void orca_msgs__msg__FailsafeTrigger__rosidl_typesupport_introspection_c__Failsa
 
 static rosidl_typesupport_introspection_c__MessageMember orca_msgs__msg__FailsafeTrigger__rosidl_typesupport_introspection_c__FailsafeTrigger_message_member_array[1] = {
   {
-    "structure_needs_at_least_one_member",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
+    "active",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(orca_msgs__msg__FailsafeTrigger, structure_needs_at_least_one_member),  // bytes offset in struct
+    offsetof(orca_msgs__msg__FailsafeTrigger, active),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

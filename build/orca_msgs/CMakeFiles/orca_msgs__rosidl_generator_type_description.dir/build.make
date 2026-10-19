@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/riovaldo/orca_ws/src/orca_msgs
+CMAKE_SOURCE_DIR = /home/riovaldo/orcav4_ws/src/orca_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/riovaldo/orca_ws/build/orca_msgs
+CMAKE_BINARY_DIR = /home/riovaldo/orcav4_ws/build/orca_msgs
 
 # Utility rule file for orca_msgs__rosidl_generator_type_description.
 
@@ -85,8 +85,8 @@ rosidl_generator_type_description/orca_msgs/msg/FinalDetection.json: rosidl_adap
 rosidl_generator_type_description/orca_msgs/msg/FinalDetection.json: rosidl_adapter/orca_msgs/msg/OrcaControl.idl
 rosidl_generator_type_description/orca_msgs/msg/FinalDetection.json: rosidl_adapter/orca_msgs/msg/FlareSequence.idl
 rosidl_generator_type_description/orca_msgs/msg/FinalDetection.json: rosidl_adapter/orca_msgs/msg/FailsafeTrigger.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/riovaldo/orca_ws/build/orca_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating type hashes for ROS interfaces"
-	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description --generator-arguments-file /home/riovaldo/orca_ws/build/orca_msgs/rosidl_generator_type_description__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/riovaldo/orcav4_ws/build/orca_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating type hashes for ROS interfaces"
+	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description --generator-arguments-file /home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_generator_type_description__arguments.json
 
 rosidl_generator_type_description/orca_msgs/msg/GateDetection.json: rosidl_generator_type_description/orca_msgs/msg/FinalDetection.json
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/orca_msgs/msg/GateDetection.json
@@ -130,6 +130,6 @@ CMakeFiles/orca_msgs__rosidl_generator_type_description.dir/clean:
 .PHONY : CMakeFiles/orca_msgs__rosidl_generator_type_description.dir/clean
 
 CMakeFiles/orca_msgs__rosidl_generator_type_description.dir/depend:
-	cd /home/riovaldo/orca_ws/build/orca_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/riovaldo/orca_ws/src/orca_msgs /home/riovaldo/orca_ws/src/orca_msgs /home/riovaldo/orca_ws/build/orca_msgs /home/riovaldo/orca_ws/build/orca_msgs /home/riovaldo/orca_ws/build/orca_msgs/CMakeFiles/orca_msgs__rosidl_generator_type_description.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/riovaldo/orcav4_ws/build/orca_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/riovaldo/orcav4_ws/src/orca_msgs /home/riovaldo/orcav4_ws/src/orca_msgs /home/riovaldo/orcav4_ws/build/orca_msgs /home/riovaldo/orcav4_ws/build/orca_msgs /home/riovaldo/orcav4_ws/build/orca_msgs/CMakeFiles/orca_msgs__rosidl_generator_type_description.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/orca_msgs__rosidl_generator_type_description.dir/depend
 

@@ -50,7 +50,15 @@ bool orca_msgs__msg__failsafe_trigger__convert_from_py(PyObject * _pymsg, void *
     assert(strncmp("orca_msgs.msg._failsafe_trigger.FailsafeTrigger", full_classname_dest, 47) == 0);
   }
   orca_msgs__msg__FailsafeTrigger * ros_message = _ros_message;
-  ros_message->structure_needs_at_least_one_member = 0;
+  {  // active
+    PyObject * field = PyObject_GetAttrString(_pymsg, "active");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->active = (Py_True == field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -72,7 +80,18 @@ PyObject * orca_msgs__msg__failsafe_trigger__convert_to_py(void * raw_ros_messag
       return NULL;
     }
   }
-  (void)raw_ros_message;
+  orca_msgs__msg__FailsafeTrigger * ros_message = (orca_msgs__msg__FailsafeTrigger *)raw_ros_message;
+  {  // active
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->active ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "active", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
 
   // ownership of _pymessage is transferred to the caller
   return _pymessage;

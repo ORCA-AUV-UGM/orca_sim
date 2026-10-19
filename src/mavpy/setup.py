@@ -24,6 +24,8 @@ setup(
         'console_scripts': [
             'test_control = mavpy.test_control:main',
             'test_keyboard = mavpy.test_keyboard:main',
+
+            'attitude_node = mavpy.attitude_node:main',
             'control_bridge = mavpy.control_bridge:main',
             'keyboard = mavpy.keyboard:main',
         ],

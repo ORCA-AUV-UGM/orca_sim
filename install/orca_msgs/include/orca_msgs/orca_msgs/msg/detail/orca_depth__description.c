@@ -77,7 +77,6 @@ orca_msgs__msg__OrcaDepth__get_type_description(
 }
 
 static char toplevel_type_raw_source[] =
-  "\n"
   "float32 depth\n"
   "float32 pressure";
 
@@ -93,7 +92,7 @@ orca_msgs__msg__OrcaDepth__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {orca_msgs__msg__OrcaDepth__TYPE_NAME, 23, 23},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 31, 31},
+    {toplevel_type_raw_source, 30, 30},
   };
   return &source;
 }

@@ -12,9 +12,9 @@ module orca_msgs {
 
       float initial_z;
 
-      float yaw_deg;
-
       float initial_deg;
+
+      float yaw_deg;
 
       float roll_deg;
 

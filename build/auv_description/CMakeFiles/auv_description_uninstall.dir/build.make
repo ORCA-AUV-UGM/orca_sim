@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/riovaldo/orca_ws/src/auv_description
+CMAKE_SOURCE_DIR = /home/riovaldo/orcav4_ws/src/auv_description
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/riovaldo/orca_ws/build/auv_description
+CMAKE_BINARY_DIR = /home/riovaldo/orcav4_ws/build/auv_description
 
 # Utility rule file for auv_description_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/auv_description_uninstall.dir/compiler_depend.make
 include CMakeFiles/auv_description_uninstall.dir/progress.make
 
 CMakeFiles/auv_description_uninstall:
-	/usr/bin/cmake -P /home/riovaldo/orca_ws/build/auv_description/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/riovaldo/orcav4_ws/build/auv_description/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 auv_description_uninstall: CMakeFiles/auv_description_uninstall
 auv_description_uninstall: CMakeFiles/auv_description_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/auv_description_uninstall.dir/clean:
 .PHONY : CMakeFiles/auv_description_uninstall.dir/clean
 
 CMakeFiles/auv_description_uninstall.dir/depend:
-	cd /home/riovaldo/orca_ws/build/auv_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/riovaldo/orca_ws/src/auv_description /home/riovaldo/orca_ws/src/auv_description /home/riovaldo/orca_ws/build/auv_description /home/riovaldo/orca_ws/build/auv_description /home/riovaldo/orca_ws/build/auv_description/CMakeFiles/auv_description_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/riovaldo/orcav4_ws/build/auv_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/riovaldo/orcav4_ws/src/auv_description /home/riovaldo/orcav4_ws/src/auv_description /home/riovaldo/orcav4_ws/build/auv_description /home/riovaldo/orcav4_ws/build/auv_description /home/riovaldo/orcav4_ws/build/auv_description/CMakeFiles/auv_description_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/auv_description_uninstall.dir/depend
 

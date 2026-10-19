@@ -4,10 +4,10 @@
 
 #include <string.h>
 
+#include "rosidl_typesupport_interface/macros.h"
+#include "orca_msgs/msg/detail/failsafe_trigger__type_support.h"
 #include "orca_msgs/msg/detail/failsafe_trigger__struct.h"
 #include "orca_msgs/msg/detail/failsafe_trigger__functions.h"
-#include "orca_msgs/msg/detail/failsafe_trigger__type_support.h"
-#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

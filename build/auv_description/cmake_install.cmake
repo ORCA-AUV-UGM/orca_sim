@@ -1,8 +1,8 @@
-# Install script for directory: /home/riovaldo/orca_ws/src/auv_description
+# Install script for directory: /home/riovaldo/orcav4_ws/src/auv_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/riovaldo/orca_ws/install/auv_description")
+  set(CMAKE_INSTALL_PREFIX "/home/riovaldo/orcav4_ws/install/auv_description")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,19 +44,19 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/auv_description/" TYPE DIRECTORY FILES
-    "/home/riovaldo/orca_ws/src/auv_description/urdf"
-    "/home/riovaldo/orca_ws/src/auv_description/launch"
-    "/home/riovaldo/orca_ws/src/auv_description/meshes"
-    "/home/riovaldo/orca_ws/src/auv_description/rviz"
+    "/home/riovaldo/orcav4_ws/src/auv_description/urdf"
+    "/home/riovaldo/orcav4_ws/src/auv_description/launch"
+    "/home/riovaldo/orcav4_ws/src/auv_description/meshes"
+    "/home/riovaldo/orcav4_ws/src/auv_description/rviz"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/riovaldo/orca_ws/build/auv_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/auv_description")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/riovaldo/orcav4_ws/build/auv_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/auv_description")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/riovaldo/orca_ws/build/auv_description/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/auv_description")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/riovaldo/orcav4_ws/build/auv_description/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/auv_description")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -64,7 +64,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/auv_description/environment" TYPE FILE FILES "/home/riovaldo/orca_ws/build/auv_description/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/auv_description/environment" TYPE FILE FILES "/home/riovaldo/orcav4_ws/build/auv_description/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -72,42 +72,42 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/auv_description/environment" TYPE FILE FILES "/home/riovaldo/orca_ws/build/auv_description/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/auv_description/environment" TYPE FILE FILES "/home/riovaldo/orcav4_ws/build/auv_description/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/auv_description" TYPE FILE FILES "/home/riovaldo/orca_ws/build/auv_description/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/auv_description" TYPE FILE FILES "/home/riovaldo/orcav4_ws/build/auv_description/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/auv_description" TYPE FILE FILES "/home/riovaldo/orca_ws/build/auv_description/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/auv_description" TYPE FILE FILES "/home/riovaldo/orcav4_ws/build/auv_description/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/auv_description" TYPE FILE FILES "/home/riovaldo/orca_ws/build/auv_description/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/auv_description" TYPE FILE FILES "/home/riovaldo/orcav4_ws/build/auv_description/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/auv_description" TYPE FILE FILES "/home/riovaldo/orca_ws/build/auv_description/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/auv_description" TYPE FILE FILES "/home/riovaldo/orcav4_ws/build/auv_description/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/auv_description" TYPE FILE FILES "/home/riovaldo/orca_ws/build/auv_description/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/auv_description" TYPE FILE FILES "/home/riovaldo/orcav4_ws/build/auv_description/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/riovaldo/orca_ws/build/auv_description/ament_cmake_index/share/ament_index/resource_index/packages/auv_description")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/riovaldo/orcav4_ws/build/auv_description/ament_cmake_index/share/ament_index/resource_index/packages/auv_description")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/auv_description/cmake" TYPE FILE FILES
-    "/home/riovaldo/orca_ws/build/auv_description/ament_cmake_core/auv_descriptionConfig.cmake"
-    "/home/riovaldo/orca_ws/build/auv_description/ament_cmake_core/auv_descriptionConfig-version.cmake"
+    "/home/riovaldo/orcav4_ws/build/auv_description/ament_cmake_core/auv_descriptionConfig.cmake"
+    "/home/riovaldo/orcav4_ws/build/auv_description/ament_cmake_core/auv_descriptionConfig-version.cmake"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/auv_description" TYPE FILE FILES "/home/riovaldo/orca_ws/src/auv_description/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/auv_description" TYPE FILE FILES "/home/riovaldo/orcav4_ws/src/auv_description/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -118,5 +118,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/riovaldo/orca_ws/build/auv_description/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/riovaldo/orcav4_ws/build/auv_description/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

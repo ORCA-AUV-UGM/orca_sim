@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/riovaldo/orca_ws/src/orca_msgs
+CMAKE_SOURCE_DIR = /home/riovaldo/orcav4_ws/src/orca_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/riovaldo/orca_ws/build/orca_msgs
+CMAKE_BINARY_DIR = /home/riovaldo/orcav4_ws/build/orca_msgs
 
 # Utility rule file for orca_msgs.
 
@@ -66,14 +66,14 @@ include CMakeFiles/orca_msgs.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/orca_msgs.dir/progress.make
 
-CMakeFiles/orca_msgs: /home/riovaldo/orca_ws/src/orca_msgs/msg/FinalDetection.msg
-CMakeFiles/orca_msgs: /home/riovaldo/orca_ws/src/orca_msgs/msg/GateDetection.msg
-CMakeFiles/orca_msgs: /home/riovaldo/orca_ws/src/orca_msgs/msg/OrcaDepth.msg
-CMakeFiles/orca_msgs: /home/riovaldo/orca_ws/src/orca_msgs/msg/OrcaAttitude.msg
-CMakeFiles/orca_msgs: /home/riovaldo/orca_ws/src/orca_msgs/msg/OrcaProximity.msg
-CMakeFiles/orca_msgs: /home/riovaldo/orca_ws/src/orca_msgs/msg/OrcaControl.msg
-CMakeFiles/orca_msgs: /home/riovaldo/orca_ws/src/orca_msgs/msg/FlareSequence.msg
-CMakeFiles/orca_msgs: /home/riovaldo/orca_ws/src/orca_msgs/msg/FailsafeTrigger.msg
+CMakeFiles/orca_msgs: /home/riovaldo/orcav4_ws/src/orca_msgs/msg/FinalDetection.msg
+CMakeFiles/orca_msgs: /home/riovaldo/orcav4_ws/src/orca_msgs/msg/GateDetection.msg
+CMakeFiles/orca_msgs: /home/riovaldo/orcav4_ws/src/orca_msgs/msg/OrcaDepth.msg
+CMakeFiles/orca_msgs: /home/riovaldo/orcav4_ws/src/orca_msgs/msg/OrcaAttitude.msg
+CMakeFiles/orca_msgs: /home/riovaldo/orcav4_ws/src/orca_msgs/msg/OrcaProximity.msg
+CMakeFiles/orca_msgs: /home/riovaldo/orcav4_ws/src/orca_msgs/msg/OrcaControl.msg
+CMakeFiles/orca_msgs: /home/riovaldo/orcav4_ws/src/orca_msgs/msg/FlareSequence.msg
+CMakeFiles/orca_msgs: /home/riovaldo/orcav4_ws/src/orca_msgs/msg/FailsafeTrigger.msg
 
 orca_msgs: CMakeFiles/orca_msgs
 orca_msgs: CMakeFiles/orca_msgs.dir/build.make
@@ -88,6 +88,6 @@ CMakeFiles/orca_msgs.dir/clean:
 .PHONY : CMakeFiles/orca_msgs.dir/clean
 
 CMakeFiles/orca_msgs.dir/depend:
-	cd /home/riovaldo/orca_ws/build/orca_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/riovaldo/orca_ws/src/orca_msgs /home/riovaldo/orca_ws/src/orca_msgs /home/riovaldo/orca_ws/build/orca_msgs /home/riovaldo/orca_ws/build/orca_msgs /home/riovaldo/orca_ws/build/orca_msgs/CMakeFiles/orca_msgs.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/riovaldo/orcav4_ws/build/orca_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/riovaldo/orcav4_ws/src/orca_msgs /home/riovaldo/orcav4_ws/src/orca_msgs /home/riovaldo/orcav4_ws/build/orca_msgs /home/riovaldo/orcav4_ws/build/orca_msgs /home/riovaldo/orcav4_ws/build/orca_msgs/CMakeFiles/orca_msgs.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/orca_msgs.dir/depend
 

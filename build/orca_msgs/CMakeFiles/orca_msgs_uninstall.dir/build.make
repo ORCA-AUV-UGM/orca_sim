@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/riovaldo/orca_ws/src/orca_msgs
+CMAKE_SOURCE_DIR = /home/riovaldo/orcav4_ws/src/orca_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/riovaldo/orca_ws/build/orca_msgs
+CMAKE_BINARY_DIR = /home/riovaldo/orcav4_ws/build/orca_msgs
 
 # Utility rule file for orca_msgs_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/orca_msgs_uninstall.dir/compiler_depend.make
 include CMakeFiles/orca_msgs_uninstall.dir/progress.make
 
 CMakeFiles/orca_msgs_uninstall:
-	/usr/bin/cmake -P /home/riovaldo/orca_ws/build/orca_msgs/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/riovaldo/orcav4_ws/build/orca_msgs/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 orca_msgs_uninstall: CMakeFiles/orca_msgs_uninstall
 orca_msgs_uninstall: CMakeFiles/orca_msgs_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/orca_msgs_uninstall.dir/clean:
 .PHONY : CMakeFiles/orca_msgs_uninstall.dir/clean
 
 CMakeFiles/orca_msgs_uninstall.dir/depend:
-	cd /home/riovaldo/orca_ws/build/orca_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/riovaldo/orca_ws/src/orca_msgs /home/riovaldo/orca_ws/src/orca_msgs /home/riovaldo/orca_ws/build/orca_msgs /home/riovaldo/orca_ws/build/orca_msgs /home/riovaldo/orca_ws/build/orca_msgs/CMakeFiles/orca_msgs_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/riovaldo/orcav4_ws/build/orca_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/riovaldo/orcav4_ws/src/orca_msgs /home/riovaldo/orcav4_ws/src/orca_msgs /home/riovaldo/orcav4_ws/build/orca_msgs /home/riovaldo/orcav4_ws/build/orca_msgs /home/riovaldo/orcav4_ws/build/orca_msgs/CMakeFiles/orca_msgs_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/orca_msgs_uninstall.dir/depend
 

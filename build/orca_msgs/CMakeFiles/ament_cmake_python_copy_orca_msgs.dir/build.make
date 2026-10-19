@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/riovaldo/orca_ws/src/orca_msgs
+CMAKE_SOURCE_DIR = /home/riovaldo/orcav4_ws/src/orca_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/riovaldo/orca_ws/build/orca_msgs
+CMAKE_BINARY_DIR = /home/riovaldo/orcav4_ws/build/orca_msgs
 
 # Utility rule file for ament_cmake_python_copy_orca_msgs.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_copy_orca_msgs.dir/compiler_depend.make
 include CMakeFiles/ament_cmake_python_copy_orca_msgs.dir/progress.make
 
 CMakeFiles/ament_cmake_python_copy_orca_msgs:
-	/usr/bin/cmake -E copy_directory /home/riovaldo/orca_ws/build/orca_msgs/rosidl_generator_py/orca_msgs /home/riovaldo/orca_ws/build/orca_msgs/ament_cmake_python/orca_msgs/orca_msgs
+	/usr/bin/cmake -E copy_directory /home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_generator_py/orca_msgs /home/riovaldo/orcav4_ws/build/orca_msgs/ament_cmake_python/orca_msgs/orca_msgs
 
 ament_cmake_python_copy_orca_msgs: CMakeFiles/ament_cmake_python_copy_orca_msgs
 ament_cmake_python_copy_orca_msgs: CMakeFiles/ament_cmake_python_copy_orca_msgs.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_copy_orca_msgs.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_copy_orca_msgs.dir/clean
 
 CMakeFiles/ament_cmake_python_copy_orca_msgs.dir/depend:
-	cd /home/riovaldo/orca_ws/build/orca_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/riovaldo/orca_ws/src/orca_msgs /home/riovaldo/orca_ws/src/orca_msgs /home/riovaldo/orca_ws/build/orca_msgs /home/riovaldo/orca_ws/build/orca_msgs /home/riovaldo/orca_ws/build/orca_msgs/CMakeFiles/ament_cmake_python_copy_orca_msgs.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/riovaldo/orcav4_ws/build/orca_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/riovaldo/orcav4_ws/src/orca_msgs /home/riovaldo/orcav4_ws/src/orca_msgs /home/riovaldo/orcav4_ws/build/orca_msgs /home/riovaldo/orcav4_ws/build/orca_msgs /home/riovaldo/orcav4_ws/build/orca_msgs/CMakeFiles/ament_cmake_python_copy_orca_msgs.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ament_cmake_python_copy_orca_msgs.dir/depend
 

@@ -4,9 +4,9 @@
       "type_name": "orca_msgs/msg/FailsafeTrigger",
       "fields": [
         {
-          "name": "structure_needs_at_least_one_member",
+          "name": "active",
           "type": {
-            "type_id": 3,
+            "type_id": 15,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -20,7 +20,7 @@
   "type_hashes": [
     {
       "type_name": "orca_msgs/msg/FailsafeTrigger",
-      "hash_string": "RIHS01_2f9f7916724b754eb9840a7bd47b5bb9beccbea443fedd5464db644d310e69b0"
+      "hash_string": "RIHS01_de312d572bbc1432cf3758d534839f5c671f3c0ad50218ef9a2eb7c4aa5b7c17"
     }
   ]
 }

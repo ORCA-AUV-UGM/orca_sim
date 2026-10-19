@@ -1,0 +1,48 @@
+running egg_info
+creating ../../build/mavpy/mavpy.egg-info
+writing ../../build/mavpy/mavpy.egg-info/PKG-INFO
+writing dependency_links to ../../build/mavpy/mavpy.egg-info/dependency_links.txt
+writing entry points to ../../build/mavpy/mavpy.egg-info/entry_points.txt
+writing requirements to ../../build/mavpy/mavpy.egg-info/requires.txt
+writing top-level names to ../../build/mavpy/mavpy.egg-info/top_level.txt
+writing manifest file '../../build/mavpy/mavpy.egg-info/SOURCES.txt'
+reading manifest file '../../build/mavpy/mavpy.egg-info/SOURCES.txt'
+writing manifest file '../../build/mavpy/mavpy.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/riovaldo/orcav4_ws/build/mavpy/build
+creating /home/riovaldo/orcav4_ws/build/mavpy/build/lib
+creating /home/riovaldo/orcav4_ws/build/mavpy/build/lib/mavpy
+copying mavpy/keyboard.py -> /home/riovaldo/orcav4_ws/build/mavpy/build/lib/mavpy
+copying mavpy/control_bridge.py -> /home/riovaldo/orcav4_ws/build/mavpy/build/lib/mavpy
+copying mavpy/test_control.py -> /home/riovaldo/orcav4_ws/build/mavpy/build/lib/mavpy
+copying mavpy/test_keyboard.py -> /home/riovaldo/orcav4_ws/build/mavpy/build/lib/mavpy
+copying mavpy/__init__.py -> /home/riovaldo/orcav4_ws/build/mavpy/build/lib/mavpy
+running install
+running install_lib
+creating /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy
+copying /home/riovaldo/orcav4_ws/build/mavpy/build/lib/mavpy/keyboard.py -> /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy
+copying /home/riovaldo/orcav4_ws/build/mavpy/build/lib/mavpy/control_bridge.py -> /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy
+copying /home/riovaldo/orcav4_ws/build/mavpy/build/lib/mavpy/test_control.py -> /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy
+copying /home/riovaldo/orcav4_ws/build/mavpy/build/lib/mavpy/test_keyboard.py -> /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy
+copying /home/riovaldo/orcav4_ws/build/mavpy/build/lib/mavpy/__init__.py -> /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy
+byte-compiling /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy/keyboard.py to keyboard.cpython-312.pyc
+byte-compiling /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy/control_bridge.py to control_bridge.cpython-312.pyc
+byte-compiling /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy/test_control.py to test_control.cpython-312.pyc
+byte-compiling /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy/test_keyboard.py to test_keyboard.cpython-312.pyc
+byte-compiling /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/riovaldo/orcav4_ws/install/mavpy/share/ament_index
+creating /home/riovaldo/orcav4_ws/install/mavpy/share/ament_index/resource_index
+creating /home/riovaldo/orcav4_ws/install/mavpy/share/ament_index/resource_index/packages
+copying resource/mavpy -> /home/riovaldo/orcav4_ws/install/mavpy/share/ament_index/resource_index/packages
+copying package.xml -> /home/riovaldo/orcav4_ws/install/mavpy/share/mavpy
+creating /home/riovaldo/orcav4_ws/install/mavpy/share/mavpy/models
+running install_egg_info
+Copying ../../build/mavpy/mavpy.egg-info to /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy-0.1.0-py3.12.egg-info
+running install_scripts
+Installing control_bridge script to /home/riovaldo/orcav4_ws/install/mavpy/lib/mavpy
+Installing keyboard script to /home/riovaldo/orcav4_ws/install/mavpy/lib/mavpy
+Installing test_control script to /home/riovaldo/orcav4_ws/install/mavpy/lib/mavpy
+Installing test_keyboard script to /home/riovaldo/orcav4_ws/install/mavpy/lib/mavpy
+writing list of installed files to '/home/riovaldo/orcav4_ws/build/mavpy/install.log'

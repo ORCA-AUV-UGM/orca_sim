@@ -45,8 +45,8 @@ struct OrcaAttitude_
       this->initial_x = 0.0f;
       this->initial_y = 0.0f;
       this->initial_z = 0.0f;
-      this->yaw_deg = 0.0f;
       this->initial_deg = 0.0f;
+      this->yaw_deg = 0.0f;
       this->roll_deg = 0.0f;
       this->pitch_deg = 0.0f;
       this->rollspeed_deg_s = 0.0f;
@@ -64,8 +64,8 @@ struct OrcaAttitude_
       this->initial_x = 0.0f;
       this->initial_y = 0.0f;
       this->initial_z = 0.0f;
-      this->yaw_deg = 0.0f;
       this->initial_deg = 0.0f;
+      this->yaw_deg = 0.0f;
       this->roll_deg = 0.0f;
       this->pitch_deg = 0.0f;
       this->rollspeed_deg_s = 0.0f;
@@ -84,12 +84,12 @@ struct OrcaAttitude_
   using _initial_z_type =
     float;
   _initial_z_type initial_z;
-  using _yaw_deg_type =
-    float;
-  _yaw_deg_type yaw_deg;
   using _initial_deg_type =
     float;
   _initial_deg_type initial_deg;
+  using _yaw_deg_type =
+    float;
+  _yaw_deg_type yaw_deg;
   using _roll_deg_type =
     float;
   _roll_deg_type roll_deg;
@@ -125,16 +125,16 @@ struct OrcaAttitude_
     this->initial_z = _arg;
     return *this;
   }
-  Type & set__yaw_deg(
-    const float & _arg)
-  {
-    this->yaw_deg = _arg;
-    return *this;
-  }
   Type & set__initial_deg(
     const float & _arg)
   {
     this->initial_deg = _arg;
+    return *this;
+  }
+  Type & set__yaw_deg(
+    const float & _arg)
+  {
+    this->yaw_deg = _arg;
     return *this;
   }
   Type & set__roll_deg(
@@ -219,10 +219,10 @@ struct OrcaAttitude_
     if (this->initial_z != other.initial_z) {
       return false;
     }
-    if (this->yaw_deg != other.yaw_deg) {
+    if (this->initial_deg != other.initial_deg) {
       return false;
     }
-    if (this->initial_deg != other.initial_deg) {
+    if (this->yaw_deg != other.yaw_deg) {
       return false;
     }
     if (this->roll_deg != other.roll_deg) {

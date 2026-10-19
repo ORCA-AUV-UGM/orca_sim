@@ -49,17 +49,17 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: yaw_deg
-  {
-    out << "yaw_deg: ";
-    rosidl_generator_traits::value_to_yaml(msg.yaw_deg, out);
-    out << ", ";
-  }
-
   // member: initial_deg
   {
     out << "initial_deg: ";
     rosidl_generator_traits::value_to_yaml(msg.initial_deg, out);
+    out << ", ";
+  }
+
+  // member: yaw_deg
+  {
+    out << "yaw_deg: ";
+    rosidl_generator_traits::value_to_yaml(msg.yaw_deg, out);
     out << ", ";
   }
 
@@ -133,16 +133,6 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: yaw_deg
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "yaw_deg: ";
-    rosidl_generator_traits::value_to_yaml(msg.yaw_deg, out);
-    out << "\n";
-  }
-
   // member: initial_deg
   {
     if (indentation > 0) {
@@ -150,6 +140,16 @@ inline void to_block_style_yaml(
     }
     out << "initial_deg: ";
     rosidl_generator_traits::value_to_yaml(msg.initial_deg, out);
+    out << "\n";
+  }
+
+  // member: yaw_deg
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "yaw_deg: ";
+    rosidl_generator_traits::value_to_yaml(msg.yaw_deg, out);
     out << "\n";
   }
 

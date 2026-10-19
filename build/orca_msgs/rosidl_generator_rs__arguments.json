@@ -1,26 +1,26 @@
 {
   "package_name": "orca_msgs",
-  "output_dir": "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_generator_rs/orca_msgs",
+  "output_dir": "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_generator_rs/orca_msgs",
   "template_dir": "/opt/ros/jazzy/share/rosidl_generator_rs/cmake/../resource",
   "idl_tuples": [
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs:msg/FinalDetection.idl",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs:msg/GateDetection.idl",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs:msg/OrcaDepth.idl",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs:msg/OrcaAttitude.idl",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs:msg/OrcaProximity.idl",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs:msg/OrcaControl.idl",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs:msg/FlareSequence.idl",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs:msg/FailsafeTrigger.idl"
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs:msg/FinalDetection.idl",
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs:msg/GateDetection.idl",
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs:msg/OrcaDepth.idl",
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs:msg/OrcaAttitude.idl",
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs:msg/OrcaProximity.idl",
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs:msg/OrcaControl.idl",
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs:msg/FlareSequence.idl",
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs:msg/FailsafeTrigger.idl"
   ],
   "ros_interface_files": [
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/FinalDetection.idl",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/GateDetection.idl",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/OrcaDepth.idl",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/OrcaAttitude.idl",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/OrcaProximity.idl",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/OrcaControl.idl",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/FlareSequence.idl",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/FailsafeTrigger.idl"
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/FinalDetection.idl",
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/GateDetection.idl",
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/OrcaDepth.idl",
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/OrcaAttitude.idl",
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/OrcaProximity.idl",
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/OrcaControl.idl",
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/FlareSequence.idl",
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/FailsafeTrigger.idl"
   ],
   "target_dependencies": [
     "/opt/ros/jazzy/share/rosidl_generator_rs/cmake/../../../lib/rosidl_generator_rs/rosidl_generator_rs",
@@ -38,14 +38,14 @@
     "/opt/ros/jazzy/share/rosidl_generator_rs/cmake/../resource/templates/msg_rmw.rs.em",
     "/opt/ros/jazzy/share/rosidl_generator_rs/cmake/../resource/templates/srv_idiomatic.rs.em",
     "/opt/ros/jazzy/share/rosidl_generator_rs/cmake/../resource/templates/srv_rmw.rs.em",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/FinalDetection.idl",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/GateDetection.idl",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/OrcaDepth.idl",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/OrcaAttitude.idl",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/OrcaProximity.idl",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/OrcaControl.idl",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/FlareSequence.idl",
-    "/home/riovaldo/orca_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/FailsafeTrigger.idl"
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/FinalDetection.idl",
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/GateDetection.idl",
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/OrcaDepth.idl",
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/OrcaAttitude.idl",
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/OrcaProximity.idl",
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/OrcaControl.idl",
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/FlareSequence.idl",
+    "/home/riovaldo/orcav4_ws/build/orca_msgs/rosidl_adapter/orca_msgs/msg/FailsafeTrigger.idl"
   ],
   "package_version": "0.0.0"
 }

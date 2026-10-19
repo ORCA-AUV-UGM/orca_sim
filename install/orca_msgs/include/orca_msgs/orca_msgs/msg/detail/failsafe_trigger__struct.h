@@ -22,7 +22,7 @@ extern "C"
 /// Struct defined in msg/FailsafeTrigger in the package orca_msgs.
 typedef struct orca_msgs__msg__FailsafeTrigger
 {
-  uint8_t structure_needs_at_least_one_member;
+  bool active;
 } orca_msgs__msg__FailsafeTrigger;
 
 // Struct for a sequence of orca_msgs__msg__FailsafeTrigger.

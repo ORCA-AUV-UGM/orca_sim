@@ -316,12 +316,12 @@ pub struct OrcaAttitude {
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub yaw_deg: f32,
+    pub initial_deg: f32,
 
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub initial_deg: f32,
+    pub yaw_deg: f32,
 
 
     // This member is not documented.
@@ -367,8 +367,8 @@ impl rosidl_runtime_rs::Message for OrcaAttitude {
         initial_x: msg.initial_x,
         initial_y: msg.initial_y,
         initial_z: msg.initial_z,
-        yaw_deg: msg.yaw_deg,
         initial_deg: msg.initial_deg,
+        yaw_deg: msg.yaw_deg,
         roll_deg: msg.roll_deg,
         pitch_deg: msg.pitch_deg,
         rollspeed_deg_s: msg.rollspeed_deg_s,
@@ -379,8 +379,8 @@ impl rosidl_runtime_rs::Message for OrcaAttitude {
       initial_x: msg.initial_x,
       initial_y: msg.initial_y,
       initial_z: msg.initial_z,
-      yaw_deg: msg.yaw_deg,
       initial_deg: msg.initial_deg,
+      yaw_deg: msg.yaw_deg,
       roll_deg: msg.roll_deg,
       pitch_deg: msg.pitch_deg,
       rollspeed_deg_s: msg.rollspeed_deg_s,
@@ -395,8 +395,8 @@ impl rosidl_runtime_rs::Message for OrcaAttitude {
       initial_x: msg.initial_x,
       initial_y: msg.initial_y,
       initial_z: msg.initial_z,
-      yaw_deg: msg.yaw_deg,
       initial_deg: msg.initial_deg,
+      yaw_deg: msg.yaw_deg,
       roll_deg: msg.roll_deg,
       pitch_deg: msg.pitch_deg,
       rollspeed_deg_s: msg.rollspeed_deg_s,
@@ -408,9 +408,9 @@ impl rosidl_runtime_rs::Message for OrcaAttitude {
 
 
 // Corresponds to orca_msgs__msg__OrcaProximity
-/// data proximity isinya boolean doang njir
-/// true = arm
-/// false = disarm
+
+// This struct is not documented.
+#[allow(missing_docs)]
 
 #[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
 #[derive(Clone, Debug, PartialEq, PartialOrd)]
@@ -625,7 +625,7 @@ pub struct FailsafeTrigger {
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub structure_needs_at_least_one_member: u8,
+    pub active: bool,
 
 }
 
@@ -643,17 +643,17 @@ impl rosidl_runtime_rs::Message for FailsafeTrigger {
   fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> {
     match msg_cow {
       std::borrow::Cow::Owned(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
-        structure_needs_at_least_one_member: msg.structure_needs_at_least_one_member,
+        active: msg.active,
       }),
       std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
-      structure_needs_at_least_one_member: msg.structure_needs_at_least_one_member,
+      active: msg.active,
       })
     }
   }
 
   fn from_rmw_message(msg: Self::RmwMsg) -> Self {
     Self {
-      structure_needs_at_least_one_member: msg.structure_needs_at_least_one_member,
+      active: msg.active,
     }
   }
 }

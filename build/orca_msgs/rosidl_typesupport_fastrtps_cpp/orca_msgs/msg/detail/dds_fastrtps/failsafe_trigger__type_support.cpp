@@ -36,8 +36,8 @@ cdr_serialize(
   const orca_msgs::msg::FailsafeTrigger & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: structure_needs_at_least_one_member
-  cdr << ros_message.structure_needs_at_least_one_member;
+  // Member: active
+  cdr << (ros_message.active ? true : false);
 
   return true;
 }
@@ -48,8 +48,12 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   orca_msgs::msg::FailsafeTrigger & ros_message)
 {
-  // Member: structure_needs_at_least_one_member
-  cdr >> ros_message.structure_needs_at_least_one_member;
+  // Member: active
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.active = tmp ? true : false;
+  }
 
   return true;
 }  // NOLINT(readability/fn_size)
@@ -68,9 +72,9 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: structure_needs_at_least_one_member
+  // Member: active
   {
-    size_t item_size = sizeof(ros_message.structure_needs_at_least_one_member);
+    size_t item_size = sizeof(ros_message.active);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -98,7 +102,7 @@ max_serialized_size_FailsafeTrigger(
   full_bounded = true;
   is_plain = true;
 
-  // Member: structure_needs_at_least_one_member
+  // Member: active
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -113,7 +117,7 @@ max_serialized_size_FailsafeTrigger(
     using DataType = orca_msgs::msg::FailsafeTrigger;
     is_plain =
       (
-      offsetof(DataType, structure_needs_at_least_one_member) +
+      offsetof(DataType, active) +
       last_member_size
       ) == ret_val;
   }
@@ -127,8 +131,8 @@ cdr_serialize_key(
   const orca_msgs::msg::FailsafeTrigger & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: structure_needs_at_least_one_member
-  cdr << ros_message.structure_needs_at_least_one_member;
+  // Member: active
+  cdr << (ros_message.active ? true : false);
 
   return true;
 }
@@ -146,9 +150,9 @@ get_serialized_size_key(
   (void)padding;
   (void)wchar_size;
 
-  // Member: structure_needs_at_least_one_member
+  // Member: active
   {
-    size_t item_size = sizeof(ros_message.structure_needs_at_least_one_member);
+    size_t item_size = sizeof(ros_message.active);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -175,7 +179,7 @@ max_serialized_size_key_FailsafeTrigger(
   full_bounded = true;
   is_plain = true;
 
-  // Member: structure_needs_at_least_one_member
+  // Member: active
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -190,7 +194,7 @@ max_serialized_size_key_FailsafeTrigger(
     using DataType = orca_msgs::msg::FailsafeTrigger;
     is_plain =
       (
-      offsetof(DataType, structure_needs_at_least_one_member) +
+      offsetof(DataType, active) +
       last_member_size
       ) == ret_val;
   }

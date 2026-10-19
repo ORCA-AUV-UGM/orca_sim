@@ -20,11 +20,6 @@ extern "C"
 // Constants defined in the message
 
 /// Struct defined in msg/OrcaProximity in the package orca_msgs.
-/**
-  * data proximity isinya boolean doang njir
-  * true = arm
-  * false = disarm
- */
 typedef struct orca_msgs__msg__OrcaProximity
 {
   bool arm_mode;

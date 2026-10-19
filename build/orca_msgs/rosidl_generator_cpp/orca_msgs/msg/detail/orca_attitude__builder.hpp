@@ -104,15 +104,15 @@ private:
   ::orca_msgs::msg::OrcaAttitude msg_;
 };
 
-class Init_OrcaAttitude_initial_deg
+class Init_OrcaAttitude_yaw_deg
 {
 public:
-  explicit Init_OrcaAttitude_initial_deg(::orca_msgs::msg::OrcaAttitude & msg)
+  explicit Init_OrcaAttitude_yaw_deg(::orca_msgs::msg::OrcaAttitude & msg)
   : msg_(msg)
   {}
-  Init_OrcaAttitude_roll_deg initial_deg(::orca_msgs::msg::OrcaAttitude::_initial_deg_type arg)
+  Init_OrcaAttitude_roll_deg yaw_deg(::orca_msgs::msg::OrcaAttitude::_yaw_deg_type arg)
   {
-    msg_.initial_deg = std::move(arg);
+    msg_.yaw_deg = std::move(arg);
     return Init_OrcaAttitude_roll_deg(msg_);
   }
 
@@ -120,16 +120,16 @@ private:
   ::orca_msgs::msg::OrcaAttitude msg_;
 };
 
-class Init_OrcaAttitude_yaw_deg
+class Init_OrcaAttitude_initial_deg
 {
 public:
-  explicit Init_OrcaAttitude_yaw_deg(::orca_msgs::msg::OrcaAttitude & msg)
+  explicit Init_OrcaAttitude_initial_deg(::orca_msgs::msg::OrcaAttitude & msg)
   : msg_(msg)
   {}
-  Init_OrcaAttitude_initial_deg yaw_deg(::orca_msgs::msg::OrcaAttitude::_yaw_deg_type arg)
+  Init_OrcaAttitude_yaw_deg initial_deg(::orca_msgs::msg::OrcaAttitude::_initial_deg_type arg)
   {
-    msg_.yaw_deg = std::move(arg);
-    return Init_OrcaAttitude_initial_deg(msg_);
+    msg_.initial_deg = std::move(arg);
+    return Init_OrcaAttitude_yaw_deg(msg_);
   }
 
 private:
@@ -142,10 +142,10 @@ public:
   explicit Init_OrcaAttitude_initial_z(::orca_msgs::msg::OrcaAttitude & msg)
   : msg_(msg)
   {}
-  Init_OrcaAttitude_yaw_deg initial_z(::orca_msgs::msg::OrcaAttitude::_initial_z_type arg)
+  Init_OrcaAttitude_initial_deg initial_z(::orca_msgs::msg::OrcaAttitude::_initial_z_type arg)
   {
     msg_.initial_z = std::move(arg);
-    return Init_OrcaAttitude_yaw_deg(msg_);
+    return Init_OrcaAttitude_initial_deg(msg_);
   }
 
 private:

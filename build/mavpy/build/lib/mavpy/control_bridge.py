@@ -1,44 +1,22 @@
 #!/usr/bin/env python3
 import time
-from typing import Optional
-
 import rclpy
 from rclpy.node import Node
+from typing import Optional
 from pymavlink import mavutil
-
 from orca_msgs.msg import OrcaControl, OrcaProximity, FailsafeTrigger
 
-
 class ControlBridge(Node):
-    """
-    Jalur tunggal dari ROS 2 menuju Pixhawk.
-
-    Prioritas kendali:
-    1. Fail-safe control
-    2. Manual control dari GCS
-    3. Auto control
-    4. Neutral fallback
-
-    FailSafeNode tidak lagi mengirim MAVLink langsung. Semua command, termasuk fail-safe,
-    diarahkan ke node ini agar tidak terjadi dua node yang berebut override Pixhawk.
-    """
-
     def __init__(self):
         super().__init__('control_bridge')
 
-        # =========================
-        # Parameter topic
-        # =========================
         self.declare_parameter('mavlink_url', 'udpin:0.0.0.0:14551')
-        self.declare_parameter('manual_control_topic', '/orca/manual/control')
-        self.declare_parameter('auto_control_topic', '/orca/auto/control')
-        self.declare_parameter('failsafe_control_topic', '/orca/failsafe/control')
-        self.declare_parameter('failsafe_trigger_topic', '/orca/failsafe/trigger')
-        self.declare_parameter('proximity_topic', '/orca/start_trigger')
+        self.declare_parameter('manual_control_topic', '/manual/control')
+        self.declare_parameter('auto_control_topic', '/auto/control')
+        self.declare_parameter('failsafe_control_topic', '/failsafe/control')
+        self.declare_parameter('failsafe_trigger_topic', '/failsafe/trigger')
+        self.declare_parameter('proximity_topic', '/start_trigger')
 
-        # =========================
-        # Parameter kendali
-        # =========================
         self.declare_parameter('publish_override_hz', 10.0)
         self.declare_parameter('neutral_pwm', 1500)
         self.declare_parameter('auto_stale_timeout_sec', 0.6)
@@ -47,7 +25,6 @@ class ControlBridge(Node):
         self.declare_parameter('manual_priority', True)
         self.declare_parameter('manual_release_mode', 'MISSION')
 
-        # Servo gripper
         self.declare_parameter('gripper_servo_channel', 10)
         self.declare_parameter('gripper_pwm_open_right', 955)
         self.declare_parameter('gripper_pwm_open_left', 2100)
@@ -75,17 +52,13 @@ class ControlBridge(Node):
             'close': int(self.get_parameter('gripper_pwm_close').value),
         }
 
-        # =========================
-        # MAVLink
-        # =========================
         self.master = mavutil.mavlink_connection(self.mavlink_url)
         self.get_logger().info(f'Menunggu heartbeat Pixhawk di {self.mavlink_url}...')
         self.master.wait_heartbeat()
         self.get_logger().info(f'Pixhawk terhubung via {self.mavlink_url}')
 
-        # =========================
-        # State command
-        # =========================
+        self._set_servo_channel_disabled(self.gripper_servo_channel)
+
         self.manual_cmd = self.make_neutral('manual_init')
         self.auto_cmd = self.make_neutral('auto_init')
         self.failsafe_cmd = self.make_neutral('failsafe_init')
@@ -104,25 +77,29 @@ class ControlBridge(Node):
         self.proximity_triggered = False
         self.prev_proximity = False
 
-        # =========================
-        # ROS interface
-        # =========================
         self.create_subscription(OrcaControl, self.manual_control_topic, self.manual_cb, 10)
         self.create_subscription(OrcaControl, self.auto_control_topic, self.auto_cb, 10)
         self.create_subscription(OrcaControl, self.failsafe_control_topic, self.failsafe_control_cb, 10)
         self.create_subscription(FailsafeTrigger, self.failsafe_trigger_topic, self.failsafe_trigger_cb, 10)
         self.create_subscription(OrcaProximity, self.proximity_topic, self.proximity_cb, 10)
 
-        self.create_timer(
-            1.0 / max(1.0, self.publish_override_hz),
-            self.send_selected_control,
+        self.create_timer(1.0 / max(1.0, self.publish_override_hz), self.send_selected_control,)
+
+    def _set_servo_channel_disabled(self, channel: int):
+        param_name = f'SERVO{channel}_FUNCTION'.encode('utf-8')
+        self.get_logger().info(f'Mengatur parameter {param_name.decode()} -> 0 (Disabled)...')
+        self.master.mav.param_set_send(
+            self.master.target_system,
+            self.master.target_component,
+            param_name,
+            0.0,
+            mavutil.mavlink.MAV_PARAM_TYPE_REAL32
         )
 
-    # ==========================================================
-    # Message helpers
-    # ==========================================================
     def make_neutral(self, source: str, disarm: bool = False) -> OrcaControl:
         msg = OrcaControl()
+        msg.pitch = self.neutral_pwm
+        msg.roll = self.neutral_pwm
         msg.throttle = self.neutral_pwm
         msg.lateral = self.neutral_pwm
         msg.forward = self.neutral_pwm
@@ -149,9 +126,6 @@ class ControlBridge(Node):
     def failsafe_control_is_fresh(self) -> bool:
         return self._is_fresh(self.last_failsafe_control_time, self.failsafe_stale_timeout_sec)
 
-    # ==========================================================
-    # ROS callbacks
-    # ==========================================================
     def manual_cb(self, msg: OrcaControl):
         self.manual_cmd = self._sanitize_control(msg)
         self.last_manual_time = time.monotonic()
@@ -179,9 +153,6 @@ class ControlBridge(Node):
     def proximity_cb(self, msg: OrcaProximity):
         self.proximity_triggered = bool(msg.triggered)
 
-    # ==========================================================
-    # Control selection
-    # ==========================================================
     def _select_control(self) -> OrcaControl:
         if self.failsafe_active:
             if self.failsafe_control_is_fresh():
@@ -218,15 +189,12 @@ class ControlBridge(Node):
         self._send_gripper(msg.gripper_mode)
         self._send_rc_override(msg)
 
-    # ==========================================================
-    # MAVLink commands
-    # ==========================================================
     def _send_rc_override(self, msg: OrcaControl):
         self.master.mav.rc_channels_override_send(
             self.master.target_system,
             self.master.target_component,
-            0,
-            0,
+            int(msg.pitch),
+            int(msg.roll),
             int(msg.throttle),
             int(msg.yaw),
             int(msg.forward),
@@ -248,7 +216,6 @@ class ControlBridge(Node):
         if self.proximity_triggered and not self.prev_proximity:
             self.get_logger().info('Proximity trigger → ARM')
             self._send_arm('arm')
-
         elif not self.proximity_triggered and self.prev_proximity:
             self.get_logger().info('Proximity trigger off → DISARM')
             self._send_arm('disarm')
@@ -315,18 +282,18 @@ class ControlBridge(Node):
 
         self.get_logger().info(f'GRIPPER COMMAND: {gripper_mode} → PWM {pwm}')
 
-    # ==========================================================
-    # Utility
-    # ==========================================================
     def _sanitize_control(self, msg: OrcaControl) -> OrcaControl:
+        msg.pitch = self._clamp_pwm(int(msg.pitch))
+        msg.roll = self._clamp_pwm(int(msg.roll))
         msg.forward = self._clamp_pwm(int(msg.forward))
         msg.lateral = self._clamp_pwm(int(msg.lateral))
         msg.throttle = self._clamp_pwm(int(msg.throttle))
         msg.yaw = self._clamp_pwm(int(msg.yaw))
         return msg
 
-    @staticmethod
-    def _clamp_pwm(value: int) -> int:
+    def _clamp_pwm(self, value: int) -> int:
+        if value < 1100 or value > 1900:
+            return self.neutral_pwm
         return max(1100, min(1900, value))
 
     def reset_override(self):
@@ -343,7 +310,6 @@ class ControlBridge(Node):
         self.reset_override()
         super().destroy_node()
 
-
 def main(args=None):
     rclpy.init(args=args)
     node = ControlBridge()
@@ -355,7 +321,6 @@ def main(args=None):
     finally:
         node.destroy_node()
         rclpy.shutdown()
-
 
 if __name__ == '__main__':
     main()

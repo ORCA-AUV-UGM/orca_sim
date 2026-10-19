@@ -11,10 +11,10 @@ orca_msgs__msg__FailsafeTrigger__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x2f, 0x9f, 0x79, 0x16, 0x72, 0x4b, 0x75, 0x4e,
-      0xb9, 0x84, 0x0a, 0x7b, 0xd4, 0x7b, 0x5b, 0xb9,
-      0xbe, 0xcc, 0xbe, 0xa4, 0x43, 0xfe, 0xdd, 0x54,
-      0x64, 0xdb, 0x64, 0x4d, 0x31, 0x0e, 0x69, 0xb0,
+      0xde, 0x31, 0x2d, 0x57, 0x2b, 0xbc, 0x14, 0x32,
+      0xcf, 0x37, 0x58, 0xd5, 0x34, 0x83, 0x9f, 0x5c,
+      0x67, 0x1f, 0x3c, 0x0a, 0xd5, 0x02, 0x18, 0xef,
+      0x9a, 0x2e, 0xb7, 0xc4, 0xaa, 0x5b, 0x7c, 0x17,
     }};
   return &hash;
 }
@@ -31,13 +31,13 @@ orca_msgs__msg__FailsafeTrigger__get_type_hash(
 static char orca_msgs__msg__FailsafeTrigger__TYPE_NAME[] = "orca_msgs/msg/FailsafeTrigger";
 
 // Define type names, field names, and default values
-static char orca_msgs__msg__FailsafeTrigger__FIELD_NAME__structure_needs_at_least_one_member[] = "structure_needs_at_least_one_member";
+static char orca_msgs__msg__FailsafeTrigger__FIELD_NAME__active[] = "active";
 
 static rosidl_runtime_c__type_description__Field orca_msgs__msg__FailsafeTrigger__FIELDS[] = {
   {
-    {orca_msgs__msg__FailsafeTrigger__FIELD_NAME__structure_needs_at_least_one_member, 35, 35},
+    {orca_msgs__msg__FailsafeTrigger__FIELD_NAME__active, 6, 6},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
       0,
       0,
       {NULL, 0, 0},
@@ -65,6 +65,8 @@ orca_msgs__msg__FailsafeTrigger__get_type_description(
   return &description;
 }
 
+static char toplevel_type_raw_source[] =
+  "bool active";
 
 static char msg_encoding[] = "msg";
 
@@ -78,7 +80,7 @@ orca_msgs__msg__FailsafeTrigger__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {orca_msgs__msg__FailsafeTrigger__TYPE_NAME, 29, 29},
     {msg_encoding, 3, 3},
-    {NULL, 0, 0},
+    {toplevel_type_raw_source, 11, 11},
   };
   return &source;
 }

@@ -9,6 +9,7 @@ setup.py
 ../../build/mavpy/mavpy.egg-info/top_level.txt
 ../../build/mavpy/mavpy.egg-info/zip-safe
 mavpy/__init__.py
+mavpy/attitude_node.py
 mavpy/control_bridge.py
 mavpy/keyboard.py
 mavpy/test_control.py

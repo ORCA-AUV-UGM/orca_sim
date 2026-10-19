@@ -5,10 +5,6 @@
 
 module orca_msgs {
   module msg {
-    @verbatim (language="comment", text=
-      "data proximity isinya boolean doang njir" "\n"
-      "true = arm" "\n"
-      "false = disarm")
     struct OrcaProximity {
       boolean arm_mode;
     };

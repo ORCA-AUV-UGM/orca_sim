@@ -20,8 +20,8 @@ orca_msgs__msg__OrcaAttitude__init(orca_msgs__msg__OrcaAttitude * msg)
   // initial_x
   // initial_y
   // initial_z
-  // yaw_deg
   // initial_deg
+  // yaw_deg
   // roll_deg
   // pitch_deg
   // rollspeed_deg_s
@@ -39,8 +39,8 @@ orca_msgs__msg__OrcaAttitude__fini(orca_msgs__msg__OrcaAttitude * msg)
   // initial_x
   // initial_y
   // initial_z
-  // yaw_deg
   // initial_deg
+  // yaw_deg
   // roll_deg
   // pitch_deg
   // rollspeed_deg_s
@@ -66,12 +66,12 @@ orca_msgs__msg__OrcaAttitude__are_equal(const orca_msgs__msg__OrcaAttitude * lhs
   if (lhs->initial_z != rhs->initial_z) {
     return false;
   }
-  // yaw_deg
-  if (lhs->yaw_deg != rhs->yaw_deg) {
-    return false;
-  }
   // initial_deg
   if (lhs->initial_deg != rhs->initial_deg) {
+    return false;
+  }
+  // yaw_deg
+  if (lhs->yaw_deg != rhs->yaw_deg) {
     return false;
   }
   // roll_deg
@@ -111,10 +111,10 @@ orca_msgs__msg__OrcaAttitude__copy(
   output->initial_y = input->initial_y;
   // initial_z
   output->initial_z = input->initial_z;
-  // yaw_deg
-  output->yaw_deg = input->yaw_deg;
   // initial_deg
   output->initial_deg = input->initial_deg;
+  // yaw_deg
+  output->yaw_deg = input->yaw_deg;
   // roll_deg
   output->roll_deg = input->roll_deg;
   // pitch_deg

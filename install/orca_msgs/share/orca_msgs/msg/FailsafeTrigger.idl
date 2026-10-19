@@ -6,7 +6,7 @@
 module orca_msgs {
   module msg {
     struct FailsafeTrigger {
-      uint8 structure_needs_at_least_one_member;
+      boolean active;
     };
   };
 };

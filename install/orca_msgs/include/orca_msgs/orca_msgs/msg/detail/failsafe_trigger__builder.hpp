@@ -21,6 +21,26 @@ namespace orca_msgs
 namespace msg
 {
 
+namespace builder
+{
+
+class Init_FailsafeTrigger_active
+{
+public:
+  Init_FailsafeTrigger_active()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  ::orca_msgs::msg::FailsafeTrigger active(::orca_msgs::msg::FailsafeTrigger::_active_type arg)
+  {
+    msg_.active = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::orca_msgs::msg::FailsafeTrigger msg_;
+};
+
+}  // namespace builder
 
 }  // namespace msg
 
@@ -31,7 +51,7 @@ template<>
 inline
 auto build<::orca_msgs::msg::FailsafeTrigger>()
 {
-  return ::orca_msgs::msg::FailsafeTrigger(rosidl_runtime_cpp::MessageInitialization::ZERO);
+  return orca_msgs::msg::builder::Init_FailsafeTrigger_active();
 }
 
 }  // namespace orca_msgs

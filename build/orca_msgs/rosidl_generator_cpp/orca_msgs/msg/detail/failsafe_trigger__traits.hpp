@@ -27,17 +27,28 @@ inline void to_flow_style_yaml(
   const FailsafeTrigger & msg,
   std::ostream & out)
 {
-  (void)msg;
-  out << "null";
+  out << "{";
+  // member: active
+  {
+    out << "active: ";
+    rosidl_generator_traits::value_to_yaml(msg.active, out);
+  }
+  out << "}";
 }  // NOLINT(readability/fn_size)
 
 inline void to_block_style_yaml(
   const FailsafeTrigger & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  (void)msg;
-  (void)indentation;
-  out << "null\n";
+  // member: active
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "active: ";
+    rosidl_generator_traits::value_to_yaml(msg.active, out);
+    out << "\n";
+  }
 }  // NOLINT(readability/fn_size)
 
 inline std::string to_yaml(const FailsafeTrigger & msg, bool use_flow_style = false)

@@ -42,7 +42,7 @@ struct FailsafeTrigger_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->structure_needs_at_least_one_member = 0;
+      this->active = false;
     }
   }
 
@@ -52,15 +52,22 @@ struct FailsafeTrigger_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->structure_needs_at_least_one_member = 0;
+      this->active = false;
     }
   }
 
   // field types and members
-  using _structure_needs_at_least_one_member_type =
-    uint8_t;
-  _structure_needs_at_least_one_member_type structure_needs_at_least_one_member;
+  using _active_type =
+    bool;
+  _active_type active;
 
+  // setters for named parameter idiom
+  Type & set__active(
+    const bool & _arg)
+  {
+    this->active = _arg;
+    return *this;
+  }
 
   // constant declarations
 
@@ -104,7 +111,7 @@ struct FailsafeTrigger_
   // comparison operators
   bool operator==(const FailsafeTrigger_ & other) const
   {
-    if (this->structure_needs_at_least_one_member != other.structure_needs_at_least_one_member) {
+    if (this->active != other.active) {
       return false;
     }
     return true;

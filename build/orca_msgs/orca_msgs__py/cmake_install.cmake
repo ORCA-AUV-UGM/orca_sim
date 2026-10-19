@@ -1,8 +1,8 @@
-# Install script for directory: /home/riovaldo/orca_ws/build/orca_msgs/orca_msgs__py
+# Install script for directory: /home/riovaldo/orcav4_ws/build/orca_msgs/orca_msgs__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/riovaldo/orca_ws/install/orca_msgs")
+  set(CMAKE_INSTALL_PREFIX "/home/riovaldo/orcav4_ws/install/orca_msgs")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

@@ -11,10 +11,10 @@ orca_msgs__msg__OrcaAttitude__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xed, 0x89, 0x72, 0x03, 0x1b, 0xcf, 0xaf, 0x48,
-      0x95, 0x63, 0x55, 0x7d, 0xf1, 0x61, 0x0b, 0xa9,
-      0x8b, 0x3f, 0xac, 0xf2, 0x58, 0xcd, 0x11, 0xfc,
-      0x74, 0x52, 0x11, 0xb9, 0xda, 0x61, 0xc3, 0x80,
+      0x49, 0xc2, 0x27, 0x02, 0x81, 0x9f, 0xc4, 0xce,
+      0x7f, 0x37, 0x5d, 0xb1, 0x60, 0x89, 0x7a, 0x9b,
+      0x18, 0x79, 0x57, 0x85, 0xd0, 0xed, 0x92, 0x44,
+      0x2a, 0x0e, 0x43, 0x20, 0x34, 0xe3, 0x8d, 0x1a,
     }};
   return &hash;
 }
@@ -34,8 +34,8 @@ static char orca_msgs__msg__OrcaAttitude__TYPE_NAME[] = "orca_msgs/msg/OrcaAttit
 static char orca_msgs__msg__OrcaAttitude__FIELD_NAME__initial_x[] = "initial_x";
 static char orca_msgs__msg__OrcaAttitude__FIELD_NAME__initial_y[] = "initial_y";
 static char orca_msgs__msg__OrcaAttitude__FIELD_NAME__initial_z[] = "initial_z";
-static char orca_msgs__msg__OrcaAttitude__FIELD_NAME__yaw_deg[] = "yaw_deg";
 static char orca_msgs__msg__OrcaAttitude__FIELD_NAME__initial_deg[] = "initial_deg";
+static char orca_msgs__msg__OrcaAttitude__FIELD_NAME__yaw_deg[] = "yaw_deg";
 static char orca_msgs__msg__OrcaAttitude__FIELD_NAME__roll_deg[] = "roll_deg";
 static char orca_msgs__msg__OrcaAttitude__FIELD_NAME__pitch_deg[] = "pitch_deg";
 static char orca_msgs__msg__OrcaAttitude__FIELD_NAME__rollspeed_deg_s[] = "rollspeed_deg_s";
@@ -74,7 +74,7 @@ static rosidl_runtime_c__type_description__Field orca_msgs__msg__OrcaAttitude__F
     {NULL, 0, 0},
   },
   {
-    {orca_msgs__msg__OrcaAttitude__FIELD_NAME__yaw_deg, 7, 7},
+    {orca_msgs__msg__OrcaAttitude__FIELD_NAME__initial_deg, 11, 11},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
       0,
@@ -84,7 +84,7 @@ static rosidl_runtime_c__type_description__Field orca_msgs__msg__OrcaAttitude__F
     {NULL, 0, 0},
   },
   {
-    {orca_msgs__msg__OrcaAttitude__FIELD_NAME__initial_deg, 11, 11},
+    {orca_msgs__msg__OrcaAttitude__FIELD_NAME__yaw_deg, 7, 7},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
       0,
@@ -168,12 +168,12 @@ static char toplevel_type_raw_source[] =
   "float32 initial_x\n"
   "float32 initial_y\n"
   "float32 initial_z\n"
-  "\n"
-  "float32 yaw_deg\n"
   "float32 initial_deg\n"
   "\n"
+  "float32 yaw_deg\n"
   "float32 roll_deg\n"
   "float32 pitch_deg\n"
+  "\n"
   "float32 rollspeed_deg_s\n"
   "float32 pitchspeed_deg_s\n"
   "float32 yawspeed_deg_s";

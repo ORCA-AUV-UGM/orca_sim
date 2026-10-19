@@ -48,9 +48,9 @@ bool cdr_serialize_orca_msgs__msg__FailsafeTrigger(
   const orca_msgs__msg__FailsafeTrigger * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: structure_needs_at_least_one_member
+  // Field name: active
   {
-    cdr << ros_message->structure_needs_at_least_one_member;
+    cdr << (ros_message->active ? true : false);
   }
 
   return true;
@@ -61,9 +61,11 @@ bool cdr_deserialize_orca_msgs__msg__FailsafeTrigger(
   eprosima::fastcdr::Cdr & cdr,
   orca_msgs__msg__FailsafeTrigger * ros_message)
 {
-  // Field name: structure_needs_at_least_one_member
+  // Field name: active
   {
-    cdr >> ros_message->structure_needs_at_least_one_member;
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->active = tmp ? true : false;
   }
 
   return true;
@@ -84,9 +86,9 @@ size_t get_serialized_size_orca_msgs__msg__FailsafeTrigger(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: structure_needs_at_least_one_member
+  // Field name: active
   {
-    size_t item_size = sizeof(ros_message->structure_needs_at_least_one_member);
+    size_t item_size = sizeof(ros_message->active);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -113,7 +115,7 @@ size_t max_serialized_size_orca_msgs__msg__FailsafeTrigger(
   full_bounded = true;
   is_plain = true;
 
-  // Field name: structure_needs_at_least_one_member
+  // Field name: active
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -129,7 +131,7 @@ size_t max_serialized_size_orca_msgs__msg__FailsafeTrigger(
     using DataType = orca_msgs__msg__FailsafeTrigger;
     is_plain =
       (
-      offsetof(DataType, structure_needs_at_least_one_member) +
+      offsetof(DataType, active) +
       last_member_size
       ) == ret_val;
   }
@@ -141,9 +143,9 @@ bool cdr_serialize_key_orca_msgs__msg__FailsafeTrigger(
   const orca_msgs__msg__FailsafeTrigger * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: structure_needs_at_least_one_member
+  // Field name: active
   {
-    cdr << ros_message->structure_needs_at_least_one_member;
+    cdr << (ros_message->active ? true : false);
   }
 
   return true;
@@ -164,9 +166,9 @@ size_t get_serialized_size_key_orca_msgs__msg__FailsafeTrigger(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: structure_needs_at_least_one_member
+  // Field name: active
   {
-    size_t item_size = sizeof(ros_message->structure_needs_at_least_one_member);
+    size_t item_size = sizeof(ros_message->active);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -191,7 +193,7 @@ size_t max_serialized_size_key_orca_msgs__msg__FailsafeTrigger(
 
   full_bounded = true;
   is_plain = true;
-  // Field name: structure_needs_at_least_one_member
+  // Field name: active
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -206,7 +208,7 @@ size_t max_serialized_size_key_orca_msgs__msg__FailsafeTrigger(
     using DataType = orca_msgs__msg__FailsafeTrigger;
     is_plain =
       (
-      offsetof(DataType, structure_needs_at_least_one_member) +
+      offsetof(DataType, active) +
       last_member_size
       ) == ret_val;
   }

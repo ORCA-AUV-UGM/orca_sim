@@ -360,12 +360,12 @@ pub struct OrcaAttitude {
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub yaw_deg: f32,
+    pub initial_deg: f32,
 
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub initial_deg: f32,
+    pub yaw_deg: f32,
 
 
     // This member is not documented.
@@ -454,9 +454,9 @@ extern "C" {
 // Corresponds to orca_msgs__msg__OrcaProximity
 #[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
 
-/// data proximity isinya boolean doang njir
-/// true = arm
-/// false = disarm
+
+// This struct is not documented.
+#[allow(missing_docs)]
 
 #[repr(C)]
 #[derive(Clone, Debug, PartialEq, PartialOrd)]
@@ -731,7 +731,7 @@ pub struct FailsafeTrigger {
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub structure_needs_at_least_one_member: u8,
+    pub active: bool,
 
 }
 

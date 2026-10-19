@@ -40,15 +40,15 @@ void FailsafeTrigger_fini_function(void * message_memory)
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember FailsafeTrigger_message_member_array[1] = {
   {
-    "structure_needs_at_least_one_member",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
+    "active",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(orca_msgs::msg::FailsafeTrigger, structure_needs_at_least_one_member),  // bytes offset in struct
+    offsetof(orca_msgs::msg::FailsafeTrigger, active),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer

@@ -77,15 +77,6 @@ bool orca_msgs__msg__orca_attitude__convert_from_py(PyObject * _pymsg, void * _r
     ros_message->initial_z = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // yaw_deg
-    PyObject * field = PyObject_GetAttrString(_pymsg, "yaw_deg");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->yaw_deg = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
   {  // initial_deg
     PyObject * field = PyObject_GetAttrString(_pymsg, "initial_deg");
     if (!field) {
@@ -93,6 +84,15 @@ bool orca_msgs__msg__orca_attitude__convert_from_py(PyObject * _pymsg, void * _r
     }
     assert(PyFloat_Check(field));
     ros_message->initial_deg = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // yaw_deg
+    PyObject * field = PyObject_GetAttrString(_pymsg, "yaw_deg");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->yaw_deg = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // roll_deg
@@ -195,22 +195,22 @@ PyObject * orca_msgs__msg__orca_attitude__convert_to_py(void * raw_ros_message)
       }
     }
   }
-  {  // yaw_deg
+  {  // initial_deg
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->yaw_deg);
+    field = PyFloat_FromDouble(ros_message->initial_deg);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "yaw_deg", field);
+      int rc = PyObject_SetAttrString(_pymessage, "initial_deg", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // initial_deg
+  {  // yaw_deg
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->initial_deg);
+    field = PyFloat_FromDouble(ros_message->yaw_deg);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "initial_deg", field);
+      int rc = PyObject_SetAttrString(_pymessage, "yaw_deg", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

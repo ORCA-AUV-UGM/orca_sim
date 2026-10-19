@@ -63,14 +63,14 @@ bool cdr_serialize_orca_msgs__msg__OrcaAttitude(
     cdr << ros_message->initial_z;
   }
 
-  // Field name: yaw_deg
-  {
-    cdr << ros_message->yaw_deg;
-  }
-
   // Field name: initial_deg
   {
     cdr << ros_message->initial_deg;
+  }
+
+  // Field name: yaw_deg
+  {
+    cdr << ros_message->yaw_deg;
   }
 
   // Field name: roll_deg
@@ -121,14 +121,14 @@ bool cdr_deserialize_orca_msgs__msg__OrcaAttitude(
     cdr >> ros_message->initial_z;
   }
 
-  // Field name: yaw_deg
-  {
-    cdr >> ros_message->yaw_deg;
-  }
-
   // Field name: initial_deg
   {
     cdr >> ros_message->initial_deg;
+  }
+
+  // Field name: yaw_deg
+  {
+    cdr >> ros_message->yaw_deg;
   }
 
   // Field name: roll_deg
@@ -195,16 +195,16 @@ size_t get_serialized_size_orca_msgs__msg__OrcaAttitude(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: yaw_deg
+  // Field name: initial_deg
   {
-    size_t item_size = sizeof(ros_message->yaw_deg);
+    size_t item_size = sizeof(ros_message->initial_deg);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: initial_deg
+  // Field name: yaw_deg
   {
-    size_t item_size = sizeof(ros_message->initial_deg);
+    size_t item_size = sizeof(ros_message->yaw_deg);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -290,7 +290,7 @@ size_t max_serialized_size_orca_msgs__msg__OrcaAttitude(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: yaw_deg
+  // Field name: initial_deg
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -298,7 +298,7 @@ size_t max_serialized_size_orca_msgs__msg__OrcaAttitude(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: initial_deg
+  // Field name: yaw_deg
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -382,14 +382,14 @@ bool cdr_serialize_key_orca_msgs__msg__OrcaAttitude(
     cdr << ros_message->initial_z;
   }
 
-  // Field name: yaw_deg
-  {
-    cdr << ros_message->yaw_deg;
-  }
-
   // Field name: initial_deg
   {
     cdr << ros_message->initial_deg;
+  }
+
+  // Field name: yaw_deg
+  {
+    cdr << ros_message->yaw_deg;
   }
 
   // Field name: roll_deg
@@ -456,16 +456,16 @@ size_t get_serialized_size_key_orca_msgs__msg__OrcaAttitude(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: yaw_deg
+  // Field name: initial_deg
   {
-    size_t item_size = sizeof(ros_message->yaw_deg);
+    size_t item_size = sizeof(ros_message->initial_deg);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: initial_deg
+  // Field name: yaw_deg
   {
-    size_t item_size = sizeof(ros_message->initial_deg);
+    size_t item_size = sizeof(ros_message->yaw_deg);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -549,7 +549,7 @@ size_t max_serialized_size_key_orca_msgs__msg__OrcaAttitude(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: yaw_deg
+  // Field name: initial_deg
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -557,7 +557,7 @@ size_t max_serialized_size_key_orca_msgs__msg__OrcaAttitude(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Field name: initial_deg
+  // Field name: yaw_deg
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
