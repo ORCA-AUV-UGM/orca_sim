@@ -4,7 +4,7 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 import cv2
 import numpy as np
-from orca_msgs.msg import GateDetection
+from orca_msgs.msg import OrcaVision
 
 class CameraSimFinal():
     def __init__(self):
@@ -13,12 +13,12 @@ class CameraSimFinal():
         self.bridge = CvBridge()
         self.sub = self.create_subscription(Image, '/camera/image_raw', self.image_callback, 10)
 
-        self.pub_obstacle = self.create_publisher(GateDetection, '/orca/perception/orange_flare', 10)
-        self.pub_gate = self.create_publisher(GateDetection, '/orca/perception/gate_final', 10)
-        self.pub_red_flare = self.create_publisher(GateDetection, '/orca/perception/red_flare', 10)
-        self.pub_yellow_flare = self.create_publisher(GateDetection, '/orca/perception/yellow_flare', 10)
-        self.pub_blue_flare = self.create_publisher(GateDetection, '/orca/perception/blue_flare', 10)
-        self.pub_bucket_blue = self.create_publisher(GateDetection, '/orca/perception/bucket_blue', 10)
+        self.pub_obstacle = self.create_publisher(OrcaVision, '/vision/orange_flare', 10)
+        self.pub_gate = self.create_publisher(OrcaVision, '/vision/gate_final', 10)
+        self.pub_red_flare = self.create_publisher(OrcaVision, '/vision/red_flare', 10)
+        self.pub_yellow_flare = self.create_publisher(OrcaVision, '/vision/yellow_flare', 10)
+        self.pub_blue_flare = self.create_publisher(OrcaVision, '/vision/blue_flare', 10)
+        self.pub_bucket_blue = self.create_publisher(OrcaVision, '/vision/bucket_blue', 10)
 
         self.OBS_LO = np.array([5, 100, 100])
         self.OBS_HI = np.array([25, 255, 255])
@@ -48,7 +48,7 @@ class CameraSimFinal():
         self.get_logger().info("Camera Final SIM Node Started")
 
     def _empty_msg(self, class_name):
-        msg = GateDetection()
+        msg = OrcaVision()
         msg.detected = False
         msg.class_name = class_name
         msg.confidence = 0.0

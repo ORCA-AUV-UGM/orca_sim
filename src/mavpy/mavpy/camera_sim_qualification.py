@@ -5,17 +5,13 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 import cv2
 import numpy as np
-from orca_msgs.msg import GateDetection
+from orca_msgs.msg import OrcaVision
 
-# Oranye (tiang)
-ORANGE_LOW  = np.array([0,  100,  100])
-ORANGE_HIGH = np.array([30, 255,  255])
+ORANGE_LOW  = np.array([0, 100, 100])
+ORANGE_HIGH = np.array([30, 255, 255])
+DARK_LOW  = np.array([0, 0, 0])
+DARK_HIGH = np.array([180, 80, 60])
 
-# Hitam/gelap (top bar) — nilai HSV: V rendah = gelap
-DARK_LOW  = np.array([0,   0,   0])
-DARK_HIGH = np.array([180, 80,  60])
-
-# Toleransi geometri
 MIN_POST_AREA      = 80     # px² – kontur tiang minimum
 MIN_BAR_AREA       = 50     # px² – kontur bar minimum
 POST_ASPECT_MIN    = 1.5    # h/w minimum untuk tiang vertikal
@@ -32,15 +28,10 @@ class CameraSimQualification(Node):
     def __init__(self):
         super().__init__('camera_sim_qualification')
         self.bridge = CvBridge()
-        self.sub = self.create_subscription(
-            Image, '/camera/image_raw', self.image_callback, 10)
-        self.pub = self.create_publisher(
-            GateDetection, '/vision/gate', 10)
+        self.sub = self.create_subscription(Image, '/camera/image_raw', self.image_callback, 10)
+        self.pub = self.create_publisher(OrcaVision, '/vision/gate', 10)
         self.get_logger().info("Camera Gate SIM Node Started")
 
-    # ------------------------------------------------------------------
-    # 1. SEGMENTASI WARNA
-    # ------------------------------------------------------------------
     def segment(self, hsv):
         k = np.ones((5, 5), np.uint8)
 
@@ -54,13 +45,8 @@ class CameraSimQualification(Node):
 
         return mask_orange, mask_dark
 
-    # ------------------------------------------------------------------
-    # 2. EKSTRAK KANDIDAT KOMPONEN
-    # ------------------------------------------------------------------
     def extract_posts(self, mask_orange):
-        """Kembalikan daftar tiang vertikal dari mask oranye."""
-        contours, _ = cv2.findContours(
-            mask_orange, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        contours, _ = cv2.findContours(mask_orange, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         posts = []
         for c in contours:
             area = cv2.contourArea(c)
@@ -80,7 +66,6 @@ class CameraSimQualification(Node):
         return posts
 
     def extract_bars(self, mask_dark):
-        """Kembalikan daftar bar horizontal dari mask gelap."""
         contours, _ = cv2.findContours(
             mask_dark, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         bars = []
@@ -101,23 +86,11 @@ class CameraSimQualification(Node):
                 })
         return bars
 
-    # ------------------------------------------------------------------
-    # 3. RANGKAI GATE — wajib 3 komponen
-    # ------------------------------------------------------------------
     def match_gate(self, posts, bars, frame_w, frame_h):
-        """
-        Kembalikan dict gate jika DAN HANYA JIKA:
-          - ditemukan tiang kiri + tiang kanan yang valid (oranye)
-          - ditemukan top bar yang valid (hitam) di atas kedua tiang
-
-        Return None jika salah satu syarat tidak terpenuhi.
-        """
         if len(posts) < 2 or len(bars) < 1:
             return None   # wajib ada minimal 2 tiang + 1 bar
 
-        # Ambil 6 tiang terbesar sebagai kandidat
         posts = sorted(posts, key=lambda b: b['area'], reverse=True)[:6]
-
         best_gate  = None
         best_score = -1
 
@@ -126,7 +99,6 @@ class CameraSimQualification(Node):
                 left  = posts[i] if posts[i]['cx'] <= posts[j]['cx'] else posts[j]
                 right = posts[i] if posts[i]['cx'] >  posts[j]['cx'] else posts[j]
 
-                # --- Validasi pasangan tiang ---
                 gap = right['cx'] - left['cx']
                 if gap < GAP_MIN_PX:
                     continue
@@ -142,7 +114,6 @@ class CameraSimQualification(Node):
                 if top_diff > max(left['h'], right['h']) * POST_TOP_DIFF_FRAC:
                     continue
 
-                # Batas gate
                 gate_top    = min(left['y'], right['y'])
                 gate_bottom = max(left['y'] + left['h'], right['y'] + right['h'])
                 gate_left   = left['x']
@@ -150,13 +121,10 @@ class CameraSimQualification(Node):
                 gate_width  = gate_right - gate_left
                 gate_height = gate_bottom - gate_top
 
-                # --- Cari top bar yang valid (WAJIB ADA) ---
                 matched_bar = None
                 for bar in bars:
-                    # Bar harus berada di zona atas gate
                     bar_y_ok = bar['cy'] < (gate_top + gate_height * BAR_Y_MAX_FRAC)
 
-                    # Bar harus overlap secara horizontal dengan gate
                     overlap_left  = max(bar['x'], gate_left)
                     overlap_right = min(bar['x'] + bar['w'], gate_right)
                     overlap_w     = overlap_right - overlap_left
@@ -164,13 +132,11 @@ class CameraSimQualification(Node):
 
                     if bar_y_ok and bar_x_ok:
                         matched_bar = bar
-                        break   # ambil bar pertama yang valid
+                        break
 
-                # Gate HANYA valid jika bar ditemukan
                 if matched_bar is None:
                     continue
 
-                # Skor kualitas pasangan
                 area_ratio = (gate_width * gate_height) / (frame_w * frame_h)
                 score = h_ratio * 0.5 + area_ratio * 0.5
 
@@ -187,12 +153,8 @@ class CameraSimQualification(Node):
                         'score':      score,
                         'confidence': 1.0,   # semua 3 komponen terdeteksi
                     }
+        return best_gate
 
-        return best_gate   # None jika tidak ada pasangan valid + bar
-
-    # ------------------------------------------------------------------
-    # 4. CALLBACK UTAMA
-    # ------------------------------------------------------------------
     def image_callback(self, msg):
         frame = self.bridge.imgmsg_to_cv2(msg, 'bgr8')
         h, w, _ = frame.shape
@@ -206,13 +168,12 @@ class CameraSimQualification(Node):
         bars  = self.extract_bars(mask_dark)
         gate  = self.match_gate(posts, bars, w, h)
 
-        msg_out            = GateDetection()
+        msg_out            = OrcaVision()
         msg_out.detected   = False
         msg_out.class_name = "gate"
         msg_out.distance   = 0.0
 
         if gate is not None:
-            # --- Kalkulasi metrik ---
             x_min, y_min = gate['x_min'], gate['y_min']
             x_max, y_max = gate['x_max'], gate['y_max']
             bbox_w  = x_max - x_min
@@ -228,7 +189,6 @@ class CameraSimQualification(Node):
             center_x_norm  = dx / (w / 2.0)
             area_ratio     = (bbox_w * bbox_h) / (w * h)
 
-            # --- Publish ---
             msg_out.detected        = True
             msg_out.confidence      = float(gate['confidence'])
             msg_out.center_x        = float(gate_cx)
@@ -239,8 +199,6 @@ class CameraSimQualification(Node):
             msg_out.bbox_area_ratio = float(area_ratio)
             msg_out.distance        = float(distance_norm)
 
-            # --- Visualisasi ---
-            # Tiang kiri (oranye)
             lp = gate['left_post']
             cv2.rectangle(frame,
                           (lp['x'], lp['y']),
@@ -250,7 +208,6 @@ class CameraSimQualification(Node):
                         (lp['x'], lp['y'] - 5),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 140, 255), 2)
 
-            # Tiang kanan (oranye)
             rp = gate['right_post']
             cv2.rectangle(frame,
                           (rp['x'], rp['y']),
@@ -260,7 +217,6 @@ class CameraSimQualification(Node):
                         (rp['x'], rp['y'] - 5),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 140, 255), 2)
 
-            # Top bar (kuning)
             bar = gate['top_bar']
             cv2.rectangle(frame,
                           (bar['x'], bar['y']),
@@ -270,13 +226,11 @@ class CameraSimQualification(Node):
                         (bar['x'], bar['y'] - 5),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 255), 2)
 
-            # Bounding box satu kesatuan gate (hijau tebal)
             cv2.rectangle(frame,
                           (int(x_min), int(y_min)),
                           (int(x_max), int(y_max)),
                           (0, 255, 0), 3)
 
-            # Titik tengah gate & frame + garis error
             cv2.circle(frame, (int(gate_cx), int(gate_cy)), 7, (0, 0, 255), -1)
             cv2.circle(frame, (int(frame_cx), int(frame_cy)), 7, (0, 255, 255), -1)
             cv2.line(frame,
@@ -284,7 +238,6 @@ class CameraSimQualification(Node):
                      (int(gate_cx),  int(gate_cy)),
                      (255, 255, 255), 2)
 
-            # HUD
             cv2.putText(frame, "GATE DETECTED [L + R + BAR]",
                         (10, 28), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
             cv2.putText(frame, f"dx={dx:+.1f}  dy={dy:+.1f}",
@@ -298,7 +251,6 @@ class CameraSimQualification(Node):
             )
 
         else:
-            # --- Debug: tunjukkan komponen yang ditemukan ---
             n_posts = len(posts)
             n_bars  = len(bars)
 

@@ -13,6 +13,7 @@ mavpy/attitude_node.py
 mavpy/camera_sim_final.py
 mavpy/camera_sim_qualification.py
 mavpy/control_bridge.py
+mavpy/final_sim.py
 mavpy/keyboard.py
 mavpy/test_control.py
 mavpy/test_keyboard.py

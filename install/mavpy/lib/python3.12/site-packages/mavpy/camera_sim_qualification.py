@@ -35,7 +35,7 @@ class CameraSimQualification(Node):
         self.sub = self.create_subscription(
             Image, '/camera/image_raw', self.image_callback, 10)
         self.pub = self.create_publisher(
-            GateDetection, '/orca/perception/gate', 10)
+            GateDetection, '/vision/gate', 10)
         self.get_logger().info("Camera Gate SIM Node Started")
 
     # ------------------------------------------------------------------

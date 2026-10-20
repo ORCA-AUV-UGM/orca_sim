@@ -17,7 +17,7 @@ setup(
     zip_safe=True,
     maintainer='jetson',
     maintainer_email='jetson@todo.todo',
-    description='ORCA sensor, control bridge, teleop, and qualification nodes',
+    description='ORCA sensor, control bridge, teleop, and mission nodes',
     license='Proprietary',
     tests_require=['pytest'],
     entry_points={

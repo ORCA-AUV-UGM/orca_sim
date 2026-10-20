@@ -1,4 +1,5 @@
 /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy/keyboard.py
+/home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy/final_sim.py
 /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy/control_bridge.py
 /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy/test_control.py
 /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy/camera_sim_qualification.py
@@ -7,6 +8,7 @@
 /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy/attitude_node.py
 /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy/__init__.py
 /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy/__pycache__/keyboard.cpython-312.pyc
+/home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy/__pycache__/final_sim.cpython-312.pyc
 /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy/__pycache__/control_bridge.cpython-312.pyc
 /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy/__pycache__/test_control.cpython-312.pyc
 /home/riovaldo/orcav4_ws/install/mavpy/lib/python3.12/site-packages/mavpy/__pycache__/camera_sim_qualification.cpython-312.pyc
