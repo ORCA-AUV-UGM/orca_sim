@@ -389,7 +389,7 @@ class CameraSimFinal():
         self.pub_blue_flare.publish(msg_blue)
         self.pub_bucket_blue.publish(msg_bucket)
 
-        cv2.imshow("SIM Final Detection", frame)
+        cv2.imshow("Sim Final Detection", frame)
         cv2.waitKey(1)
 
 def main(args=None):
