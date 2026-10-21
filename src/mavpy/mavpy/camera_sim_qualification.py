@@ -151,7 +151,7 @@ class CameraSimQualification(Node):
                         'right_post': right,
                         'top_bar':    matched_bar,
                         'score':      score,
-                        'confidence': 1.0,   # semua 3 komponen terdeteksi
+                        'confidence': 1.0,
                     }
         return best_gate
 
