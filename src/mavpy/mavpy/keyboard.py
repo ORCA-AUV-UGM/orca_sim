@@ -4,39 +4,30 @@ import rclpy
 from rclpy.node import Node
 from orca_msgs.msg import OrcaControl
 
-class ROVTeleop(Node):
+class Keyboard(Node):
     def __init__(self):
-        super().__init__('orca_keyboard_node')
-        self.declare_parameter('manual_control_topic', '/manual/control')
-        self.declare_parameter('keyboard_publish_hz', 20.0)
-        self.declare_parameter('keyboard_step_pwm', 10)
-        self.declare_parameter('keyboard_pwm_min', 1160)
-        self.declare_parameter('keyboard_pwm_max', 1840)
-        self.declare_parameter('window_size', 120)
+        super().__init__('keyboard')
 
-        self.topic_name = str(self.get_parameter('manual_control_topic').value)
-        self.publish_hz = float(self.get_parameter('keyboard_publish_hz').value)
-        self.step_pwm = int(self.get_parameter('keyboard_step_pwm').value)
-        self.pwm_min = int(self.get_parameter('keyboard_pwm_min').value)
-        self.pwm_max = int(self.get_parameter('keyboard_pwm_max').value)
-        self.window_size = int(self.get_parameter('window_size').value)
+        self.step_pwm = 10
+        self.pwm_min = 1100
+        self.pwm_max = 1900
 
         pygame.init()
-        self.screen = pygame.display.set_mode((self.window_size, self.window_size))
+        self.screen = pygame.display.set_mode((150, 150))
         pygame.display.set_caption('ORCA Keyboard Control')
 
-        self.publisher_ = self.create_publisher(OrcaControl, self.topic_name, 10)
+        self.publisher_ = self.create_publisher(OrcaControl, '/manual/control', 10)
         self.get_logger().info(
             'Keyboard aktif.\n'
             '- W/S: Forward/Backward\n'
             '- A/D: Lateral Left/Right\n'
-            '- Panah Kiri/Kanan: Yaw Left/Right\n'
-            '- Panah Atas/Bawah: Throttle Up/Down\n'
+            '- ↑/↓: Throttle Up/Down\n'
+            '- ←/→: Yaw Left/Right\n'
             '- T/G: Pitch Up/Down\n'
             '- F/H: Roll Left/Right\n'
-            '- L: Gripper Open/Close (toggle)\n'
-            '- J: Toggle Arm/Disarm\n'
-            '- K: Toggle Mode'
+            '- L:   Gripper Open/Close\n'
+            '- J:   Arm/Disarm\n'
+            '- K:   Mode MANUAL/DEPTH_HOLD'
         )
 
         self.axis_pwm = {
@@ -61,18 +52,19 @@ class ROVTeleop(Node):
 
         self.gripper_states = ['close', 'open']
         self.gripper_idx = 0
-        self.create_timer(1.0 / max(1.0, self.publish_hz), self.key_callback)
+
+        self.create_timer(1.0 / max(1.0, 20.0), self.key_callback)
 
     def key_callback(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 raise KeyboardInterrupt
+
             if event.type == pygame.KEYDOWN:
                 # Gripper control: L = toggle open <-> close
                 if event.key == pygame.K_l:
                     self.gripper_idx = 1 - self.gripper_idx
-                    self.get_logger().info(
-                        f'Gripper: {self.gripper_states[self.gripper_idx].upper()}')
+                    self.get_logger().info(f'Gripper: {self.gripper_states[self.gripper_idx].upper()}')
 
                 # System toggles
                 elif event.key == pygame.K_j:
@@ -165,7 +157,7 @@ class ROVTeleop(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = ROVTeleop()
+    node = Keyboard()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
