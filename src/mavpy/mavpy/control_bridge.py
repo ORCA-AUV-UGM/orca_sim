@@ -10,57 +10,24 @@ class ControlBridge(Node):
     def __init__(self):
         super().__init__('control_bridge')
 
-        self.declare_parameter('mavlink_url', 'udpin:0.0.0.0:14551')
-        self.declare_parameter('manual_control_topic', '/manual/control')
-        self.declare_parameter('auto_control_topic', '/auto/control')
-        self.declare_parameter('failsafe_control_topic', '/failsafe/control')
-        self.declare_parameter('failsafe_trigger_topic', '/failsafe/trigger')
-        self.declare_parameter('proximity_topic', '/start_trigger')
-
-        self.declare_parameter('publish_override_hz', 10.0)
-        self.declare_parameter('neutral_pwm', 1500)
-        self.declare_parameter('auto_stale_timeout_sec', 0.6)
-        self.declare_parameter('manual_stale_timeout_sec', 0.6)
-        self.declare_parameter('failsafe_stale_timeout_sec', 0.6)
-        self.declare_parameter('manual_priority', True)
-        self.declare_parameter('manual_release_mode', 'MISSION')
-
-        self.declare_parameter('gripper_servo_channel', 10)
-        self.declare_parameter('gripper_pwm_open', 2100)
-        self.declare_parameter('gripper_pwm_close', 955)
-
-        self.mavlink_url = str(self.get_parameter('mavlink_url').value)
-        self.manual_control_topic = str(self.get_parameter('manual_control_topic').value)
-        self.auto_control_topic = str(self.get_parameter('auto_control_topic').value)
-        self.failsafe_control_topic = str(self.get_parameter('failsafe_control_topic').value)
-        self.failsafe_trigger_topic = str(self.get_parameter('failsafe_trigger_topic').value)
-        self.proximity_topic = str(self.get_parameter('proximity_topic').value)
-
-        self.publish_override_hz = float(self.get_parameter('publish_override_hz').value)
-        self.neutral_pwm = int(self.get_parameter('neutral_pwm').value)
-        self.auto_stale_timeout_sec = float(self.get_parameter('auto_stale_timeout_sec').value)
-        self.manual_stale_timeout_sec = float(self.get_parameter('manual_stale_timeout_sec').value)
-        self.failsafe_stale_timeout_sec = float(self.get_parameter('failsafe_stale_timeout_sec').value)
-        self.manual_priority = bool(self.get_parameter('manual_priority').value)
-        self.manual_release_mode = str(self.get_parameter('manual_release_mode').value).upper().strip()
-
-        # Gripper hanya 2 kondisi: open (2100 us) dan close (955 us)
-        self.gripper_servo_channel = int(self.get_parameter('gripper_servo_channel').value)
-        self.gripper_pwm_map = {
-            'open': int(self.get_parameter('gripper_pwm_open').value),
-            'close': int(self.get_parameter('gripper_pwm_close').value),
-        }
-
-        self.master = mavutil.mavlink_connection(self.mavlink_url)
-        self.get_logger().info(f'Menunggu heartbeat Pixhawk di {self.mavlink_url}...')
+        self.master = mavutil.mavlink_connection('udpin:0.0.0.0:14551')
+        self.get_logger().info(f'Menunggu heartbeat Pixhawk...')
         self.master.wait_heartbeat()
-        self.get_logger().info(f'Pixhawk terhubung via {self.mavlink_url}')
+        self.get_logger().info(f'Pixhawk terhubung via udpin:0.0.0.0:14551')
 
+        self.gripper_servo_channel = 10
+        self.gripper_pwm_map = {'open': 2100, 'close': 955,}
         self._set_servo_channel_disabled(self.gripper_servo_channel)
 
         self.manual_cmd = self.make_neutral('manual_init')
         self.auto_cmd = self.make_neutral('auto_init')
         self.failsafe_cmd = self.make_neutral('failsafe_init')
+
+        self.auto_stale_timeout_sec = 0.6
+        self.manual_stale_timeout_sec = 0.6
+        self.failsafe_stale_timeout_sec = 0.6
+        self.manual_priority = True
+        self.manual_release_mode = 'MISSION'
 
         self.last_manual_time = 0.0
         self.last_auto_time = 0.0
@@ -76,13 +43,13 @@ class ControlBridge(Node):
         self.proximity_triggered = False
         self.prev_proximity = False
 
-        self.create_subscription(OrcaControl, self.manual_control_topic, self.manual_cb, 10)
-        self.create_subscription(OrcaControl, self.auto_control_topic, self.auto_cb, 10)
-        self.create_subscription(OrcaControl, self.failsafe_control_topic, self.failsafe_control_cb, 10)
-        self.create_subscription(FailsafeTrigger, self.failsafe_trigger_topic, self.failsafe_trigger_cb, 10)
-        self.create_subscription(OrcaProximity, self.proximity_topic, self.proximity_cb, 10)
+        self.create_subscription(OrcaControl, '/manual/control', self.manual_cb, 10)
+        self.create_subscription(OrcaControl, '/auto/control', self.auto_cb, 10)
+        self.create_subscription(OrcaControl, '/failsafe/control', self.failsafe_control_cb, 10)
+        self.create_subscription(FailsafeTrigger, '/failsafe/trigger', self.failsafe_trigger_cb, 10)
+        self.create_subscription(OrcaProximity, '/start_trigger', self.proximity_cb, 10)
 
-        self.create_timer(1.0 / max(1.0, self.publish_override_hz), self.send_selected_control,)
+        self.create_timer(1.0 / max(1.0, 10.0), self.send_selected_control,)
 
     def _set_servo_channel_disabled(self, channel: int):
         param_name = f'SERVO{channel}_FUNCTION'.encode('utf-8')
@@ -97,12 +64,12 @@ class ControlBridge(Node):
 
     def make_neutral(self, source: str, disarm: bool = False) -> OrcaControl:
         msg = OrcaControl()
-        msg.pitch = self.neutral_pwm
-        msg.roll = self.neutral_pwm
-        msg.throttle = self.neutral_pwm
-        msg.lateral = self.neutral_pwm
-        msg.forward = self.neutral_pwm
-        msg.yaw = self.neutral_pwm
+        msg.pitch = 1500
+        msg.roll = 1500
+        msg.throttle = 1500
+        msg.lateral = 1500
+        msg.forward = 1500
+        msg.yaw = 1500
         msg.arm_mode = 'disarm' if disarm else ''
         msg.control_mode = ''
         msg.gripper_mode = ''
@@ -139,11 +106,11 @@ class ControlBridge(Node):
 
     def failsafe_trigger_cb(self, msg: FailsafeTrigger):
         if msg.active and not self.failsafe_active:
-            self.get_logger().fatal('Fail-safe trigger aktif. ControlBridge beralih ke /orca/failsafe/control.')
+            self.get_logger().fatal('Fail-safe trigger aktif.')
             self.last_selected_source = ''
 
         elif not msg.active and self.failsafe_active:
-            self.get_logger().info('Fail-safe trigger nonaktif. Kendali manual/auto tersedia kembali. ARM ulang disarankan.')
+            self.get_logger().info('Fail-safe trigger nonaktif.')
             self.last_arm = None
             self.last_selected_source = ''
 
@@ -213,10 +180,10 @@ class ControlBridge(Node):
             return
 
         if self.proximity_triggered and not self.prev_proximity:
-            self.get_logger().info('Proximity trigger → ARM')
+            self.get_logger().info('Proximity trigger ON → ARM')
             self._send_arm('arm')
         elif not self.proximity_triggered and self.prev_proximity:
-            self.get_logger().info('Proximity trigger off → DISARM')
+            self.get_logger().info('Proximity trigger OFF → DISARM')
             self._send_arm('disarm')
 
         self.prev_proximity = self.proximity_triggered
@@ -259,7 +226,6 @@ class ControlBridge(Node):
         self.get_logger().info(f'MODE COMMAND: {mode_name}')
 
     def _send_gripper(self, gripper_mode: str):
-        # Hanya 'open' dan 'close'; nilai lain (termasuk kosong) diabaikan
         gripper_mode = (gripper_mode or '').strip().lower()
         if gripper_mode not in self.gripper_pwm_map:
             return
