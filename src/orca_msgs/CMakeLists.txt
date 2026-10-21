@@ -20,14 +20,14 @@ find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/FinalDetection.msg"
-  "msg/GateDetection.msg"
-  "msg/OrcaDepth.msg"
-  "msg/OrcaAttitude.msg"
-  "msg/OrcaProximity.msg"
-  "msg/OrcaControl.msg"
   "msg/FlareSequence.msg"
-  "msg/FailsafeTrigger.msg"
+  "msg/FailsafeTrigger.msg"  
+  "msg/OrcaAttitude.msg"
+  "msg/OrcaControl.msg"
+  "msg/OrcaDepth.msg"
+  "msg/OrcaJoystick.msg"
+  "msg/OrcaProximity.msg"
+  "msg/OrcaVision.msg"
 )
 
 ament_export_dependencies(rosidl_default_runtime)
