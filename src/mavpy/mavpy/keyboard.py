@@ -34,7 +34,7 @@ class ROVTeleop(Node):
             '- Panah Atas/Bawah: Throttle Up/Down\n'
             '- T/G: Pitch Up/Down\n'
             '- F/H: Roll Left/Right\n'
-            '- 1: Open Left, 2: Close, 3: Open Right (Gripper)\n'
+            '- L: Gripper Open/Close (toggle)\n'
             '- J: Toggle Arm/Disarm\n'
             '- K: Toggle Mode'
         )
@@ -59,8 +59,8 @@ class ROVTeleop(Node):
         self.control_modes = ['MANUAL', 'ALT_HOLD']
         self.control_mode_idx = 0
 
-        self.gripper_states = ['open_right', 'close', 'open_left']
-        self.gripper_idx = 1
+        self.gripper_states = ['close', 'open']
+        self.gripper_idx = 0
         self.create_timer(1.0 / max(1.0, self.publish_hz), self.key_callback)
 
     def key_callback(self):
@@ -68,13 +68,11 @@ class ROVTeleop(Node):
             if event.type == pygame.QUIT:
                 raise KeyboardInterrupt
             if event.type == pygame.KEYDOWN:
-                # Gripper control
-                if event.key == pygame.K_1 or event.key == pygame.K_KP1:
-                    self.gripper_idx = 2  # open_left
-                elif event.key == pygame.K_2 or event.key == pygame.K_KP2:
-                    self.gripper_idx = 1  # close
-                elif event.key == pygame.K_3 or event.key == pygame.K_KP3:
-                    self.gripper_idx = 0  # open_right
+                # Gripper control: L = toggle open <-> close
+                if event.key == pygame.K_l:
+                    self.gripper_idx = 1 - self.gripper_idx
+                    self.get_logger().info(
+                        f'Gripper: {self.gripper_states[self.gripper_idx].upper()}')
 
                 # System toggles
                 elif event.key == pygame.K_j:

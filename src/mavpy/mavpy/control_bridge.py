@@ -26,9 +26,8 @@ class ControlBridge(Node):
         self.declare_parameter('manual_release_mode', 'MISSION')
 
         self.declare_parameter('gripper_servo_channel', 10)
-        self.declare_parameter('gripper_pwm_open_right', 955)
-        self.declare_parameter('gripper_pwm_open_left', 2100)
-        self.declare_parameter('gripper_pwm_close', 1500)
+        self.declare_parameter('gripper_pwm_open', 2100)
+        self.declare_parameter('gripper_pwm_close', 955)
 
         self.mavlink_url = str(self.get_parameter('mavlink_url').value)
         self.manual_control_topic = str(self.get_parameter('manual_control_topic').value)
@@ -45,10 +44,10 @@ class ControlBridge(Node):
         self.manual_priority = bool(self.get_parameter('manual_priority').value)
         self.manual_release_mode = str(self.get_parameter('manual_release_mode').value).upper().strip()
 
+        # Gripper hanya 2 kondisi: open (2100 us) dan close (955 us)
         self.gripper_servo_channel = int(self.get_parameter('gripper_servo_channel').value)
         self.gripper_pwm_map = {
-            'open_right': int(self.get_parameter('gripper_pwm_open_right').value),
-            'open_left': int(self.get_parameter('gripper_pwm_open_left').value),
+            'open': int(self.get_parameter('gripper_pwm_open').value),
             'close': int(self.get_parameter('gripper_pwm_close').value),
         }
 
@@ -260,6 +259,7 @@ class ControlBridge(Node):
         self.get_logger().info(f'MODE COMMAND: {mode_name}')
 
     def _send_gripper(self, gripper_mode: str):
+        # Hanya 'open' dan 'close'; nilai lain (termasuk kosong) diabaikan
         gripper_mode = (gripper_mode or '').strip().lower()
         if gripper_mode not in self.gripper_pwm_map:
             return
