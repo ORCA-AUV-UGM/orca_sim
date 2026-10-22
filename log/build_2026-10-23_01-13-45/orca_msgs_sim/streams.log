@@ -1,0 +1,476 @@
+[0.018s] Invoking command in '/home/riovaldo/orca_sim/build/orca_msgs_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/riovaldo/orca_sim/install/mavpy_sim:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/riovaldo/orca_sim/src/orca_msgs_sim -DCMAKE_INSTALL_PREFIX=/home/riovaldo/orca_sim/install/orca_msgs_sim
+[0.075s] -- The C compiler identification is GNU 13.3.0
+[0.137s] -- The CXX compiler identification is GNU 13.3.0
+[0.158s] -- Detecting C compiler ABI info
+[0.306s] -- Detecting C compiler ABI info - done
+[0.322s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.323s] -- Detecting C compile features
+[0.324s] -- Detecting C compile features - done
+[0.336s] -- Detecting CXX compiler ABI info
+[0.489s] -- Detecting CXX compiler ABI info - done
+[0.514s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.514s] -- Detecting CXX compile features
+[0.515s] -- Detecting CXX compile features - done
+[0.521s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.699s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.826s] -- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.834s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.896s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.960s] -- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.848s] -- Found ament_cmake_ros: 0.12.2 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[2.508s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.431s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.438s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[3.696s] -- Found PythonExtra: /usr/bin/python3  
+[4.309s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[4.389s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[4.399s] -- Configuring done (4.4s)
+[4.455s] -- Generating done (0.0s)
+[4.468s] -- Build files have been written to: /home/riovaldo/orca_sim/build/orca_msgs_sim
+[4.476s] Invoked command in '/home/riovaldo/orca_sim/build/orca_msgs_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/riovaldo/orca_sim/install/mavpy_sim:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/riovaldo/orca_sim/src/orca_msgs_sim -DCMAKE_INSTALL_PREFIX=/home/riovaldo/orca_sim/install/orca_msgs_sim
+[4.477s] Invoking command in '/home/riovaldo/orca_sim/build/orca_msgs_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/riovaldo/orca_sim/install/mavpy_sim:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/riovaldo/orca_sim/build/orca_msgs_sim -- -j8 -l8
+[4.542s] [  2%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[4.543s] [  2%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[4.555s] [  2%] Built target ament_cmake_python_copy_orca_msgs_sim
+[4.780s] running egg_info
+[4.781s] creating orca_msgs_sim.egg-info
+[4.799s] writing orca_msgs_sim.egg-info/PKG-INFO
+[4.799s] writing dependency_links to orca_msgs_sim.egg-info/dependency_links.txt
+[4.800s] writing top-level names to orca_msgs_sim.egg-info/top_level.txt
+[4.800s] writing manifest file 'orca_msgs_sim.egg-info/SOURCES.txt'
+[4.864s] reading manifest file 'orca_msgs_sim.egg-info/SOURCES.txt'
+[4.865s] writing manifest file 'orca_msgs_sim.egg-info/SOURCES.txt'
+[4.869s] [  2%] Built target orca_msgs_sim__rosidl_generator_type_description
+[4.881s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[4.892s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[4.898s] [  3%] Built target orca_msgs_sim__rs
+[4.903s] [  3%] Built target ament_cmake_python_build_orca_msgs_sim_egg
+[5.474s] [  3%] Built target orca_msgs_sim__cpp
+[5.625s] [  7%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/failsafe_trigger__type_support.c.o[0m
+[5.625s] [  7%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/flare_sequence__functions.c.o[0m
+[5.626s] [  7%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/flare_sequence__description.c.o[0m
+[5.626s] [  7%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/flare_sequence__type_support.c.o[0m
+[5.626s] [  8%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/failsafe_trigger__description.c.o[0m
+[5.628s] [  9%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/orca_attitude__description.c.o[0m
+[5.628s] [ 10%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/orca_attitude__functions.c.o[0m
+[5.630s] [ 11%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/failsafe_trigger__functions.c.o[0m
+[5.670s] [ 13%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/orca_attitude__type_support.c.o[0m
+[5.670s] [ 13%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/orca_control__description.c.o[0m
+[5.676s] [ 15%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/orca_control__type_support.c.o[0m
+[5.676s] [ 15%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/orca_control__functions.c.o[0m
+[5.678s] [ 16%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/orca_depth__description.c.o[0m
+[5.695s] [ 17%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/orca_depth__functions.c.o[0m
+[5.696s] [ 18%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/orca_depth__type_support.c.o[0m
+[5.698s] [ 19%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/orca_joystick__description.c.o[0m
+[5.712s] [ 20%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/orca_joystick__functions.c.o[0m
+[5.718s] [ 21%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/orca_joystick__type_support.c.o[0m
+[5.725s] [ 21%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/orca_proximity__description.c.o[0m
+[5.732s] [ 22%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/orca_proximity__functions.c.o[0m
+[5.751s] [ 23%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/orca_proximity__type_support.c.o[0m
+[5.757s] [ 25%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/orca_vision__functions.c.o[0m
+[5.757s] [ 25%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/orca_vision__description.c.o[0m
+[5.764s] [ 26%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_c.dir/rosidl_generator_c/orca_msgs_sim/msg/detail/orca_vision__type_support.c.o[0m
+[5.807s] [ 27%] [32m[1mLinking C shared library liborca_msgs_sim__rosidl_generator_c.so[0m
+[5.879s] [ 27%] Built target orca_msgs_sim__rosidl_generator_c
+[5.900s] [ 29%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[5.900s] [ 29%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[5.904s] [ 30%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[5.905s] [ 31%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[5.906s] [ 32%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[5.907s] [ 33%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[6.373s] [ 36%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/orca_msgs_sim/msg/orca_attitude__type_support.cpp.o[0m
+[6.374s] [ 36%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/orca_msgs_sim/msg/failsafe_trigger__type_support.cpp.o[0m
+[6.374s] [ 36%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/orca_msgs_sim/msg/flare_sequence__type_support.cpp.o[0m
+[6.689s] [ 37%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_c.dir/rosidl_typesupport_c/orca_msgs_sim/msg/flare_sequence__type_support.cpp.o[0m
+[6.754s] [ 38%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_c.dir/rosidl_typesupport_c/orca_msgs_sim/msg/failsafe_trigger__type_support.cpp.o[0m
+[6.813s] [ 39%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/orca_msgs_sim/msg/detail/dds_fastrtps/flare_sequence__type_support.cpp.o[0m
+[6.815s] [ 40%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_c.dir/rosidl_typesupport_c/orca_msgs_sim/msg/orca_attitude__type_support.cpp.o[0m
+[6.841s] [ 41%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/orca_msgs_sim/msg/detail/dds_fastrtps/failsafe_trigger__type_support.cpp.o[0m
+[6.874s] [ 41%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_c.dir/rosidl_typesupport_c/orca_msgs_sim/msg/orca_control__type_support.cpp.o[0m
+[6.882s] [ 42%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/orca_msgs_sim/msg/orca_control__type_support.cpp.o[0m
+[6.885s] [ 43%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/orca_msgs_sim/msg/detail/dds_fastrtps/orca_attitude__type_support.cpp.o[0m
+[6.891s] [ 44%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/orca_msgs_sim/msg/detail/flare_sequence__type_support.cpp.o[0m
+[6.920s] [ 45%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/orca_msgs_sim/msg/detail/flare_sequence__type_support.c.o[0m
+[6.937s] [ 46%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_c.dir/rosidl_typesupport_c/orca_msgs_sim/msg/orca_depth__type_support.cpp.o[0m
+[6.976s] [ 47%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/orca_msgs_sim/msg/detail/failsafe_trigger__type_support.c.o[0m
+[7.000s] [ 48%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_c.dir/rosidl_typesupport_c/orca_msgs_sim/msg/orca_joystick__type_support.cpp.o[0m
+[7.027s] [ 49%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/orca_msgs_sim/msg/detail/orca_attitude__type_support.c.o[0m
+[7.063s] [ 50%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_c.dir/rosidl_typesupport_c/orca_msgs_sim/msg/orca_proximity__type_support.cpp.o[0m
+[7.079s] [ 51%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/orca_msgs_sim/msg/detail/orca_control__type_support.c.o[0m
+[7.127s] [ 52%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_c.dir/rosidl_typesupport_c/orca_msgs_sim/msg/orca_vision__type_support.cpp.o[0m
+[7.132s] [ 53%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/orca_msgs_sim/msg/detail/orca_depth__type_support.c.o[0m
+[7.184s] [ 54%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/orca_msgs_sim/msg/detail/flare_sequence__type_support_c.cpp.o[0m
+[7.184s] [ 54%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/orca_msgs_sim/msg/detail/orca_joystick__type_support.c.o[0m
+[7.192s] [ 55%] [32m[1mLinking CXX shared library liborca_msgs_sim__rosidl_typesupport_c.so[0m
+[7.239s] [ 56%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/orca_msgs_sim/msg/detail/orca_proximity__type_support.c.o[0m
+[7.262s] [ 56%] Built target orca_msgs_sim__rosidl_typesupport_c
+[7.277s] [ 57%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/orca_msgs_sim/msg/orca_depth__type_support.cpp.o[0m
+[7.294s] [ 58%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/orca_msgs_sim/msg/detail/orca_vision__type_support.c.o[0m
+[7.364s] [ 59%] [32m[1mLinking C shared library liborca_msgs_sim__rosidl_typesupport_introspection_c.so[0m
+[7.369s] [ 60%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/orca_msgs_sim/msg/detail/failsafe_trigger__type_support.cpp.o[0m
+[7.400s] [ 61%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/orca_msgs_sim/msg/detail/dds_fastrtps/orca_control__type_support.cpp.o[0m
+[7.415s] [ 61%] Built target orca_msgs_sim__rosidl_typesupport_introspection_c
+[7.429s] [ 62%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/orca_msgs_sim/msg/detail/failsafe_trigger__type_support_c.cpp.o[0m
+[7.547s] [ 63%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/orca_msgs_sim/msg/detail/dds_fastrtps/orca_depth__type_support.cpp.o[0m
+[7.557s] [ 64%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/orca_msgs_sim/msg/detail/dds_fastrtps/orca_joystick__type_support.cpp.o[0m
+[7.640s] [ 65%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/orca_msgs_sim/msg/detail/orca_attitude__type_support.cpp.o[0m
+[7.744s] [ 66%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/orca_msgs_sim/msg/orca_joystick__type_support.cpp.o[0m
+[7.838s] [ 67%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/orca_msgs_sim/msg/detail/orca_attitude__type_support_c.cpp.o[0m
+[7.886s] [ 68%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/orca_msgs_sim/msg/detail/dds_fastrtps/orca_proximity__type_support.cpp.o[0m
+[8.106s] [ 69%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/orca_msgs_sim/msg/detail/orca_control__type_support.cpp.o[0m
+[8.144s] [ 70%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/orca_msgs_sim/msg/orca_proximity__type_support.cpp.o[0m
+[8.157s] [ 71%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/orca_msgs_sim/msg/detail/orca_control__type_support_c.cpp.o[0m
+[8.231s] [ 72%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/orca_msgs_sim/msg/detail/orca_depth__type_support.cpp.o[0m
+[8.312s] [ 72%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/orca_msgs_sim/msg/detail/orca_depth__type_support_c.cpp.o[0m
+[8.320s] [ 73%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/orca_msgs_sim/msg/orca_vision__type_support.cpp.o[0m
+[8.548s] [ 74%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/orca_msgs_sim/msg/detail/orca_joystick__type_support.cpp.o[0m
+[8.590s] [ 75%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/orca_msgs_sim/msg/detail/dds_fastrtps/orca_vision__type_support.cpp.o[0m
+[8.601s] [ 76%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/orca_msgs_sim/msg/detail/orca_joystick__type_support_c.cpp.o[0m
+[8.623s] [ 77%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/orca_msgs_sim/msg/detail/orca_proximity__type_support.cpp.o[0m
+[8.731s] [ 78%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/orca_msgs_sim/msg/detail/orca_proximity__type_support_c.cpp.o[0m
+[8.816s] [ 79%] [32m[1mLinking CXX shared library liborca_msgs_sim__rosidl_typesupport_cpp.so[0m
+[8.883s] [ 79%] Built target orca_msgs_sim__rosidl_typesupport_cpp
+[8.897s] [ 80%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/orca_msgs_sim/msg/detail/orca_vision__type_support.cpp.o[0m
+[8.904s] [ 81%] [32mBuilding CXX object CMakeFiles/orca_msgs_sim__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/orca_msgs_sim/msg/detail/orca_vision__type_support_c.cpp.o[0m
+[9.227s] [ 82%] [32m[1mLinking CXX shared library liborca_msgs_sim__rosidl_typesupport_fastrtps_cpp.so[0m
+[9.311s] [ 82%] Built target orca_msgs_sim__rosidl_typesupport_fastrtps_cpp
+[9.349s] [ 83%] [32m[1mLinking CXX shared library liborca_msgs_sim__rosidl_typesupport_introspection_cpp.so[0m
+[9.414s] [ 83%] Built target orca_msgs_sim__rosidl_typesupport_introspection_cpp
+[9.419s] [ 84%] [32m[1mLinking CXX shared library liborca_msgs_sim__rosidl_typesupport_fastrtps_c.so[0m
+[9.526s] [ 84%] Built target orca_msgs_sim__rosidl_typesupport_fastrtps_c
+[9.551s] [ 84%] Built target orca_msgs_sim
+[9.593s] [ 85%] [34m[1mGenerating Python code for ROS interfaces[0m
+[10.442s] [ 85%] Built target orca_msgs_sim__py
+[10.478s] [ 88%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_py.dir/rosidl_generator_py/orca_msgs_sim/msg/_flare_sequence_s.c.o[0m
+[10.478s] [ 89%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_py.dir/rosidl_generator_py/orca_msgs_sim/msg/_orca_attitude_s.c.o[0m
+[10.479s] [ 89%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_py.dir/rosidl_generator_py/orca_msgs_sim/msg/_orca_control_s.c.o[0m
+[10.479s] [ 89%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_py.dir/rosidl_generator_py/orca_msgs_sim/msg/_failsafe_trigger_s.c.o[0m
+[10.479s] [ 90%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_py.dir/rosidl_generator_py/orca_msgs_sim/msg/_orca_joystick_s.c.o[0m
+[10.479s] [ 91%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_py.dir/rosidl_generator_py/orca_msgs_sim/msg/_orca_depth_s.c.o[0m
+[10.479s] [ 92%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_py.dir/rosidl_generator_py/orca_msgs_sim/msg/_orca_proximity_s.c.o[0m
+[10.479s] [ 93%] [32mBuilding C object CMakeFiles/orca_msgs_sim__rosidl_generator_py.dir/rosidl_generator_py/orca_msgs_sim/msg/_orca_vision_s.c.o[0m
+[10.691s] [ 94%] [32m[1mLinking C shared library liborca_msgs_sim__rosidl_generator_py.so[0m
+[10.759s] [ 94%] Built target orca_msgs_sim__rosidl_generator_py
+[10.798s] [ 97%] [32mBuilding C object CMakeFiles/orca_msgs_sim_s__rosidl_typesupport_c.dir/rosidl_generator_py/orca_msgs_sim/_orca_msgs_sim_s.ep.rosidl_typesupport_c.c.o[0m
+[10.798s] [ 97%] [32mBuilding C object CMakeFiles/orca_msgs_sim_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/orca_msgs_sim/_orca_msgs_sim_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[10.798s] [ 97%] [32mBuilding C object CMakeFiles/orca_msgs_sim_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/orca_msgs_sim/_orca_msgs_sim_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[10.962s] [100%] [32m[1mLinking C shared module rosidl_generator_py/orca_msgs_sim/orca_msgs_sim_s__rosidl_typesupport_c.so[0m
+[10.963s] [100%] [32m[1mLinking C shared module rosidl_generator_py/orca_msgs_sim/orca_msgs_sim_s__rosidl_typesupport_introspection_c.so[0m
+[10.963s] [100%] [32m[1mLinking C shared module rosidl_generator_py/orca_msgs_sim/orca_msgs_sim_s__rosidl_typesupport_fastrtps_c.so[0m
+[10.994s] [100%] Built target orca_msgs_sim_s__rosidl_typesupport_introspection_c
+[10.994s] [100%] Built target orca_msgs_sim_s__rosidl_typesupport_c
+[10.994s] [100%] Built target orca_msgs_sim_s__rosidl_typesupport_fastrtps_c
+[11.006s] Invoked command in '/home/riovaldo/orca_sim/build/orca_msgs_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/riovaldo/orca_sim/install/mavpy_sim:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/riovaldo/orca_sim/build/orca_msgs_sim -- -j8 -l8
+[11.007s] Invoking command in '/home/riovaldo/orca_sim/build/orca_msgs_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/riovaldo/orca_sim/install/mavpy_sim:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/riovaldo/orca_sim/build/orca_msgs_sim
+[11.016s] -- Install configuration: ""
+[11.016s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/ament_index/resource_index/rosidl_interfaces/orca_msgs_sim
+[11.016s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/FlareSequence.json
+[11.016s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/FailsafeTrigger.json
+[11.016s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/OrcaAttitude.json
+[11.016s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/OrcaControl.json
+[11.016s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/OrcaDepth.json
+[11.016s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/OrcaJoystick.json
+[11.017s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/OrcaProximity.json
+[11.017s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/OrcaVision.json
+[11.017s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim
+[11.017s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg
+[11.017s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/orca_vision.h
+[11.017s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/flare_sequence.h
+[11.017s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/orca_proximity.h
+[11.017s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/rosidl_generator_c__visibility_control.h
+[11.017s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/failsafe_trigger.h
+[11.017s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail
+[11.017s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/failsafe_trigger__functions.h
+[11.017s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_control__functions.h
+[11.018s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/failsafe_trigger__type_support.c
+[11.018s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/flare_sequence__type_support.c
+[11.018s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_depth__functions.c
+[11.018s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_control__type_support.c
+[11.018s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_vision__description.c
+[11.018s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/failsafe_trigger__functions.c
+[11.018s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_proximity__type_support.c
+[11.018s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_depth__functions.h
+[11.018s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_vision__struct.h
+[11.018s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_control__functions.c
+[11.018s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_depth__type_support.h
+[11.018s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_attitude__type_support.h
+[11.018s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_control__type_support.h
+[11.018s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/failsafe_trigger__struct.h
+[11.019s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_attitude__description.c
+[11.019s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_control__struct.h
+[11.019s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/failsafe_trigger__type_support.h
+[11.019s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_joystick__functions.c
+[11.019s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_proximity__functions.c
+[11.019s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_proximity__functions.h
+[11.019s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/failsafe_trigger__description.c
+[11.019s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_attitude__struct.h
+[11.019s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/flare_sequence__description.c
+[11.019s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_proximity__struct.h
+[11.019s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_attitude__type_support.c
+[11.019s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_joystick__struct.h
+[11.019s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_depth__description.c
+[11.019s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/flare_sequence__type_support.h
+[11.020s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_vision__functions.h
+[11.020s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/flare_sequence__functions.c
+[11.020s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_joystick__description.c
+[11.020s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_joystick__type_support.c
+[11.020s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_depth__struct.h
+[11.020s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_vision__type_support.h
+[11.020s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_control__description.c
+[11.020s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_attitude__functions.c
+[11.020s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_proximity__type_support.h
+[11.020s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_proximity__description.c
+[11.020s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_joystick__type_support.h
+[11.020s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/flare_sequence__struct.h
+[11.020s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_depth__type_support.c
+[11.020s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_attitude__functions.h
+[11.020s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_joystick__functions.h
+[11.021s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_vision__functions.c
+[11.021s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/flare_sequence__functions.h
+[11.021s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_vision__type_support.c
+[11.021s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/orca_depth.h
+[11.021s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/orca_attitude.h
+[11.021s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/orca_control.h
+[11.021s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/orca_joystick.h
+[11.021s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/environment/library_path.sh
+[11.021s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/environment/library_path.dsv
+[11.021s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/liborca_msgs_sim__rosidl_generator_c.so
+[11.021s] -- Set non-toolchain portion of runtime path of "/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/liborca_msgs_sim__rosidl_generator_c.so" to ""
+[11.021s] -- Up-to-date: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim
+[11.021s] -- Up-to-date: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg
+[11.022s] -- Up-to-date: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail
+[11.022s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/flare_sequence__rosidl_typesupport_fastrtps_c.h
+[11.022s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_control__rosidl_typesupport_fastrtps_c.h
+[11.022s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_joystick__rosidl_typesupport_fastrtps_c.h
+[11.022s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/failsafe_trigger__rosidl_typesupport_fastrtps_c.h
+[11.022s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_attitude__rosidl_typesupport_fastrtps_c.h
+[11.022s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_proximity__rosidl_typesupport_fastrtps_c.h
+[11.022s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_vision__rosidl_typesupport_fastrtps_c.h
+[11.022s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_depth__rosidl_typesupport_fastrtps_c.h
+[11.022s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[11.022s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/liborca_msgs_sim__rosidl_typesupport_fastrtps_c.so
+[11.022s] -- Set non-toolchain portion of runtime path of "/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/liborca_msgs_sim__rosidl_typesupport_fastrtps_c.so" to ""
+[11.023s] -- Up-to-date: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim
+[11.023s] -- Up-to-date: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg
+[11.023s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[11.023s] -- Up-to-date: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail
+[11.023s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/failsafe_trigger__type_support.c
+[11.023s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/flare_sequence__type_support.c
+[11.023s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_control__type_support.c
+[11.023s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_proximity__type_support.c
+[11.023s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_joystick__rosidl_typesupport_introspection_c.h
+[11.023s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/flare_sequence__rosidl_typesupport_introspection_c.h
+[11.023s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_attitude__rosidl_typesupport_introspection_c.h
+[11.023s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_vision__rosidl_typesupport_introspection_c.h
+[11.023s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_attitude__type_support.c
+[11.024s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_depth__rosidl_typesupport_introspection_c.h
+[11.024s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_joystick__type_support.c
+[11.024s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_control__rosidl_typesupport_introspection_c.h
+[11.024s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/failsafe_trigger__rosidl_typesupport_introspection_c.h
+[11.024s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_depth__type_support.c
+[11.024s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_vision__type_support.c
+[11.024s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_proximity__rosidl_typesupport_introspection_c.h
+[11.024s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/liborca_msgs_sim__rosidl_typesupport_introspection_c.so
+[11.024s] -- Set non-toolchain portion of runtime path of "/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/liborca_msgs_sim__rosidl_typesupport_introspection_c.so" to ""
+[11.024s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/liborca_msgs_sim__rosidl_typesupport_c.so
+[11.024s] -- Set non-toolchain portion of runtime path of "/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/liborca_msgs_sim__rosidl_typesupport_c.so" to ""
+[11.025s] -- Up-to-date: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim
+[11.025s] -- Up-to-date: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg
+[11.025s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/orca_control.hpp
+[11.025s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/orca_depth.hpp
+[11.025s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/failsafe_trigger.hpp
+[11.025s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/orca_vision.hpp
+[11.025s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/orca_joystick.hpp
+[11.025s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/rosidl_generator_cpp__visibility_control.hpp
+[11.025s] -- Up-to-date: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail
+[11.025s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_vision__builder.hpp
+[11.025s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_control__builder.hpp
+[11.025s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_vision__type_support.hpp
+[11.025s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/flare_sequence__struct.hpp
+[11.025s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_joystick__struct.hpp
+[11.026s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_proximity__builder.hpp
+[11.026s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_joystick__builder.hpp
+[11.026s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_attitude__type_support.hpp
+[11.026s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_joystick__traits.hpp
+[11.026s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_joystick__type_support.hpp
+[11.026s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_vision__struct.hpp
+[11.026s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_depth__traits.hpp
+[11.026s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_control__type_support.hpp
+[11.026s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_proximity__traits.hpp
+[11.026s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_attitude__builder.hpp
+[11.026s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/flare_sequence__builder.hpp
+[11.026s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_proximity__struct.hpp
+[11.026s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_attitude__traits.hpp
+[11.026s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_control__traits.hpp
+[11.027s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_depth__type_support.hpp
+[11.027s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/failsafe_trigger__type_support.hpp
+[11.027s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_depth__struct.hpp
+[11.027s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/failsafe_trigger__struct.hpp
+[11.027s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/failsafe_trigger__traits.hpp
+[11.027s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/flare_sequence__traits.hpp
+[11.027s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_control__struct.hpp
+[11.027s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/flare_sequence__type_support.hpp
+[11.027s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_vision__traits.hpp
+[11.027s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_depth__builder.hpp
+[11.027s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_attitude__struct.hpp
+[11.027s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/failsafe_trigger__builder.hpp
+[11.027s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_proximity__type_support.hpp
+[11.028s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/orca_proximity.hpp
+[11.028s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/orca_attitude.hpp
+[11.028s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/flare_sequence.hpp
+[11.028s] -- Up-to-date: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim
+[11.028s] -- Up-to-date: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg
+[11.028s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[11.028s] -- Up-to-date: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail
+[11.028s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_joystick__rosidl_typesupport_fastrtps_cpp.hpp
+[11.028s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_proximity__rosidl_typesupport_fastrtps_cpp.hpp
+[11.028s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_attitude__rosidl_typesupport_fastrtps_cpp.hpp
+[11.028s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_control__rosidl_typesupport_fastrtps_cpp.hpp
+[11.028s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/dds_fastrtps
+[11.028s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/failsafe_trigger__rosidl_typesupport_fastrtps_cpp.hpp
+[11.028s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_depth__rosidl_typesupport_fastrtps_cpp.hpp
+[11.029s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/flare_sequence__rosidl_typesupport_fastrtps_cpp.hpp
+[11.029s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_vision__rosidl_typesupport_fastrtps_cpp.hpp
+[11.029s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/liborca_msgs_sim__rosidl_typesupport_fastrtps_cpp.so
+[11.029s] -- Set non-toolchain portion of runtime path of "/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/liborca_msgs_sim__rosidl_typesupport_fastrtps_cpp.so" to ""
+[11.029s] -- Up-to-date: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim
+[11.029s] -- Up-to-date: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg
+[11.029s] -- Up-to-date: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail
+[11.029s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/flare_sequence__rosidl_typesupport_introspection_cpp.hpp
+[11.029s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_vision__type_support.cpp
+[11.029s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_proximity__type_support.cpp
+[11.029s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/failsafe_trigger__type_support.cpp
+[11.029s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_control__rosidl_typesupport_introspection_cpp.hpp
+[11.029s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_depth__type_support.cpp
+[11.030s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/failsafe_trigger__rosidl_typesupport_introspection_cpp.hpp
+[11.030s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_vision__rosidl_typesupport_introspection_cpp.hpp
+[11.030s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_control__type_support.cpp
+[11.030s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_attitude__rosidl_typesupport_introspection_cpp.hpp
+[11.030s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/flare_sequence__type_support.cpp
+[11.030s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_joystick__rosidl_typesupport_introspection_cpp.hpp
+[11.030s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_joystick__type_support.cpp
+[11.030s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_depth__rosidl_typesupport_introspection_cpp.hpp
+[11.030s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_attitude__type_support.cpp
+[11.030s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/include/orca_msgs_sim/orca_msgs_sim/msg/detail/orca_proximity__rosidl_typesupport_introspection_cpp.hpp
+[11.030s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/liborca_msgs_sim__rosidl_typesupport_introspection_cpp.so
+[11.030s] -- Set non-toolchain portion of runtime path of "/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/liborca_msgs_sim__rosidl_typesupport_introspection_cpp.so" to ""
+[11.031s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/liborca_msgs_sim__rosidl_typesupport_cpp.so
+[11.031s] -- Set non-toolchain portion of runtime path of "/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/liborca_msgs_sim__rosidl_typesupport_cpp.so" to ""
+[11.031s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/environment/pythonpath.sh
+[11.031s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/environment/pythonpath.dsv
+[11.031s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim-0.0.0-py3.12.egg-info
+[11.031s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim-0.0.0-py3.12.egg-info/dependency_links.txt
+[11.031s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim-0.0.0-py3.12.egg-info/SOURCES.txt
+[11.031s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim-0.0.0-py3.12.egg-info/PKG-INFO
+[11.031s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim-0.0.0-py3.12.egg-info/top_level.txt
+[11.031s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim
+[11.031s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/_orca_msgs_sim_s.ep.rosidl_typesupport_fastrtps_c.c
+[11.032s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/_orca_msgs_sim_s.ep.rosidl_typesupport_c.c
+[11.032s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/orca_msgs_sim_s__rosidl_typesupport_introspection_c.so
+[11.032s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg
+[11.032s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_orca_joystick_s.c
+[11.032s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_flare_sequence_s.c
+[11.032s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_orca_depth.py
+[11.032s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_orca_depth_s.c
+[11.032s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_orca_proximity_s.c
+[11.032s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_orca_joystick.py
+[11.032s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_orca_vision.py
+[11.032s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_orca_attitude_s.c
+[11.032s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_orca_vision_s.c
+[11.032s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_flare_sequence.py
+[11.033s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/__init__.py
+[11.033s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_failsafe_trigger.py
+[11.033s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_failsafe_trigger_s.c
+[11.033s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_orca_attitude.py
+[11.033s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_orca_control.py
+[11.033s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_orca_proximity.py
+[11.033s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_orca_control_s.c
+[11.033s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/orca_msgs_sim_s__rosidl_typesupport_c.so
+[11.033s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/orca_msgs_sim_s__rosidl_typesupport_fastrtps_c.so
+[11.033s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/__init__.py
+[11.033s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/_orca_msgs_sim_s.ep.rosidl_typesupport_introspection_c.c
+[11.104s] Listing '/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim'...
+[11.104s] Compiling '/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/__init__.py'...
+[11.104s] Listing '/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg'...
+[11.105s] Compiling '/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/__init__.py'...
+[11.105s] Compiling '/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_failsafe_trigger.py'...
+[11.105s] Compiling '/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_flare_sequence.py'...
+[11.105s] Compiling '/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_orca_attitude.py'...
+[11.105s] Compiling '/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_orca_control.py'...
+[11.105s] Compiling '/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_orca_depth.py'...
+[11.105s] Compiling '/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_orca_joystick.py'...
+[11.105s] Compiling '/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_orca_proximity.py'...
+[11.105s] Compiling '/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/msg/_orca_vision.py'...
+[11.111s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/orca_msgs_sim_s__rosidl_typesupport_fastrtps_c.so
+[11.111s] -- Set non-toolchain portion of runtime path of "/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/orca_msgs_sim_s__rosidl_typesupport_fastrtps_c.so" to ""
+[11.111s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/orca_msgs_sim_s__rosidl_typesupport_introspection_c.so
+[11.112s] -- Set non-toolchain portion of runtime path of "/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/orca_msgs_sim_s__rosidl_typesupport_introspection_c.so" to ""
+[11.112s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/orca_msgs_sim_s__rosidl_typesupport_c.so
+[11.112s] -- Set non-toolchain portion of runtime path of "/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages/orca_msgs_sim/orca_msgs_sim_s__rosidl_typesupport_c.so" to ""
+[11.112s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/lib/liborca_msgs_sim__rosidl_generator_py.so
+[11.113s] -- Set non-toolchain portion of runtime path of "/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/liborca_msgs_sim__rosidl_generator_py.so" to ""
+[11.113s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/rust
+[11.113s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/rust/Cargo.toml
+[11.113s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/rust/src
+[11.113s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/rust/src/msg.rs
+[11.113s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/rust/src/lib.rs
+[11.113s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/rust/src/msg
+[11.113s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/rust/src/msg/rmw.rs
+[11.113s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/rust/build.rs
+[11.114s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/FlareSequence.idl
+[11.114s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/FailsafeTrigger.idl
+[11.114s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/OrcaAttitude.idl
+[11.114s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/OrcaControl.idl
+[11.114s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/OrcaDepth.idl
+[11.114s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/OrcaJoystick.idl
+[11.114s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/OrcaProximity.idl
+[11.114s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/OrcaVision.idl
+[11.114s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/FlareSequence.msg
+[11.114s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/FailsafeTrigger.msg
+[11.114s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/OrcaAttitude.msg
+[11.114s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/OrcaControl.msg
+[11.115s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/OrcaDepth.msg
+[11.115s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/OrcaJoystick.msg
+[11.115s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/OrcaProximity.msg
+[11.115s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/msg/OrcaVision.msg
+[11.115s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/ament_index/resource_index/package_run_dependencies/orca_msgs_sim
+[11.115s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/ament_index/resource_index/parent_prefix_path/orca_msgs_sim
+[11.115s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/environment/ament_prefix_path.sh
+[11.115s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/environment/ament_prefix_path.dsv
+[11.115s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/environment/path.sh
+[11.115s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/environment/path.dsv
+[11.115s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/local_setup.bash
+[11.116s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/local_setup.sh
+[11.116s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/local_setup.zsh
+[11.116s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/local_setup.dsv
+[11.116s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/package.dsv
+[11.116s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/ament_index/resource_index/packages/orca_msgs_sim
+[11.116s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/export_orca_msgs_sim__rosidl_generator_cExport.cmake
+[11.116s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/export_orca_msgs_sim__rosidl_generator_cExport-noconfig.cmake
+[11.117s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/export_orca_msgs_sim__rosidl_typesupport_fastrtps_cExport.cmake
+[11.117s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/export_orca_msgs_sim__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[11.117s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/orca_msgs_sim__rosidl_typesupport_introspection_cExport.cmake
+[11.117s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/orca_msgs_sim__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[11.117s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/orca_msgs_sim__rosidl_typesupport_cExport.cmake
+[11.117s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/orca_msgs_sim__rosidl_typesupport_cExport-noconfig.cmake
+[11.118s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/export_orca_msgs_sim__rosidl_generator_cppExport.cmake
+[11.118s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/export_orca_msgs_sim__rosidl_typesupport_fastrtps_cppExport.cmake
+[11.118s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/export_orca_msgs_sim__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[11.118s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/orca_msgs_sim__rosidl_typesupport_introspection_cppExport.cmake
+[11.118s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/orca_msgs_sim__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[11.118s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/orca_msgs_sim__rosidl_typesupport_cppExport.cmake
+[11.119s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/orca_msgs_sim__rosidl_typesupport_cppExport-noconfig.cmake
+[11.119s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/export_orca_msgs_sim__rosidl_generator_pyExport.cmake
+[11.119s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/export_orca_msgs_sim__rosidl_generator_pyExport-noconfig.cmake
+[11.119s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/rosidl_cmake-extras.cmake
+[11.119s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/ament_cmake_export_include_directories-extras.cmake
+[11.119s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/ament_cmake_export_libraries-extras.cmake
+[11.119s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/ament_cmake_export_targets-extras.cmake
+[11.119s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[11.120s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/ament_cmake_export_dependencies-extras.cmake
+[11.120s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[11.120s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[11.120s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/orca_msgs_simConfig.cmake
+[11.120s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/cmake/orca_msgs_simConfig-version.cmake
+[11.120s] -- Installing: /home/riovaldo/orca_sim/install/orca_msgs_sim/share/orca_msgs_sim/package.xml
+[11.123s] Invoked command in '/home/riovaldo/orca_sim/build/orca_msgs_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/riovaldo/orca_sim/install/mavpy_sim:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/riovaldo/orca_sim/build/orca_msgs_sim

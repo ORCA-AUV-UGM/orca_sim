@@ -1,0 +1,14 @@
+{
+  "package_name": "orca_msgs_sim",
+  "output_dir": "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_generator_type_description/orca_msgs_sim",
+  "idl_tuples": [
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim:msg/FlareSequence.idl",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim:msg/FailsafeTrigger.idl",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim:msg/OrcaAttitude.idl",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim:msg/OrcaControl.idl",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim:msg/OrcaDepth.idl",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim:msg/OrcaJoystick.idl",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim:msg/OrcaProximity.idl",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim:msg/OrcaVision.idl"
+  ]
+}

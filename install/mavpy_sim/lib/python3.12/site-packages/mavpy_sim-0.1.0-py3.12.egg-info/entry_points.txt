@@ -1,0 +1,8 @@
+[console_scripts]
+attitude_node = mavpy_sim.attitude_node:main
+camera_sim_final = mavpy_sim.camera_sim_final:main
+camera_sim_qualification = mavpy_sim.camera_sim_qualification:main
+control_bridge = mavpy_sim.control_bridge:main
+keyboard = mavpy_sim.keyboard:main
+test_control = mavpy_sim.test_control:main
+test_keyboard = mavpy_sim.test_keyboard:main

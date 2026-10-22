@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: mavpy-sim
+Version: 0.1.0
+Summary: ORCA sensor, control bridge, teleop, and mission nodes
+Maintainer: jetson
+Maintainer-email: jetson@todo.todo
+License: Proprietary

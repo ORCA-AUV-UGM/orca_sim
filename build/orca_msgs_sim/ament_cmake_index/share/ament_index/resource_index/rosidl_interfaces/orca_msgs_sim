@@ -1,0 +1,16 @@
+msg/FailsafeTrigger.idl
+msg/FailsafeTrigger.msg
+msg/FlareSequence.idl
+msg/FlareSequence.msg
+msg/OrcaAttitude.idl
+msg/OrcaAttitude.msg
+msg/OrcaControl.idl
+msg/OrcaControl.msg
+msg/OrcaDepth.idl
+msg/OrcaDepth.msg
+msg/OrcaJoystick.idl
+msg/OrcaJoystick.msg
+msg/OrcaProximity.idl
+msg/OrcaProximity.msg
+msg/OrcaVision.idl
+msg/OrcaVision.msg

@@ -1,0 +1,13 @@
+{
+  "package_name": "orca_msgs_sim",
+  "non_idl_tuples": [
+    "/home/riovaldo/orca_sim/src/orca_msgs_sim:msg/FlareSequence.msg",
+    "/home/riovaldo/orca_sim/src/orca_msgs_sim:msg/FailsafeTrigger.msg",
+    "/home/riovaldo/orca_sim/src/orca_msgs_sim:msg/OrcaAttitude.msg",
+    "/home/riovaldo/orca_sim/src/orca_msgs_sim:msg/OrcaControl.msg",
+    "/home/riovaldo/orca_sim/src/orca_msgs_sim:msg/OrcaDepth.msg",
+    "/home/riovaldo/orca_sim/src/orca_msgs_sim:msg/OrcaJoystick.msg",
+    "/home/riovaldo/orca_sim/src/orca_msgs_sim:msg/OrcaProximity.msg",
+    "/home/riovaldo/orca_sim/src/orca_msgs_sim:msg/OrcaVision.msg"
+  ]
+}

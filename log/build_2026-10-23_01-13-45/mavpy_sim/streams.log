@@ -1,0 +1,68 @@
+[0.835s] Invoking command in '/home/riovaldo/orca_sim/src/mavpy_sim': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/riovaldo/orca_sim/build/mavpy_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages:/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages:/home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mavpy_sim build --build-base /home/riovaldo/orca_sim/build/mavpy_sim/build install --record /home/riovaldo/orca_sim/build/mavpy_sim/install.log --install-scripts $base/lib/mavpy --single-version-externally-managed install_data
+[1.088s] running egg_info
+[1.088s] creating ../../build/mavpy_sim/mavpy_sim.egg-info
+[1.105s] writing ../../build/mavpy_sim/mavpy_sim.egg-info/PKG-INFO
+[1.106s] writing dependency_links to ../../build/mavpy_sim/mavpy_sim.egg-info/dependency_links.txt
+[1.106s] writing entry points to ../../build/mavpy_sim/mavpy_sim.egg-info/entry_points.txt
+[1.106s] writing requirements to ../../build/mavpy_sim/mavpy_sim.egg-info/requires.txt
+[1.106s] writing top-level names to ../../build/mavpy_sim/mavpy_sim.egg-info/top_level.txt
+[1.107s] writing manifest file '../../build/mavpy_sim/mavpy_sim.egg-info/SOURCES.txt'
+[1.144s] reading manifest file '../../build/mavpy_sim/mavpy_sim.egg-info/SOURCES.txt'
+[1.145s] writing manifest file '../../build/mavpy_sim/mavpy_sim.egg-info/SOURCES.txt'
+[1.145s] running build
+[1.145s] running build_py
+[1.145s] creating /home/riovaldo/orca_sim/build/mavpy_sim/build
+[1.145s] creating /home/riovaldo/orca_sim/build/mavpy_sim/build/lib
+[1.146s] creating /home/riovaldo/orca_sim/build/mavpy_sim/build/lib/mavpy_sim
+[1.146s] copying mavpy_sim/keyboard.py -> /home/riovaldo/orca_sim/build/mavpy_sim/build/lib/mavpy_sim
+[1.146s] copying mavpy_sim/final_sim.py -> /home/riovaldo/orca_sim/build/mavpy_sim/build/lib/mavpy_sim
+[1.146s] copying mavpy_sim/final.py -> /home/riovaldo/orca_sim/build/mavpy_sim/build/lib/mavpy_sim
+[1.146s] copying mavpy_sim/control_bridge.py -> /home/riovaldo/orca_sim/build/mavpy_sim/build/lib/mavpy_sim
+[1.146s] copying mavpy_sim/test_control.py -> /home/riovaldo/orca_sim/build/mavpy_sim/build/lib/mavpy_sim
+[1.146s] copying mavpy_sim/camera_sim_qualification.py -> /home/riovaldo/orca_sim/build/mavpy_sim/build/lib/mavpy_sim
+[1.146s] copying mavpy_sim/test_keyboard.py -> /home/riovaldo/orca_sim/build/mavpy_sim/build/lib/mavpy_sim
+[1.146s] copying mavpy_sim/camera_sim_final.py -> /home/riovaldo/orca_sim/build/mavpy_sim/build/lib/mavpy_sim
+[1.146s] copying mavpy_sim/attitude_node.py -> /home/riovaldo/orca_sim/build/mavpy_sim/build/lib/mavpy_sim
+[1.146s] copying mavpy_sim/__init__.py -> /home/riovaldo/orca_sim/build/mavpy_sim/build/lib/mavpy_sim
+[1.146s] running install
+[1.153s] running install_lib
+[1.173s] creating /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim
+[1.173s] copying /home/riovaldo/orca_sim/build/mavpy_sim/build/lib/mavpy_sim/keyboard.py -> /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim
+[1.173s] copying /home/riovaldo/orca_sim/build/mavpy_sim/build/lib/mavpy_sim/final_sim.py -> /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim
+[1.174s] copying /home/riovaldo/orca_sim/build/mavpy_sim/build/lib/mavpy_sim/final.py -> /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim
+[1.174s] copying /home/riovaldo/orca_sim/build/mavpy_sim/build/lib/mavpy_sim/control_bridge.py -> /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim
+[1.174s] copying /home/riovaldo/orca_sim/build/mavpy_sim/build/lib/mavpy_sim/test_control.py -> /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim
+[1.174s] copying /home/riovaldo/orca_sim/build/mavpy_sim/build/lib/mavpy_sim/camera_sim_qualification.py -> /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim
+[1.174s] copying /home/riovaldo/orca_sim/build/mavpy_sim/build/lib/mavpy_sim/test_keyboard.py -> /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim
+[1.174s] copying /home/riovaldo/orca_sim/build/mavpy_sim/build/lib/mavpy_sim/camera_sim_final.py -> /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim
+[1.174s] copying /home/riovaldo/orca_sim/build/mavpy_sim/build/lib/mavpy_sim/attitude_node.py -> /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim
+[1.174s] copying /home/riovaldo/orca_sim/build/mavpy_sim/build/lib/mavpy_sim/__init__.py -> /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim
+[1.174s] byte-compiling /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/keyboard.py to keyboard.cpython-312.pyc
+[1.176s] byte-compiling /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/final_sim.py to final_sim.cpython-312.pyc
+[1.182s] byte-compiling /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/final.py to final.cpython-312.pyc
+[1.182s] byte-compiling /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/control_bridge.py to control_bridge.cpython-312.pyc
+[1.184s] byte-compiling /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/test_control.py to test_control.cpython-312.pyc
+[1.184s] byte-compiling /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/camera_sim_qualification.py to camera_sim_qualification.cpython-312.pyc
+[1.187s] byte-compiling /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/test_keyboard.py to test_keyboard.cpython-312.pyc
+[1.187s] byte-compiling /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/camera_sim_final.py to camera_sim_final.cpython-312.pyc
+[1.191s] byte-compiling /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/attitude_node.py to attitude_node.cpython-312.pyc
+[1.192s] byte-compiling /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/__init__.py to __init__.cpython-312.pyc
+[1.193s] running install_data
+[1.193s] creating /home/riovaldo/orca_sim/install/mavpy_sim/share/ament_index
+[1.193s] creating /home/riovaldo/orca_sim/install/mavpy_sim/share/ament_index/resource_index
+[1.193s] creating /home/riovaldo/orca_sim/install/mavpy_sim/share/ament_index/resource_index/packages
+[1.193s] copying resource/mavpy_sim -> /home/riovaldo/orca_sim/install/mavpy_sim/share/ament_index/resource_index/packages
+[1.193s] copying package.xml -> /home/riovaldo/orca_sim/install/mavpy_sim/share/mavpy_sim
+[1.193s] creating /home/riovaldo/orca_sim/install/mavpy_sim/share/mavpy_sim/models
+[1.193s] running install_egg_info
+[1.213s] Copying ../../build/mavpy_sim/mavpy_sim.egg-info to /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim-0.1.0-py3.12.egg-info
+[1.214s] running install_scripts
+[1.339s] Installing attitude_node script to /home/riovaldo/orca_sim/install/mavpy_sim/lib/mavpy
+[1.339s] Installing camera_sim_final script to /home/riovaldo/orca_sim/install/mavpy_sim/lib/mavpy
+[1.339s] Installing camera_sim_qualification script to /home/riovaldo/orca_sim/install/mavpy_sim/lib/mavpy
+[1.339s] Installing control_bridge script to /home/riovaldo/orca_sim/install/mavpy_sim/lib/mavpy
+[1.340s] Installing keyboard script to /home/riovaldo/orca_sim/install/mavpy_sim/lib/mavpy
+[1.340s] Installing test_control script to /home/riovaldo/orca_sim/install/mavpy_sim/lib/mavpy
+[1.340s] Installing test_keyboard script to /home/riovaldo/orca_sim/install/mavpy_sim/lib/mavpy
+[1.340s] writing list of installed files to '/home/riovaldo/orca_sim/build/mavpy_sim/install.log'
+[1.369s] Invoked command in '/home/riovaldo/orca_sim/src/mavpy_sim' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/riovaldo/orca_sim/build/mavpy_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages:/home/riovaldo/orca_sim/install/orca_msgs_sim/lib/python3.12/site-packages:/home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mavpy_sim build --build-base /home/riovaldo/orca_sim/build/mavpy_sim/build install --record /home/riovaldo/orca_sim/build/mavpy_sim/install.log --install-scripts $base/lib/mavpy --single-version-externally-managed install_data

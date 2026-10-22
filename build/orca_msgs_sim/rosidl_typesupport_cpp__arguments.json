@@ -1,0 +1,31 @@
+{
+  "package_name": "orca_msgs_sim",
+  "output_dir": "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_typesupport_cpp/orca_msgs_sim",
+  "template_dir": "/opt/ros/jazzy/share/rosidl_typesupport_cpp/resource",
+  "idl_tuples": [
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim:msg/FlareSequence.idl",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim:msg/FailsafeTrigger.idl",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim:msg/OrcaAttitude.idl",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim:msg/OrcaControl.idl",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim:msg/OrcaDepth.idl",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim:msg/OrcaJoystick.idl",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim:msg/OrcaProximity.idl",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim:msg/OrcaVision.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/jazzy/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp",
+    "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_typesupport_cpp/__init__.py",
+    "/opt/ros/jazzy/share/rosidl_typesupport_cpp/resource/action__type_support.cpp.em",
+    "/opt/ros/jazzy/share/rosidl_typesupport_cpp/resource/idl__type_support.cpp.em",
+    "/opt/ros/jazzy/share/rosidl_typesupport_cpp/resource/msg__type_support.cpp.em",
+    "/opt/ros/jazzy/share/rosidl_typesupport_cpp/resource/srv__type_support.cpp.em",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim/msg/FlareSequence.idl",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim/msg/FailsafeTrigger.idl",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim/msg/OrcaAttitude.idl",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim/msg/OrcaControl.idl",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim/msg/OrcaDepth.idl",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim/msg/OrcaJoystick.idl",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim/msg/OrcaProximity.idl",
+    "/home/riovaldo/orca_sim/build/orca_msgs_sim/rosidl_adapter/orca_msgs_sim/msg/OrcaVision.idl"
+  ]
+}

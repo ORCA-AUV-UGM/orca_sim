@@ -1,0 +1,267 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-c4e52acd5328bde3e89a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				},
+				{
+					"build" : "orca_msgs_sim__py",
+					"jsonFile" : "directory-orca_msgs_sim__py-c58f45d3f6e8d8aa43e1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/riovaldo/orca_sim/build/orca_msgs_sim/orca_msgs_sim__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "orca_msgs_sim__rs",
+					"jsonFile" : "directory-orca_msgs_sim__rs-7360efcefd5b1b11a544.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/riovaldo/orca_sim/build/orca_msgs_sim/orca_msgs_sim__rs",
+					"targetIndexes" : 
+					[
+						14
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "orca_msgs_sim",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_orca_msgs_sim_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_orca_msgs_sim_egg-cd8e01037d3a8fe25f97.json",
+					"name" : "ament_cmake_python_build_orca_msgs_sim_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_orca_msgs_sim::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_orca_msgs_sim-090d7de3af9eff38c63d.json",
+					"name" : "ament_cmake_python_copy_orca_msgs_sim",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "orca_msgs_sim::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-orca_msgs_sim-27c85ac40a2dbbd20532.json",
+					"name" : "orca_msgs_sim",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "orca_msgs_sim__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-orca_msgs_sim__cpp-afad164bebb10468eb54.json",
+					"name" : "orca_msgs_sim__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "orca_msgs_sim__py::@673d816d8bb7357d6062",
+					"jsonFile" : "target-orca_msgs_sim__py-22da8b21b02c7e244457.json",
+					"name" : "orca_msgs_sim__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "orca_msgs_sim__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-orca_msgs_sim__rosidl_generator_c-39a8336f4325e60684fd.json",
+					"name" : "orca_msgs_sim__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "orca_msgs_sim__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-orca_msgs_sim__rosidl_generator_py-1ab42e136808eed0a631.json",
+					"name" : "orca_msgs_sim__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "orca_msgs_sim__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-orca_msgs_sim__rosidl_generator_type_description-442e9fc316e22b01f2bb.json",
+					"name" : "orca_msgs_sim__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "orca_msgs_sim__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-orca_msgs_sim__rosidl_typesupport_c-8536bb4d10a5df157153.json",
+					"name" : "orca_msgs_sim__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "orca_msgs_sim__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-orca_msgs_sim__rosidl_typesupport_cpp-327967b7a29ba2ee6a06.json",
+					"name" : "orca_msgs_sim__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "orca_msgs_sim__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-orca_msgs_sim__rosidl_typesupport_fastrtps_c-55c5f337b45befacf927.json",
+					"name" : "orca_msgs_sim__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "orca_msgs_sim__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-orca_msgs_sim__rosidl_typesupport_fastrtps_cpp-03159c51eb4ef2e4710d.json",
+					"name" : "orca_msgs_sim__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "orca_msgs_sim__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-orca_msgs_sim__rosidl_typesupport_introspection_c-72f91d567c99ba861318.json",
+					"name" : "orca_msgs_sim__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "orca_msgs_sim__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-orca_msgs_sim__rosidl_typesupport_introspection_cpp-a3e6cf0ef5bc839f13eb.json",
+					"name" : "orca_msgs_sim__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "orca_msgs_sim__rs::@e4c3636ef73c8fae1af8",
+					"jsonFile" : "target-orca_msgs_sim__rs-5a8a75dbbde27b1e956f.json",
+					"name" : "orca_msgs_sim__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "orca_msgs_sim_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-orca_msgs_sim_s__rosidl_typesupport_c-454c1a8ab216481403c5.json",
+					"name" : "orca_msgs_sim_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "orca_msgs_sim_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-orca_msgs_sim_s__rosidl_typesupport_fastrtps_c-102ca0ddf8fffc8b3ded.json",
+					"name" : "orca_msgs_sim_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "orca_msgs_sim_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-orca_msgs_sim_s__rosidl_typesupport_introspection_c-e00f9f3185235ed88c99.json",
+					"name" : "orca_msgs_sim_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "orca_msgs_sim_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-orca_msgs_sim_uninstall-c13ed9e8d80dedf6bc59.json",
+					"name" : "orca_msgs_sim_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-c4eb6c883f6aeb775ee4.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/riovaldo/orca_sim/build/orca_msgs_sim",
+		"source" : "/home/riovaldo/orca_sim/src/orca_msgs_sim"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
