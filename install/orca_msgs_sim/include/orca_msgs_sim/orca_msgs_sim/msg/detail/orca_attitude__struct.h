@@ -25,7 +25,7 @@ typedef struct orca_msgs_sim__msg__OrcaAttitude
   float initial_x;
   float initial_y;
   float initial_z;
-  float initial_deg;
+  float initial_heading;
   float yaw_deg;
   float roll_deg;
   float pitch_deg;

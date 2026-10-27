@@ -67,7 +67,7 @@ class OrcaAttitude(metaclass=Metaclass_OrcaAttitude):
         '_initial_x',
         '_initial_y',
         '_initial_z',
-        '_initial_deg',
+        '_initial_heading',
         '_yaw_deg',
         '_roll_deg',
         '_pitch_deg',
@@ -81,7 +81,7 @@ class OrcaAttitude(metaclass=Metaclass_OrcaAttitude):
         'initial_x': 'float',
         'initial_y': 'float',
         'initial_z': 'float',
-        'initial_deg': 'float',
+        'initial_heading': 'float',
         'yaw_deg': 'float',
         'roll_deg': 'float',
         'pitch_deg': 'float',
@@ -117,7 +117,7 @@ class OrcaAttitude(metaclass=Metaclass_OrcaAttitude):
         self.initial_x = kwargs.get('initial_x', float())
         self.initial_y = kwargs.get('initial_y', float())
         self.initial_z = kwargs.get('initial_z', float())
-        self.initial_deg = kwargs.get('initial_deg', float())
+        self.initial_heading = kwargs.get('initial_heading', float())
         self.yaw_deg = kwargs.get('yaw_deg', float())
         self.roll_deg = kwargs.get('roll_deg', float())
         self.pitch_deg = kwargs.get('pitch_deg', float())
@@ -161,7 +161,7 @@ class OrcaAttitude(metaclass=Metaclass_OrcaAttitude):
             return False
         if self.initial_z != other.initial_z:
             return False
-        if self.initial_deg != other.initial_deg:
+        if self.initial_heading != other.initial_heading:
             return False
         if self.yaw_deg != other.yaw_deg:
             return False
@@ -228,19 +228,19 @@ class OrcaAttitude(metaclass=Metaclass_OrcaAttitude):
         self._initial_z = value
 
     @builtins.property
-    def initial_deg(self):
-        """Message field 'initial_deg'."""
-        return self._initial_deg
+    def initial_heading(self):
+        """Message field 'initial_heading'."""
+        return self._initial_heading
 
-    @initial_deg.setter
-    def initial_deg(self, value):
+    @initial_heading.setter
+    def initial_heading(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, float), \
-                "The 'initial_deg' field must be of type 'float'"
+                "The 'initial_heading' field must be of type 'float'"
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'initial_deg' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._initial_deg = value
+                "The 'initial_heading' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._initial_heading = value
 
     @builtins.property
     def yaw_deg(self):

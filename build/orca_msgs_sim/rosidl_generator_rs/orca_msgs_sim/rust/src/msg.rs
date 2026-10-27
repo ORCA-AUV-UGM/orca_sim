@@ -119,7 +119,7 @@ pub struct OrcaAttitude {
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub initial_deg: f32,
+    pub initial_heading: f32,
 
 
     // This member is not documented.
@@ -170,7 +170,7 @@ impl rosidl_runtime_rs::Message for OrcaAttitude {
         initial_x: msg.initial_x,
         initial_y: msg.initial_y,
         initial_z: msg.initial_z,
-        initial_deg: msg.initial_deg,
+        initial_heading: msg.initial_heading,
         yaw_deg: msg.yaw_deg,
         roll_deg: msg.roll_deg,
         pitch_deg: msg.pitch_deg,
@@ -182,7 +182,7 @@ impl rosidl_runtime_rs::Message for OrcaAttitude {
       initial_x: msg.initial_x,
       initial_y: msg.initial_y,
       initial_z: msg.initial_z,
-      initial_deg: msg.initial_deg,
+      initial_heading: msg.initial_heading,
       yaw_deg: msg.yaw_deg,
       roll_deg: msg.roll_deg,
       pitch_deg: msg.pitch_deg,
@@ -198,7 +198,7 @@ impl rosidl_runtime_rs::Message for OrcaAttitude {
       initial_x: msg.initial_x,
       initial_y: msg.initial_y,
       initial_z: msg.initial_z,
-      initial_deg: msg.initial_deg,
+      initial_heading: msg.initial_heading,
       yaw_deg: msg.yaw_deg,
       roll_deg: msg.roll_deg,
       pitch_deg: msg.pitch_deg,

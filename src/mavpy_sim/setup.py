@@ -15,8 +15,8 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='jetson',
-    maintainer_email='jetson@todo.todo',
+    maintainer='riovaldo',
+    maintainer_email='christian.riovaldo10@gmail.com',
     description='ORCA sensor, control bridge, teleop, and mission nodes',
     license='Proprietary',
     tests_require=['pytest'],
@@ -28,9 +28,13 @@ setup(
             'camera_sim_qualification = mavpy_sim.camera_sim_qualification:main',
             'camera_sim_final = mavpy_sim.camera_sim_final:main',
 
-            'attitude_node = mavpy_sim.attitude_node:main',
+            'qualification_ts_sim = mavpy_sim.qualification_ts_sim:main',
+
             'control_bridge = mavpy_sim.control_bridge:main',
             'keyboard = mavpy_sim.keyboard:main',
+
+            'attitude_node = mavpy_sim.attitude_node:main',
+            'depth_sim = mavpy_sim.depth_sim:main',
         ],
     },
 )

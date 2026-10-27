@@ -45,8 +45,8 @@ cdr_serialize(
   // Member: initial_z
   cdr << ros_message.initial_z;
 
-  // Member: initial_deg
-  cdr << ros_message.initial_deg;
+  // Member: initial_heading
+  cdr << ros_message.initial_heading;
 
   // Member: yaw_deg
   cdr << ros_message.yaw_deg;
@@ -84,8 +84,8 @@ cdr_deserialize(
   // Member: initial_z
   cdr >> ros_message.initial_z;
 
-  // Member: initial_deg
-  cdr >> ros_message.initial_deg;
+  // Member: initial_heading
+  cdr >> ros_message.initial_heading;
 
   // Member: yaw_deg
   cdr >> ros_message.yaw_deg;
@@ -143,9 +143,9 @@ get_serialized_size(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: initial_deg
+  // Member: initial_heading
   {
-    size_t item_size = sizeof(ros_message.initial_deg);
+    size_t item_size = sizeof(ros_message.initial_heading);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -236,7 +236,7 @@ max_serialized_size_OrcaAttitude(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
-  // Member: initial_deg
+  // Member: initial_heading
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -317,8 +317,8 @@ cdr_serialize_key(
   // Member: initial_z
   cdr << ros_message.initial_z;
 
-  // Member: initial_deg
-  cdr << ros_message.initial_deg;
+  // Member: initial_heading
+  cdr << ros_message.initial_heading;
 
   // Member: yaw_deg
   cdr << ros_message.yaw_deg;
@@ -375,9 +375,9 @@ get_serialized_size_key(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: initial_deg
+  // Member: initial_heading
   {
-    size_t item_size = sizeof(ros_message.initial_deg);
+    size_t item_size = sizeof(ros_message.initial_heading);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -470,7 +470,7 @@ max_serialized_size_key_OrcaAttitude(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Member: initial_deg
+  // Member: initial_heading
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);

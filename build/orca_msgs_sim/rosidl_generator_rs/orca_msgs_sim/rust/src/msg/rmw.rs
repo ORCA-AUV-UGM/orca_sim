@@ -191,7 +191,7 @@ pub struct OrcaAttitude {
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub initial_deg: f32,
+    pub initial_heading: f32,
 
 
     // This member is not documented.

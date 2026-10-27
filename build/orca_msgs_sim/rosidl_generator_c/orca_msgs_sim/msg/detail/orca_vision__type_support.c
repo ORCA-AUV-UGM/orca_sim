@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "orca_msgs_sim/msg/detail/orca_vision__type_support.h"
-#include "orca_msgs_sim/msg/detail/orca_vision__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "orca_msgs_sim/msg/detail/orca_vision__struct.h"
+#include "orca_msgs_sim/msg/detail/orca_vision__type_support.h"
 #include "orca_msgs_sim/msg/detail/orca_vision__functions.h"
 
 #ifdef __cplusplus

@@ -12,7 +12,7 @@ module orca_msgs_sim {
 
       float initial_z;
 
-      float initial_deg;
+      float initial_heading;
 
       float yaw_deg;
 

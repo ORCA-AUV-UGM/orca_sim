@@ -4,7 +4,7 @@
   <name>mavpy_sim</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="elfikry@todo.todo">elfikry</maintainer>
+  <maintainer email="christian.riovaldo10@gmail.com">riovaldo</maintainer>
   <license>TODO: License declaration</license>
 
   <depend>rclpy</depend>

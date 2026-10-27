@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "orca_msgs_sim/msg/detail/orca_joystick__type_support.h"
-#include "orca_msgs_sim/msg/detail/orca_joystick__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "orca_msgs_sim/msg/detail/orca_joystick__struct.h"
 #include "orca_msgs_sim/msg/detail/orca_joystick__functions.h"
+#include "orca_msgs_sim/msg/detail/orca_joystick__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

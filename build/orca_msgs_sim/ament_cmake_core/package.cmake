@@ -1,6 +1,6 @@
 set(_AMENT_PACKAGE_NAME "orca_msgs_sim")
 set(orca_msgs_sim_VERSION "0.0.0")
-set(orca_msgs_sim_MAINTAINER "jetson <jetson@todo.todo>")
+set(orca_msgs_sim_MAINTAINER "riovaldo <christian.riovaldo10@gmail.com>")
 set(orca_msgs_sim_BUILD_DEPENDS "rosidl_default_generators")
 set(orca_msgs_sim_BUILDTOOL_DEPENDS "ament_cmake")
 set(orca_msgs_sim_BUILD_EXPORT_DEPENDS )

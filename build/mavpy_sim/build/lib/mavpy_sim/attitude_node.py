@@ -22,7 +22,7 @@ class AttitudeNode(Node):
             1,
         )
 
-        self.initial_heading = None
+        self.initial_deg = None
         self.last_log_time = 0.0
         self.create_timer(0.02, self.poll_mavlink)
 
@@ -37,18 +37,17 @@ class AttitudeNode(Node):
                 break
 
             raw_yaw = float(math.degrees(msg.yaw))
-
-            if self.initial_heading is None:
-                self.initial_heading = raw_yaw
-
-            relative_yaw = raw_yaw - self.initial_heading
-            relative_yaw = self.wrap_angle_deg(relative_yaw)
+            if self.initial_deg is None:
+                self.initial_deg = raw_yaw
+                
+            temp_yaw = raw_yaw - self.initial_deg
+            relative_yaw = self.wrap_angle_deg(temp_yaw)
 
             out = OrcaAttitude()
             out.roll_deg = float(math.degrees(msg.roll))
             out.pitch_deg = float(math.degrees(msg.pitch))
             out.yaw_deg = raw_yaw
-            out.initial_deg = relative_yaw
+            out.initial_heading = relative_yaw
             out.rollspeed_deg_s = float(math.degrees(msg.rollspeed))
             out.pitchspeed_deg_s = float(math.degrees(msg.pitchspeed))
             out.yawspeed_deg_s = float(math.degrees(msg.yawspeed))

@@ -94,7 +94,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember OrcaAttitude_
     nullptr  // resize(index) function pointer
   },
   {
-    "initial_deg",  // name
+    "initial_heading",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
@@ -102,7 +102,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember OrcaAttitude_
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(orca_msgs_sim::msg::OrcaAttitude, initial_deg),  // bytes offset in struct
+    offsetof(orca_msgs_sim::msg::OrcaAttitude, initial_heading),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer

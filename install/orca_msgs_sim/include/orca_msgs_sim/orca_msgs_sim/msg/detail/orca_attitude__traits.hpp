@@ -49,10 +49,10 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: initial_deg
+  // member: initial_heading
   {
-    out << "initial_deg: ";
-    rosidl_generator_traits::value_to_yaml(msg.initial_deg, out);
+    out << "initial_heading: ";
+    rosidl_generator_traits::value_to_yaml(msg.initial_heading, out);
     out << ", ";
   }
 
@@ -133,13 +133,13 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: initial_deg
+  // member: initial_heading
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "initial_deg: ";
-    rosidl_generator_traits::value_to_yaml(msg.initial_deg, out);
+    out << "initial_heading: ";
+    rosidl_generator_traits::value_to_yaml(msg.initial_heading, out);
     out << "\n";
   }
 

@@ -1,7 +1,7 @@
 float32 initial_x
 float32 initial_y
 float32 initial_z
-float32 initial_deg
+float32 initial_heading
 
 float32 yaw_deg
 float32 roll_deg

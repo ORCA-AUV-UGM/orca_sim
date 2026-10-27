@@ -13,9 +13,11 @@ mavpy_sim/attitude_node.py
 mavpy_sim/camera_sim_final.py
 mavpy_sim/camera_sim_qualification.py
 mavpy_sim/control_bridge.py
+mavpy_sim/depth_sim.py
 mavpy_sim/final.py
 mavpy_sim/final_sim.py
 mavpy_sim/keyboard.py
+mavpy_sim/qualification_ts_sim.py
 mavpy_sim/test_control.py
 mavpy_sim/test_keyboard.py
 resource/mavpy_sim
