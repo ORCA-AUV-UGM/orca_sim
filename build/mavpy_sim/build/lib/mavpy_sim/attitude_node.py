@@ -12,7 +12,7 @@ class AttitudeNode(Node):
         self.publisher_ = self.create_publisher(OrcaAttitude, '/sensor/attitude', 10)
         self.master = mavutil.mavlink_connection('udpin:0.0.0.0:14553')
         self.master.wait_heartbeat()
-        self.get_logger().info(f'Pixhawk attitude stream connected via {self.mavlink_url}')
+        self.get_logger().info(f'Pixhawk attitude stream connected via udpin:0.0.0.0:14553')
 
         self.master.mav.request_data_stream_send(
             self.master.target_system,

@@ -57,7 +57,7 @@ class AttitudeNode(Node):
             now = self.get_clock().now().nanoseconds * 1e-9
             if now - self.last_log_time > 1.0:
                 self.get_logger().info(f"""
-                \n Initial heading: {out.initial_deg:.2f} deg
+                \n Initial heading: {out.initial_heading:.2f} deg
                 \n Roll: {out.roll_deg:.2f} deg
                 \n Pitch: {out.pitch_deg:.2f} deg
                 \n Yaw: {out.yaw_deg:.2f} deg
