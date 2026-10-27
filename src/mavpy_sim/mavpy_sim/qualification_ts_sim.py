@@ -50,9 +50,9 @@ class QualificationTsSim(Node):
         self.depth = msg.depth
 
     def attitude_cb(self, msg: OrcaAttitude):
-        self.yaw = msg.yaw
-        self.roll = msg.roll
-        self.pitch = msg.pitch
+        self.yaw = msg.yaw_deg
+        self.roll = msg.roll_deg
+        self.pitch = msg.pitch_deg
         self.initial_heading = msg.initial_heading
 
     def proximity_cb(self, msg: OrcaProximity):
