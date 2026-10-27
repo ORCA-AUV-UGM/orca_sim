@@ -34,6 +34,7 @@ setup(
             'keyboard = mavpy_sim.keyboard:main',
 
             'attitude_node = mavpy_sim.attitude_node:main',
+            'proximity_sim = mavpy_sim.proximity_sim:main',
             'depth_sim = mavpy_sim.depth_sim:main',
         ],
     },

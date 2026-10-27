@@ -7,6 +7,7 @@
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/camera_sim_qualification.py
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/test_keyboard.py
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/camera_sim_final.py
+/home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/proximity_sim.py
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/attitude_node.py
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/__init__.py
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/qualification_ts_sim.py
@@ -19,6 +20,7 @@
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/__pycache__/camera_sim_qualification.cpython-312.pyc
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/__pycache__/test_keyboard.cpython-312.pyc
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/__pycache__/camera_sim_final.cpython-312.pyc
+/home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/__pycache__/proximity_sim.cpython-312.pyc
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/__pycache__/attitude_node.cpython-312.pyc
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/__pycache__/__init__.cpython-312.pyc
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/__pycache__/qualification_ts_sim.cpython-312.pyc
@@ -38,6 +40,7 @@
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/mavpy_sim/control_bridge
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/mavpy_sim/depth_sim
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/mavpy_sim/keyboard
+/home/riovaldo/orca_sim/install/mavpy_sim/lib/mavpy_sim/proximity_sim
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/mavpy_sim/qualification_ts_sim
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/mavpy_sim/test_control
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/mavpy_sim/test_keyboard

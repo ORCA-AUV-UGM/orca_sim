@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
-#include "orca_msgs_sim/msg/detail/failsafe_trigger__struct.h"
 #include "orca_msgs_sim/msg/detail/failsafe_trigger__functions.h"
+#include "orca_msgs_sim/msg/detail/failsafe_trigger__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "orca_msgs_sim/msg/detail/failsafe_trigger__type_support.h"
 
 #ifdef __cplusplus

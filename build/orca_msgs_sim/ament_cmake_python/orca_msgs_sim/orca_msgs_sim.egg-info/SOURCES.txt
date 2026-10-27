@@ -4,12 +4,3 @@ orca_msgs_sim.egg-info/PKG-INFO
 orca_msgs_sim.egg-info/SOURCES.txt
 orca_msgs_sim.egg-info/dependency_links.txt
 orca_msgs_sim.egg-info/top_level.txt
-orca_msgs_sim/msg/__init__.py
-orca_msgs_sim/msg/_failsafe_trigger.py
-orca_msgs_sim/msg/_flare_sequence.py
-orca_msgs_sim/msg/_orca_attitude.py
-orca_msgs_sim/msg/_orca_control.py
-orca_msgs_sim/msg/_orca_depth.py
-orca_msgs_sim/msg/_orca_joystick.py
-orca_msgs_sim/msg/_orca_proximity.py
-orca_msgs_sim/msg/_orca_vision.py
