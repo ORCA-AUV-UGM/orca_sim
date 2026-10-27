@@ -4,7 +4,7 @@ import time
 from enum import Enum
 from rclpy.node import Node
 from std_msgs.msg import String
-from orca_msgs.msg import OrcaAttitude, OrcaControl, OrcaDepth, OrcaProximity
+from orca_msgs_sim.msg import OrcaAttitude, OrcaControl, OrcaDepth, OrcaProximity
 
 class State(str, Enum):
     WAIT_ARM = 'WAIT_ARM'
