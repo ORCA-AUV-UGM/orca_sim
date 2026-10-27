@@ -60,7 +60,7 @@ class DepthSim(Node):
             return
         
         if self.now_sec() - self.last_log_time > 1.0:
-            self.get_logger().info(f'\nDepth: {msg.depth} m | Pressure: {msg.pressure} mbar')
+            self.get_logger().info(f'\nDepth: {msg.depth} m | Pressure: {msg.pressure} mbar\n')
             self.last_log_time = self.now_sec()
 
 def main(args=None):
