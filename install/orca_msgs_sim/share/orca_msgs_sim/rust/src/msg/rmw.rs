@@ -613,7 +613,7 @@ pub struct OrcaProximity {
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub arm_mode: bool,
+    pub triggered: bool,
 
 }
 

@@ -506,7 +506,7 @@ pub struct OrcaProximity {
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub arm_mode: bool,
+    pub triggered: bool,
 
 }
 
@@ -524,17 +524,17 @@ impl rosidl_runtime_rs::Message for OrcaProximity {
   fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> {
     match msg_cow {
       std::borrow::Cow::Owned(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
-        arm_mode: msg.arm_mode,
+        triggered: msg.triggered,
       }),
       std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
-      arm_mode: msg.arm_mode,
+      triggered: msg.triggered,
       })
     }
   }
 
   fn from_rmw_message(msg: Self::RmwMsg) -> Self {
     Self {
-      arm_mode: msg.arm_mode,
+      triggered: msg.triggered,
     }
   }
 }

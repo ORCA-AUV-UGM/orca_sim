@@ -6,7 +6,7 @@
 module orca_msgs_sim {
   module msg {
     struct OrcaProximity {
-      boolean arm_mode;
+      boolean triggered;
     };
   };
 };

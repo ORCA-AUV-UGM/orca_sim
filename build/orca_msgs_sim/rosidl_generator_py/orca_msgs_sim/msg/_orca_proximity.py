@@ -62,12 +62,12 @@ class OrcaProximity(metaclass=Metaclass_OrcaProximity):
     """Message class 'OrcaProximity'."""
 
     __slots__ = [
-        '_arm_mode',
+        '_triggered',
         '_check_fields',
     ]
 
     _fields_and_field_types = {
-        'arm_mode': 'boolean',
+        'triggered': 'boolean',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
@@ -85,7 +85,7 @@ class OrcaProximity(metaclass=Metaclass_OrcaProximity):
             assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.arm_mode = kwargs.get('arm_mode', bool())
+        self.triggered = kwargs.get('triggered', bool())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -117,7 +117,7 @@ class OrcaProximity(metaclass=Metaclass_OrcaProximity):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.arm_mode != other.arm_mode:
+        if self.triggered != other.triggered:
             return False
         return True
 
@@ -127,14 +127,14 @@ class OrcaProximity(metaclass=Metaclass_OrcaProximity):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def arm_mode(self):
-        """Message field 'arm_mode'."""
-        return self._arm_mode
+    def triggered(self):
+        """Message field 'triggered'."""
+        return self._triggered
 
-    @arm_mode.setter
-    def arm_mode(self, value):
+    @triggered.setter
+    def triggered(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, bool), \
-                "The 'arm_mode' field must be of type 'bool'"
-        self._arm_mode = value
+                "The 'triggered' field must be of type 'bool'"
+        self._triggered = value

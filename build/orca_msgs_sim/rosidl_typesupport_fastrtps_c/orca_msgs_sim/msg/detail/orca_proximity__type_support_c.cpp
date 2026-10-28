@@ -48,9 +48,9 @@ bool cdr_serialize_orca_msgs_sim__msg__OrcaProximity(
   const orca_msgs_sim__msg__OrcaProximity * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: arm_mode
+  // Field name: triggered
   {
-    cdr << (ros_message->arm_mode ? true : false);
+    cdr << (ros_message->triggered ? true : false);
   }
 
   return true;
@@ -61,11 +61,11 @@ bool cdr_deserialize_orca_msgs_sim__msg__OrcaProximity(
   eprosima::fastcdr::Cdr & cdr,
   orca_msgs_sim__msg__OrcaProximity * ros_message)
 {
-  // Field name: arm_mode
+  // Field name: triggered
   {
     uint8_t tmp;
     cdr >> tmp;
-    ros_message->arm_mode = tmp ? true : false;
+    ros_message->triggered = tmp ? true : false;
   }
 
   return true;
@@ -86,9 +86,9 @@ size_t get_serialized_size_orca_msgs_sim__msg__OrcaProximity(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: arm_mode
+  // Field name: triggered
   {
-    size_t item_size = sizeof(ros_message->arm_mode);
+    size_t item_size = sizeof(ros_message->triggered);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -115,7 +115,7 @@ size_t max_serialized_size_orca_msgs_sim__msg__OrcaProximity(
   full_bounded = true;
   is_plain = true;
 
-  // Field name: arm_mode
+  // Field name: triggered
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -131,7 +131,7 @@ size_t max_serialized_size_orca_msgs_sim__msg__OrcaProximity(
     using DataType = orca_msgs_sim__msg__OrcaProximity;
     is_plain =
       (
-      offsetof(DataType, arm_mode) +
+      offsetof(DataType, triggered) +
       last_member_size
       ) == ret_val;
   }
@@ -143,9 +143,9 @@ bool cdr_serialize_key_orca_msgs_sim__msg__OrcaProximity(
   const orca_msgs_sim__msg__OrcaProximity * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: arm_mode
+  // Field name: triggered
   {
-    cdr << (ros_message->arm_mode ? true : false);
+    cdr << (ros_message->triggered ? true : false);
   }
 
   return true;
@@ -166,9 +166,9 @@ size_t get_serialized_size_key_orca_msgs_sim__msg__OrcaProximity(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: arm_mode
+  // Field name: triggered
   {
-    size_t item_size = sizeof(ros_message->arm_mode);
+    size_t item_size = sizeof(ros_message->triggered);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -193,7 +193,7 @@ size_t max_serialized_size_key_orca_msgs_sim__msg__OrcaProximity(
 
   full_bounded = true;
   is_plain = true;
-  // Field name: arm_mode
+  // Field name: triggered
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint8_t);
@@ -208,7 +208,7 @@ size_t max_serialized_size_key_orca_msgs_sim__msg__OrcaProximity(
     using DataType = orca_msgs_sim__msg__OrcaProximity;
     is_plain =
       (
-      offsetof(DataType, arm_mode) +
+      offsetof(DataType, triggered) +
       last_member_size
       ) == ret_val;
   }

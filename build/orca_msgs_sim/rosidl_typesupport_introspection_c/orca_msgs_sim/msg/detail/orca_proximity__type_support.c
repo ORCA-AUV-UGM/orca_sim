@@ -33,7 +33,7 @@ void orca_msgs_sim__msg__OrcaProximity__rosidl_typesupport_introspection_c__Orca
 
 static rosidl_typesupport_introspection_c__MessageMember orca_msgs_sim__msg__OrcaProximity__rosidl_typesupport_introspection_c__OrcaProximity_message_member_array[1] = {
   {
-    "arm_mode",  // name
+    "triggered",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
@@ -41,7 +41,7 @@ static rosidl_typesupport_introspection_c__MessageMember orca_msgs_sim__msg__Orc
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(orca_msgs_sim__msg__OrcaProximity, arm_mode),  // bytes offset in struct
+    offsetof(orca_msgs_sim__msg__OrcaProximity, triggered),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

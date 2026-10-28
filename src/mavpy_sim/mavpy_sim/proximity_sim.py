@@ -38,18 +38,13 @@ class ProximitySim(Node):
             self.old_term = termios.tcgetattr(self.fd)
             tty.setcbreak(self.fd)
         else:
-            self.get_logger().warn(
-                "stdin bukan terminal interaktif — keyboard tidak bisa dibaca. "
-                "Jalankan lewat `ros2 run`, bukan `ros2 launch`."
-            )
+            self.get_logger().warn("Keyboard tidak bisa dibaca!")
 
         self.create_timer(0.05, self.key_cb)
         self.create_timer(HEARTBEAT_SEC, self.publish_state)
 
         self.publish_state()
-        self.get_logger().info(
-            f"PROXIMITY SIM READY (field '{self.field}') — tekan '{TOGGLE_KEY}' untuk toggle | status: OFF"
-        )
+        self.get_logger().info(f"PROXIMITY SIM READY — tekan '{TOGGLE_KEY}' untuk toggle | status: OFF")
 
     def key_cb(self):
         if self.fd is None:

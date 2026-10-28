@@ -24,15 +24,15 @@ namespace msg
 namespace builder
 {
 
-class Init_OrcaProximity_arm_mode
+class Init_OrcaProximity_triggered
 {
 public:
-  Init_OrcaProximity_arm_mode()
+  Init_OrcaProximity_triggered()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::orca_msgs_sim::msg::OrcaProximity arm_mode(::orca_msgs_sim::msg::OrcaProximity::_arm_mode_type arg)
+  ::orca_msgs_sim::msg::OrcaProximity triggered(::orca_msgs_sim::msg::OrcaProximity::_triggered_type arg)
   {
-    msg_.arm_mode = std::move(arg);
+    msg_.triggered = std::move(arg);
     return std::move(msg_);
   }
 
@@ -51,7 +51,7 @@ template<>
 inline
 auto build<::orca_msgs_sim::msg::OrcaProximity>()
 {
-  return orca_msgs_sim::msg::builder::Init_OrcaProximity_arm_mode();
+  return orca_msgs_sim::msg::builder::Init_OrcaProximity_triggered();
 }
 
 }  // namespace orca_msgs_sim

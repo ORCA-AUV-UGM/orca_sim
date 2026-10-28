@@ -17,7 +17,7 @@ orca_msgs_sim__msg__OrcaProximity__init(orca_msgs_sim__msg__OrcaProximity * msg)
   if (!msg) {
     return false;
   }
-  // arm_mode
+  // triggered
   return true;
 }
 
@@ -27,7 +27,7 @@ orca_msgs_sim__msg__OrcaProximity__fini(orca_msgs_sim__msg__OrcaProximity * msg)
   if (!msg) {
     return;
   }
-  // arm_mode
+  // triggered
 }
 
 bool
@@ -36,8 +36,8 @@ orca_msgs_sim__msg__OrcaProximity__are_equal(const orca_msgs_sim__msg__OrcaProxi
   if (!lhs || !rhs) {
     return false;
   }
-  // arm_mode
-  if (lhs->arm_mode != rhs->arm_mode) {
+  // triggered
+  if (lhs->triggered != rhs->triggered) {
     return false;
   }
   return true;
@@ -51,8 +51,8 @@ orca_msgs_sim__msg__OrcaProximity__copy(
   if (!input || !output) {
     return false;
   }
-  // arm_mode
-  output->arm_mode = input->arm_mode;
+  // triggered
+  output->triggered = input->triggered;
   return true;
 }
 

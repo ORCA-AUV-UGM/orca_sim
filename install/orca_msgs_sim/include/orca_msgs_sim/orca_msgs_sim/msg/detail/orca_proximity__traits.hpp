@@ -28,10 +28,10 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: arm_mode
+  // member: triggered
   {
-    out << "arm_mode: ";
-    rosidl_generator_traits::value_to_yaml(msg.arm_mode, out);
+    out << "triggered: ";
+    rosidl_generator_traits::value_to_yaml(msg.triggered, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -40,13 +40,13 @@ inline void to_block_style_yaml(
   const OrcaProximity & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: arm_mode
+  // member: triggered
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "arm_mode: ";
-    rosidl_generator_traits::value_to_yaml(msg.arm_mode, out);
+    out << "triggered: ";
+    rosidl_generator_traits::value_to_yaml(msg.triggered, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

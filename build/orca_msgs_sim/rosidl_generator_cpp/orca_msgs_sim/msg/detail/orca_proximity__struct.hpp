@@ -42,7 +42,7 @@ struct OrcaProximity_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->arm_mode = false;
+      this->triggered = false;
     }
   }
 
@@ -52,20 +52,20 @@ struct OrcaProximity_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->arm_mode = false;
+      this->triggered = false;
     }
   }
 
   // field types and members
-  using _arm_mode_type =
+  using _triggered_type =
     bool;
-  _arm_mode_type arm_mode;
+  _triggered_type triggered;
 
   // setters for named parameter idiom
-  Type & set__arm_mode(
+  Type & set__triggered(
     const bool & _arg)
   {
-    this->arm_mode = _arg;
+    this->triggered = _arg;
     return *this;
   }
 
@@ -111,7 +111,7 @@ struct OrcaProximity_
   // comparison operators
   bool operator==(const OrcaProximity_ & other) const
   {
-    if (this->arm_mode != other.arm_mode) {
+    if (this->triggered != other.triggered) {
       return false;
     }
     return true;

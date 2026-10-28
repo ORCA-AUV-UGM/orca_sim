@@ -23,9 +23,9 @@ class QualificationTsSim(Node):
     def __init__(self):
         super().__init__('qualification_ts_sim')
 
-        self.target_depth = 0.65
+        self.target_depth = 0.5
         self.neutral = 1500
-        self.forward_fast = 1850
+        self.forward_fast = 1800
         self.throttle_down = 1350
         self.throttle_up = 1600
 
@@ -120,7 +120,7 @@ class QualificationTsSim(Node):
 
         if self.state == State.FORWARD_1:
             self.publish(forward=self.forward_fast)
-            if self.elapsed() > 20.0:
+            if self.elapsed() > 8.0:
                 self.set_state(State.STOP_1)
             return
 
@@ -133,12 +133,12 @@ class QualificationTsSim(Node):
         if self.state == State.UTURN:
             if self.initial_heading is None:
                 return
-            if self.initial_heading > 170:
+            if self.initial_heading > 170 or self.initial_heading < -170:
                 self.get_logger().info("U-turn selesai → FORWARD_2")
                 self.publish()
                 self.set_state(State.FORWARD_2)
                 return
-            self.publish(yaw=1650)
+            self.publish(yaw=1600)
             return
 
         if self.state == State.FORWARD_2:

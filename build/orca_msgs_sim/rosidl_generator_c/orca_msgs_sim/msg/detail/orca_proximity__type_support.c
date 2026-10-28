@@ -4,10 +4,10 @@
 
 #include <string.h>
 
+#include "orca_msgs_sim/msg/detail/orca_proximity__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "orca_msgs_sim/msg/detail/orca_proximity__type_support.h"
 #include "orca_msgs_sim/msg/detail/orca_proximity__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
-#include "orca_msgs_sim/msg/detail/orca_proximity__functions.h"
 
 #ifdef __cplusplus
 extern "C"

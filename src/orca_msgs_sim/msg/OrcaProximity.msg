@@ -1,1 +1,1 @@
-bool arm_mode
+bool triggered

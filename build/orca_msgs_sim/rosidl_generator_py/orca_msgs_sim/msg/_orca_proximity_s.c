@@ -50,13 +50,13 @@ bool orca_msgs_sim__msg__orca_proximity__convert_from_py(PyObject * _pymsg, void
     assert(strncmp("orca_msgs_sim.msg._orca_proximity.OrcaProximity", full_classname_dest, 47) == 0);
   }
   orca_msgs_sim__msg__OrcaProximity * ros_message = _ros_message;
-  {  // arm_mode
-    PyObject * field = PyObject_GetAttrString(_pymsg, "arm_mode");
+  {  // triggered
+    PyObject * field = PyObject_GetAttrString(_pymsg, "triggered");
     if (!field) {
       return false;
     }
     assert(PyBool_Check(field));
-    ros_message->arm_mode = (Py_True == field);
+    ros_message->triggered = (Py_True == field);
     Py_DECREF(field);
   }
 
@@ -81,11 +81,11 @@ PyObject * orca_msgs_sim__msg__orca_proximity__convert_to_py(void * raw_ros_mess
     }
   }
   orca_msgs_sim__msg__OrcaProximity * ros_message = (orca_msgs_sim__msg__OrcaProximity *)raw_ros_message;
-  {  // arm_mode
+  {  // triggered
     PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->arm_mode ? 1 : 0);
+    field = PyBool_FromLong(ros_message->triggered ? 1 : 0);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "arm_mode", field);
+      int rc = PyObject_SetAttrString(_pymessage, "triggered", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

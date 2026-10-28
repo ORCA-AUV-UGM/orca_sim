@@ -11,10 +11,10 @@ orca_msgs_sim__msg__OrcaProximity__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x29, 0x07, 0x6f, 0xbe, 0x70, 0x09, 0x03, 0x0c,
-      0x2d, 0x9e, 0xf3, 0x13, 0xf5, 0xee, 0x33, 0x17,
-      0xf0, 0x9a, 0xfb, 0x9b, 0x4e, 0x57, 0xf7, 0xf2,
-      0x84, 0x3f, 0x99, 0x78, 0x36, 0xcb, 0xb1, 0xf9,
+      0xe0, 0x5d, 0x22, 0xb1, 0xb0, 0xfd, 0xd0, 0x2e,
+      0xf5, 0xc3, 0xbb, 0xe4, 0xba, 0x10, 0x38, 0x6b,
+      0x9f, 0x26, 0x05, 0xc5, 0xc3, 0x27, 0xf7, 0x14,
+      0xb7, 0xdb, 0x76, 0x14, 0xc3, 0x92, 0xc2, 0x00,
     }};
   return &hash;
 }
@@ -31,11 +31,11 @@ orca_msgs_sim__msg__OrcaProximity__get_type_hash(
 static char orca_msgs_sim__msg__OrcaProximity__TYPE_NAME[] = "orca_msgs_sim/msg/OrcaProximity";
 
 // Define type names, field names, and default values
-static char orca_msgs_sim__msg__OrcaProximity__FIELD_NAME__arm_mode[] = "arm_mode";
+static char orca_msgs_sim__msg__OrcaProximity__FIELD_NAME__triggered[] = "triggered";
 
 static rosidl_runtime_c__type_description__Field orca_msgs_sim__msg__OrcaProximity__FIELDS[] = {
   {
-    {orca_msgs_sim__msg__OrcaProximity__FIELD_NAME__arm_mode, 8, 8},
+    {orca_msgs_sim__msg__OrcaProximity__FIELD_NAME__triggered, 9, 9},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_BOOLEAN,
       0,
@@ -66,7 +66,7 @@ orca_msgs_sim__msg__OrcaProximity__get_type_description(
 }
 
 static char toplevel_type_raw_source[] =
-  "bool arm_mode";
+  "bool triggered";
 
 static char msg_encoding[] = "msg";
 
@@ -80,7 +80,7 @@ orca_msgs_sim__msg__OrcaProximity__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {orca_msgs_sim__msg__OrcaProximity__TYPE_NAME, 31, 31},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 13, 13},
+    {toplevel_type_raw_source, 14, 14},
   };
   return &source;
 }

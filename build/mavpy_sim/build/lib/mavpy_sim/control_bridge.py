@@ -259,7 +259,7 @@ class ControlBridge(Node):
 
     def _clamp_pwm(self, value: int) -> int:
         if value < 1100 or value > 1900:
-            return self.neutral_pwm
+            return 1500
         return max(1100, min(1900, value))
 
     def reset_override(self):

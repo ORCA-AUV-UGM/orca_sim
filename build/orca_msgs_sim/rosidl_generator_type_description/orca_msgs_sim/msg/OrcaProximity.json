@@ -4,7 +4,7 @@
       "type_name": "orca_msgs_sim/msg/OrcaProximity",
       "fields": [
         {
-          "name": "arm_mode",
+          "name": "triggered",
           "type": {
             "type_id": 15,
             "capacity": 0,
@@ -20,7 +20,7 @@
   "type_hashes": [
     {
       "type_name": "orca_msgs_sim/msg/OrcaProximity",
-      "hash_string": "RIHS01_29076fbe7009030c2d9ef313f5ee3317f09afb9b4e57f7f2843f997836cbb1f9"
+      "hash_string": "RIHS01_e05d22b1b0fdd02ef5c3bbe4ba10386b9f2605c5c327f714b7db7614c392c200"
     }
   ]
 }

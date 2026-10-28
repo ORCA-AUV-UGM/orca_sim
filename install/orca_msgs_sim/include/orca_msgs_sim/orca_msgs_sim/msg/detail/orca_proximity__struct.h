@@ -22,7 +22,7 @@ extern "C"
 /// Struct defined in msg/OrcaProximity in the package orca_msgs_sim.
 typedef struct orca_msgs_sim__msg__OrcaProximity
 {
-  bool arm_mode;
+  bool triggered;
 } orca_msgs_sim__msg__OrcaProximity;
 
 // Struct for a sequence of orca_msgs_sim__msg__OrcaProximity.
