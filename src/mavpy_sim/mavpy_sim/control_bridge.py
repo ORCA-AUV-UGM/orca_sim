@@ -47,7 +47,7 @@ class ControlBridge(Node):
         self.create_subscription(OrcaControl, '/auto/control', self.auto_cb, 10)
         self.create_subscription(OrcaControl, '/failsafe/control', self.failsafe_control_cb, 10)
         self.create_subscription(FailsafeTrigger, '/failsafe/trigger', self.failsafe_trigger_cb, 10)
-        self.create_subscription(OrcaProximity, '/start_trigger', self.proximity_cb, 10)
+        self.create_subscription(OrcaProximity, '/proximity/start_trigger', self.proximity_cb, 10)
 
         self.create_timer(1.0 / max(1.0, 10.0), self.send_selected_control)
 

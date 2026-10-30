@@ -16,7 +16,7 @@ class ProximitySim(Node):
     def __init__(self):
         super().__init__('proximity_sim')
 
-        self.pub = self.create_publisher(OrcaProximity, '/start_trigger', 10)
+        self.pub = self.create_publisher(OrcaProximity, '/proximity/start_trigger', 10)
         fields = OrcaProximity.get_fields_and_field_types()
 
         if 'arm_mode' in fields:
