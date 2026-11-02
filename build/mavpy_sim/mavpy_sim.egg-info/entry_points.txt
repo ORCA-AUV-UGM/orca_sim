@@ -1,11 +1,11 @@
 [console_scripts]
-attitude_node = mavpy_sim.attitude_node:main
-camera_sim_final = mavpy_sim.camera_sim_final:main
-camera_sim_qualification = mavpy_sim.camera_sim_qualification:main
+attitude_node = mavpy_sim.sensors.attitude_node:main
+camera_sim_final = mavpy_sim.camera.camera_sim_final:main
+camera_sim_qualification = mavpy_sim.camera.camera_sim_qualification:main
 control_bridge = mavpy_sim.control_bridge:main
-depth_sim = mavpy_sim.depth_sim:main
+depth_sim = mavpy_sim.sensors.depth_sim:main
 keyboard = mavpy_sim.keyboard:main
-proximity_sim = mavpy_sim.proximity_sim:main
-qualification_ts_sim = mavpy_sim.qualification_ts_sim:main
+proximity_sim = mavpy_sim.sensors.proximity_sim:main
+qualification_ts_sim = mavpy_sim.mission_qualification.qualification_ts_sim:main
 test_control = mavpy_sim.test_control:main
 test_keyboard = mavpy_sim.test_keyboard:main
