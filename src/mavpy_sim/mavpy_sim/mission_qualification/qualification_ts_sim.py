@@ -41,7 +41,7 @@ class QualificationTsSim(Node):
 
         self.create_subscription(OrcaDepth, '/sensor/depth', self.depth_cb, 10)
         self.create_subscription(OrcaAttitude, '/sensor/attitude', self.attitude_cb, 10)
-        self.create_subscription(OrcaProximity, '/start_trigger', self.proximity_cb,10)
+        self.create_subscription(OrcaProximity, '/proximity/start_trigger', self.proximity_cb,10)
 
         self.create_timer(0.1, self.update)
         self.get_logger().info("MISSION READY — waiting for proximity trigger")
