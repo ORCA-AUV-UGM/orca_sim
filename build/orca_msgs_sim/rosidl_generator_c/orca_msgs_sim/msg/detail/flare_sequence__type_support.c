@@ -4,8 +4,8 @@
 
 #include <string.h>
 
-#include "orca_msgs_sim/msg/detail/flare_sequence__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "orca_msgs_sim/msg/detail/flare_sequence__functions.h"
 #include "orca_msgs_sim/msg/detail/flare_sequence__type_support.h"
 #include "orca_msgs_sim/msg/detail/flare_sequence__struct.h"
 

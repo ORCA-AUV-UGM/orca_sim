@@ -32,6 +32,7 @@ setup(
             'camera_sim_final = mavpy_sim.camera.camera_sim_final:main',
 
             'qualification_ts_sim = mavpy_sim.mission_qualification.qualification_ts_sim:main',
+            'qualification_sim = mavpy_sim.mission_qualification.qualification_sim:main',
 
             'attitude_node = mavpy_sim.sensors.attitude_node:main',
             'proximity_sim = mavpy_sim.sensors.proximity_sim:main',

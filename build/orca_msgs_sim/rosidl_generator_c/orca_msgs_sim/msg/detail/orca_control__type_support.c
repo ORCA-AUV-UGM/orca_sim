@@ -5,8 +5,8 @@
 #include <string.h>
 
 #include "orca_msgs_sim/msg/detail/orca_control__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "orca_msgs_sim/msg/detail/orca_control__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "orca_msgs_sim/msg/detail/orca_control__type_support.h"
 
 #ifdef __cplusplus
