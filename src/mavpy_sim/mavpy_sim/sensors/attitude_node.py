@@ -10,9 +10,10 @@ class AttitudeNode(Node):
         super().__init__('attitude_node')
 
         self.publisher_ = self.create_publisher(OrcaAttitude, '/sensor/attitude', 10)
+
         self.master = mavutil.mavlink_connection('udpin:0.0.0.0:14553')
         self.master.wait_heartbeat()
-        self.get_logger().info(f'Pixhawk attitude stream connected via udpin:0.0.0.0:14553')
+        self.get_logger().info('Pixhawk connected via udpin:0.0.0.0:14553')
 
         self.master.mav.request_data_stream_send(
             self.master.target_system,
@@ -22,51 +23,94 @@ class AttitudeNode(Node):
             1,
         )
 
-        self.initial_deg = None
+        self.master.mav.request_data_stream_send(
+            self.master.target_system,
+            self.master.target_component,
+            mavutil.mavlink.MAV_DATA_STREAM_POSITION,
+            10,
+            1,
+        )
+
+        self.initial_yaw_deg = None
+        self.local_origin = None
+        self.latest_local_position = None
         self.last_log_time = 0.0
+
         self.create_timer(0.02, self.poll_mavlink)
 
     @staticmethod
     def wrap_angle_deg(angle):
-        return (angle + 180) % 360 - 180
+        return (angle + 180.0) % 360.0 - 180.0
 
     def poll_mavlink(self):
         while True:
-            msg = self.master.recv_match(type='ATTITUDE', blocking=False)
+            msg = self.master.recv_match(
+                type=['ATTITUDE', 'LOCAL_POSITION_NED'],
+                blocking=False,
+            )
             if msg is None:
                 break
 
-            raw_yaw = float(math.degrees(msg.yaw))
-            if self.initial_deg is None:
-                self.initial_deg = raw_yaw
-                
-            temp_yaw = raw_yaw - self.initial_deg
-            relative_yaw = self.wrap_angle_deg(temp_yaw)
+            now = self.get_clock().now().nanoseconds * 1e-9
+
+            if msg.get_type() == 'LOCAL_POSITION_NED':
+                self.latest_local_position = (
+                    float(msg.x),
+                    float(msg.y),
+                    float(msg.z),
+                )
+
+                if self.local_origin is None:
+                    self.local_origin = self.latest_local_position
+                    self.get_logger().info(
+                        'Local position origin set from first '
+                        'LOCAL_POSITION_NED message'
+                    )
+                continue
+
+            raw_yaw_deg = math.degrees(msg.yaw)
+            if self.initial_yaw_deg is None:
+                self.initial_yaw_deg = raw_yaw_deg
+
+            relative_yaw_deg = self.wrap_angle_deg(raw_yaw_deg - self.initial_yaw_deg)
 
             out = OrcaAttitude()
-            out.roll_deg = float(math.degrees(msg.roll))
-            out.pitch_deg = float(math.degrees(msg.pitch))
-            out.yaw_deg = raw_yaw
-            out.initial_heading = relative_yaw
-            out.rollspeed_deg_s = float(math.degrees(msg.rollspeed))
-            out.pitchspeed_deg_s = float(math.degrees(msg.pitchspeed))
-            out.yawspeed_deg_s = float(math.degrees(msg.yawspeed))
-
+            out.roll_deg = math.degrees(msg.roll)
+            out.pitch_deg = math.degrees(msg.pitch)
+            out.yaw_deg = raw_yaw_deg
+            out.initial_heading = relative_yaw_deg
+            out.rollspeed_deg_s = math.degrees(msg.rollspeed)
+            out.pitchspeed_deg_s = math.degrees(msg.pitchspeed)
+            out.yawspeed_deg_s = math.degrees(msg.yawspeed)
             self.publisher_.publish(out)
 
-            now = self.get_clock().now().nanoseconds * 1e-9
-            if now - self.last_log_time > 1.0:
-                self.get_logger().info(f"""\n
-                Initial heading: {out.initial_heading:.2f} deg
-                Roll: {out.roll_deg:.2f} deg
-                Pitch: {out.pitch_deg:.2f} deg
-                Yaw: {out.yaw_deg:.2f} deg
-                """)
+            if now - self.last_log_time >= 1.0:
+                if (
+                    self.local_origin is not None
+                    and self.latest_local_position is not None
+                ):
+                    x0, y0, _ = self.local_origin
+                    x, y, _ = self.latest_local_position
+
+                    dx = x - x0  # North
+                    dy = y - y0  # East
+                    distance = math.hypot(dx, dy)
+
+                    self.get_logger().info(
+                        f'\nYaw: {raw_yaw_deg:.1f} deg'
+                        f'\nInitial Heading: {relative_yaw_deg:.1f} deg'
+                        f'\nPosisi lokal x={dx:.2f} m, y={dy:.2f} m'
+                    )
+                else:
+                    self.get_logger().warning('Belum menerima LOCAL_POSITION_NED dari Pixhawk')
+
                 self.last_log_time = now
+
 
 def main(args=None):
     rclpy.init(args=args)
     node = AttitudeNode()
+
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
@@ -74,3 +118,7 @@ def main(args=None):
     finally:
         node.destroy_node()
         rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
