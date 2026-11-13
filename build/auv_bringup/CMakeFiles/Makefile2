@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/riovaldo/orca_sim/build/auv_bringup
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all:
+all: CMakeFiles/SauvcFlareRecovery.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,6 +73,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/auv_bringup_uninstall.dir/clean
+clean: CMakeFiles/SauvcFlareRecovery.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -126,6 +127,32 @@ auv_bringup_uninstall: CMakeFiles/auv_bringup_uninstall.dir/rule
 CMakeFiles/auv_bringup_uninstall.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/auv_bringup_uninstall.dir/build.make CMakeFiles/auv_bringup_uninstall.dir/clean
 .PHONY : CMakeFiles/auv_bringup_uninstall.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/SauvcFlareRecovery.dir
+
+# All Build rule for target.
+CMakeFiles/SauvcFlareRecovery.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SauvcFlareRecovery.dir/build.make CMakeFiles/SauvcFlareRecovery.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SauvcFlareRecovery.dir/build.make CMakeFiles/SauvcFlareRecovery.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/riovaldo/orca_sim/build/auv_bringup/CMakeFiles --progress-num=1,2 "Built target SauvcFlareRecovery"
+.PHONY : CMakeFiles/SauvcFlareRecovery.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/SauvcFlareRecovery.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/riovaldo/orca_sim/build/auv_bringup/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SauvcFlareRecovery.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/riovaldo/orca_sim/build/auv_bringup/CMakeFiles 0
+.PHONY : CMakeFiles/SauvcFlareRecovery.dir/rule
+
+# Convenience name for target.
+SauvcFlareRecovery: CMakeFiles/SauvcFlareRecovery.dir/rule
+.PHONY : SauvcFlareRecovery
+
+# clean rule for target.
+CMakeFiles/SauvcFlareRecovery.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SauvcFlareRecovery.dir/build.make CMakeFiles/SauvcFlareRecovery.dir/clean
+.PHONY : CMakeFiles/SauvcFlareRecovery.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

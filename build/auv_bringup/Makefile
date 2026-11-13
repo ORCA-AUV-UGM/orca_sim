@@ -197,6 +197,43 @@ auv_bringup_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/auv_bringup_uninstall.dir/build.make CMakeFiles/auv_bringup_uninstall.dir/build
 .PHONY : auv_bringup_uninstall/fast
 
+#=============================================================================
+# Target rules for targets named SauvcFlareRecovery
+
+# Build rule for target.
+SauvcFlareRecovery: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SauvcFlareRecovery
+.PHONY : SauvcFlareRecovery
+
+# fast build rule for target.
+SauvcFlareRecovery/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SauvcFlareRecovery.dir/build.make CMakeFiles/SauvcFlareRecovery.dir/build
+.PHONY : SauvcFlareRecovery/fast
+
+src/FlareRecovery.o: src/FlareRecovery.cc.o
+.PHONY : src/FlareRecovery.o
+
+# target to build an object file
+src/FlareRecovery.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SauvcFlareRecovery.dir/build.make CMakeFiles/SauvcFlareRecovery.dir/src/FlareRecovery.cc.o
+.PHONY : src/FlareRecovery.cc.o
+
+src/FlareRecovery.i: src/FlareRecovery.cc.i
+.PHONY : src/FlareRecovery.i
+
+# target to preprocess a source file
+src/FlareRecovery.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SauvcFlareRecovery.dir/build.make CMakeFiles/SauvcFlareRecovery.dir/src/FlareRecovery.cc.i
+.PHONY : src/FlareRecovery.cc.i
+
+src/FlareRecovery.s: src/FlareRecovery.cc.s
+.PHONY : src/FlareRecovery.s
+
+# target to generate assembly for a file
+src/FlareRecovery.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SauvcFlareRecovery.dir/build.make CMakeFiles/SauvcFlareRecovery.dir/src/FlareRecovery.cc.s
+.PHONY : src/FlareRecovery.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,6 +249,10 @@ help:
 	@echo "... test"
 	@echo "... auv_bringup_uninstall"
 	@echo "... uninstall"
+	@echo "... SauvcFlareRecovery"
+	@echo "... src/FlareRecovery.o"
+	@echo "... src/FlareRecovery.i"
+	@echo "... src/FlareRecovery.s"
 .PHONY : help
 
 

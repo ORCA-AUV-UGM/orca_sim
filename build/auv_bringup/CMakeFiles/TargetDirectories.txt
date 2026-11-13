@@ -1,5 +1,6 @@
 /home/riovaldo/orca_sim/build/auv_bringup/CMakeFiles/uninstall.dir
 /home/riovaldo/orca_sim/build/auv_bringup/CMakeFiles/auv_bringup_uninstall.dir
+/home/riovaldo/orca_sim/build/auv_bringup/CMakeFiles/SauvcFlareRecovery.dir
 /home/riovaldo/orca_sim/build/auv_bringup/CMakeFiles/test.dir
 /home/riovaldo/orca_sim/build/auv_bringup/CMakeFiles/edit_cache.dir
 /home/riovaldo/orca_sim/build/auv_bringup/CMakeFiles/rebuild_cache.dir

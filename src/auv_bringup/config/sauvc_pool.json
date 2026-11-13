@@ -1,0 +1,129 @@
+{
+  "length": 50.0,
+  "width": 25.0,
+  "shallow_depth": 1.28,
+  "deep_depth": 2.0,
+  "shallow_flat_end": 10.0,
+  "slope_end": 17.5,
+  "qualification_x": 10.0,
+  "qualification_lanes_y": [
+    -10.0,
+    0.0,
+    10.0
+  ],
+  "target_center": [
+    32.0,
+    10.0
+  ],
+  "target_size": [
+    8.0,
+    2.0
+  ],
+  "starting_center": [
+    32.0,
+    -11.0
+  ],
+  "starting_size": 1.4,
+  "surfacing_center": [
+    12.0,
+    -5.5
+  ],
+  "surfacing_size": 2.0,
+  "main_gate_center": [
+    32.0,
+    -0.5
+  ],
+  "main_gate_width": 1.5,
+  "main_gate_height": 1.5,
+  "qualification_gate_width": 1.5,
+  "qualification_gate_height": 1.0,
+  "drum_radius": 0.3,
+  "drum_height": 0.3,
+  "flare_radius": 0.008,
+  "flare_height": 0.8,
+  "flares": {
+    "yellow": [
+      30.0,
+      3.5
+    ],
+    "red": [
+      32.0,
+      3.5
+    ],
+    "blue": [
+      34.0,
+      3.5
+    ],
+    "orange": [
+      32.0,
+      -6.5
+    ]
+  },
+  "rulebook_version": "2027.3.2",
+  "rulebook_url": "https://sauvc.org/rulebook/",
+  "post_thickness": 0.04,
+  "drum_wall_thickness": 0.01,
+  "orange_flare_radius": 0.075,
+  "orange_flare_height": 1.5,
+  "golf_ball_radius": 0.02135,
+  "golf_ball_mass": 0.0459,
+  "frame_tube_diameter": 0.04,
+  "surfacing_marker_drop": 0.3,
+  "orange_zone_x": [
+    22.0,
+    49.0
+  ],
+  "orange_zone_y": [
+    -8.5,
+    -4.5
+  ],
+  "drum_colors": [
+    "blue",
+    "red",
+    "red",
+    "red"
+  ],
+  "pinger_drum_index": 1,
+  "main_gate_x_range": [
+    22.8,
+    49.2
+  ],
+  "layout_version": "ORCA_SAUVC_V6",
+  "drum_offsets": [
+    -1.5,
+    -0.5,
+    0.5,
+    1.5
+  ],
+  "qualification_mount": "floor_supported_training",
+  "blue_lane_centers": [
+    -8.75,
+    -6.25,
+    -3.75,
+    -1.25,
+    1.25,
+    3.75,
+    6.25,
+    8.75
+  ],
+  "blue_lane_width": 0.25,
+  "blue_lane_start": 2.0,
+  "blue_lane_end": 48.0,
+  "blue_lane_t_width": 1.2,
+  "flare_bounds_x": [
+    28.0,
+    37.0
+  ],
+  "flare_bounds_y": [
+    1.5,
+    6.5
+  ],
+  "flare_min_separation": 1.2,
+  "flare_reset_seconds": 2.0,
+  "flare_mass": 0.12,
+  "flare_tip_torque": 0.15,
+  "water_surface_transparency": 0.76,
+  "water_fog_enabled": true,
+  "water_fog_start": 8.0,
+  "water_fog_end": 35.0
+}

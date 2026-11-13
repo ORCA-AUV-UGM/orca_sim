@@ -1,1 +1,1 @@
-robot_state_publisher;ros_gz_sim;rviz2;ros_gz_bridge;ament_lint_auto;ament_lint_common
+gz-sim8;gz-plugin2;robot_state_publisher;ros_gz_sim;rviz2;ros_gz_bridge;ament_index_python;launch;launch_ros;python3;ament_lint_auto;ament_lint_common

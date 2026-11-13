@@ -12,10 +12,10 @@
     </node>
 
     <include file="$(find-pkg-share ros_gz_sim)/launch/gz_sim.launch.py">
-        <arg name="gz_args" value="$(find-pkg-share auv_bringup)/worlds/world_qualification.sdf"/>
+        <arg name="gz_args" value="$(find-pkg-share auv_bringup)/worlds/world_sauvc.sdf"/>
     </include>
 
-    <node pkg="ros_gz_sim" exec="create" args="-topic robot_description"/>
+    <node pkg="ros_gz_sim" exec="create" args="-topic robot_description -x 32 -y -11 -z -0.1"/>
 
     <node pkg="ros_gz_bridge" exec="parameter_bridge"
           args="/model/ORCA_V3/pose@geometry_msgs/msg/Pose[gz.msgs.Pose" />

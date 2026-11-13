@@ -1,8 +1,13 @@
+/home/riovaldo/orca_sim/install/auv_bringup/lib/libSauvcFlareRecovery.so
+/home/riovaldo/orca_sim/install/auv_bringup/share/auv_bringup//launch/world_sauvc.launch.py
 /home/riovaldo/orca_sim/install/auv_bringup/share/auv_bringup//launch/perintah_run_ardupilot.txt
 /home/riovaldo/orca_sim/install/auv_bringup/share/auv_bringup//launch/auv_gazebo.launch.xml
 /home/riovaldo/orca_sim/install/auv_bringup/share/auv_bringup//config/gazebo_bridge.yaml
+/home/riovaldo/orca_sim/install/auv_bringup/share/auv_bringup//config/sauvc_pool.json
 /home/riovaldo/orca_sim/install/auv_bringup/share/auv_bringup//worlds/world_qualification.sdf
+/home/riovaldo/orca_sim/install/auv_bringup/share/auv_bringup//worlds/world_sauvc.sdf
 /home/riovaldo/orca_sim/install/auv_bringup/share/auv_bringup//worlds/world_final.sdf
+/home/riovaldo/orca_sim/install/auv_bringup/share/auv_bringup/scripts/generate_sauvc.py
 /home/riovaldo/orca_sim/install/auv_bringup/share/ament_index/resource_index/package_run_dependencies/auv_bringup
 /home/riovaldo/orca_sim/install/auv_bringup/share/ament_index/resource_index/parent_prefix_path/auv_bringup
 /home/riovaldo/orca_sim/install/auv_bringup/share/auv_bringup/environment/ament_prefix_path.sh
