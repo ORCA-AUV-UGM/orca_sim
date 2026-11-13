@@ -205,7 +205,7 @@ colcon build
 source install/setup.bash
 ```
 ```bash
-ros2 launch auv_bringup auv_gazebo.launch.py
+ros2 launch auv_bringup auv_gazebo.launch.xml
 ```
 > ⚠️ **Penting:** Setelah lingkungan 3D terbuka di Gazebo, klik tombol **"Play/Run simulation"** (tombol oranye/hijau di pojok kiri bawah layar Gazebo) sebelum melanjut ke Terminal 2.
 
