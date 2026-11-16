@@ -30,6 +30,7 @@ setup(
 
             'camera_sim_qualification = mavpy_sim.camera.camera_sim_qualification:main',
             'camera_sim_final = mavpy_sim.camera.camera_sim_final:main',
+            'camera_sim_sauvc = mavpy_sim.camera.camera_sim_sauvc:main',
 
             'qualification_ts_sim = mavpy_sim.mission_qualification.qualification_ts_sim:main',
             'qualification_sim = mavpy_sim.mission_qualification.qualification_sim:main',

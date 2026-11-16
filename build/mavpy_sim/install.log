@@ -9,6 +9,7 @@
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/sensors/__init__.py
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/camera/camera_sim_qualification.py
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/camera/camera_sim_final.py
+/home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/camera/camera_sim_sauvc.py
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/camera/__init__.py
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/mission_qualification/__init__.py
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/mission_qualification/qualification_sim.py
@@ -26,6 +27,7 @@
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/sensors/__pycache__/__init__.cpython-312.pyc
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/camera/__pycache__/camera_sim_qualification.cpython-312.pyc
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/camera/__pycache__/camera_sim_final.cpython-312.pyc
+/home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/camera/__pycache__/camera_sim_sauvc.cpython-312.pyc
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/camera/__pycache__/__init__.cpython-312.pyc
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/mission_qualification/__pycache__/__init__.cpython-312.pyc
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/python3.12/site-packages/mavpy_sim/mission_qualification/__pycache__/qualification_sim.cpython-312.pyc
@@ -45,6 +47,7 @@
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/mavpy_sim/attitude_node
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/mavpy_sim/camera_sim_final
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/mavpy_sim/camera_sim_qualification
+/home/riovaldo/orca_sim/install/mavpy_sim/lib/mavpy_sim/camera_sim_sauvc
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/mavpy_sim/control_bridge
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/mavpy_sim/depth_sim
 /home/riovaldo/orca_sim/install/mavpy_sim/lib/mavpy_sim/keyboard

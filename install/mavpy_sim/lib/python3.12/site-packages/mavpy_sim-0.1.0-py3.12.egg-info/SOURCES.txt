@@ -16,6 +16,7 @@ mavpy_sim/test_keyboard.py
 mavpy_sim/camera/__init__.py
 mavpy_sim/camera/camera_sim_final.py
 mavpy_sim/camera/camera_sim_qualification.py
+mavpy_sim/camera/camera_sim_sauvc.py
 mavpy_sim/mission_final/__init__.py
 mavpy_sim/mission_final/final_sim.py
 mavpy_sim/mission_qualification/__init__.py

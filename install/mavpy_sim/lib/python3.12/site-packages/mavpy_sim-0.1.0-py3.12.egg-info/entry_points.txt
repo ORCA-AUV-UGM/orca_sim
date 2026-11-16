@@ -2,6 +2,7 @@
 attitude_node = mavpy_sim.sensors.attitude_node:main
 camera_sim_final = mavpy_sim.camera.camera_sim_final:main
 camera_sim_qualification = mavpy_sim.camera.camera_sim_qualification:main
+camera_sim_sauvc = mavpy_sim.camera.camera_sim_sauvc:main
 control_bridge = mavpy_sim.control_bridge:main
 depth_sim = mavpy_sim.sensors.depth_sim:main
 keyboard = mavpy_sim.keyboard:main
